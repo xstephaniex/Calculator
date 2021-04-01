@@ -1,0 +1,10 @@
+[Inputs]
+a
+b
+[Outputs]
+s
+carryout
+[BiDir]
+[ATTRIBUTES]
+VeriModel HalfAdder
+

@@ -1,3 +1,6 @@
+MO FourBitAdder NULL FourBitAdder.v vlg43/_four_bit_adder.bin 1617287708
 MO divider NULL Division.v vlg4B/divider.bin 1615147924
-MO Calculator NULL Calculator.v vlg5A/_calculator.bin 1615255234
-MO Division NULL Division.v vlg6D/_division.bin 1615255234
+MO Calculator NULL Calculator.v vlg5A/_calculator.bin 1617287708
+MO Division NULL Division.v vlg6D/_division.bin 1617287708
+MO HalfAdder NULL HalfAdder.v vlg73/_half_adder.bin 1617287708
+MO FullAdder NULL FullAdder.v vlg73/_full_adder.bin 1617287708

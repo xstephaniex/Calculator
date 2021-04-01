@@ -104,7 +104,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling verilog file "HalfAdder.v" in library work
+Compiling verilog file "FullAdder.v" in library work
+Module <HalfAdder> compiled
+Compiling verilog file "FourBitAdder.v" in library work
+Module <FullAdder> compiled
 Compiling verilog file "Division.v" in library work
+Module <FourBitAdder> compiled
 Compiling verilog file "Calculator.v" in library work
 Module <Division> compiled
 Module <Calculator> compiled
@@ -119,6 +125,12 @@ Analyzing hierarchy for module <Calculator> in library <work>.
 
 Analyzing hierarchy for module <Division> in library <work>.
 
+Analyzing hierarchy for module <FourBitAdder> in library <work>.
+
+Analyzing hierarchy for module <HalfAdder> in library <work>.
+
+Analyzing hierarchy for module <FullAdder> in library <work>.
+
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -128,6 +140,15 @@ Module <Calculator> is correct for synthesis.
  
 Analyzing module <Division> in library <work>.
 Module <Division> is correct for synthesis.
+ 
+Analyzing module <FourBitAdder> in library <work>.
+Module <FourBitAdder> is correct for synthesis.
+ 
+Analyzing module <HalfAdder> in library <work>.
+Module <HalfAdder> is correct for synthesis.
+ 
+Analyzing module <FullAdder> in library <work>.
+Module <FullAdder> is correct for synthesis.
  
 
 =========================================================================
@@ -152,14 +173,35 @@ WARNING:Xst:737 - Found 8-bit latch for signal <Reminder>. Latches may be genera
 Unit <Division> synthesized.
 
 
+Synthesizing Unit <HalfAdder>.
+    Related source file is "HalfAdder.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit xor2 for signal <s>.
+Unit <HalfAdder> synthesized.
+
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "FullAdder.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit xor2 for signal <s>.
+    Found 1-bit xor2 for signal <cout$xor0000> created at line 33.
+Unit <FullAdder> synthesized.
+
+
+Synthesizing Unit <FourBitAdder>.
+    Related source file is "FourBitAdder.v".
+Unit <FourBitAdder> synthesized.
+
+
 Synthesizing Unit <Calculator>.
     Related source file is "Calculator.v".
+WARNING:Xst:646 - Signal <cout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addition> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Reminder> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 4-bit adder carry out for signal <addition$addsub0000> created at line 38.
     Found 4x4-bit multiplier for signal <multiplication>.
-    Found 6-bit subtractor for signal <substraction$sub0000> created at line 39.
+    Found 6-bit subtractor for signal <substraction$sub0000> created at line 42.
     Summary:
-	inferred   2 Adder/Subtractor(s).
+	inferred   1 Adder/Subtractor(s).
 	inferred   1 Multiplier(s).
 Unit <Calculator> synthesized.
 
@@ -170,13 +212,14 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 1
  4x4-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 9
  4-bit adder                                           : 4
- 4-bit adder carry out                                 : 1
  4-bit subtractor                                      : 4
  6-bit subtractor                                      : 1
 # Latches                                              : 1
  8-bit latch                                           : 1
+# Xors                                                 : 7
+ 1-bit xor2                                            : 7
 
 =========================================================================
 
@@ -191,14 +234,15 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 1
  4x4-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 9
  3-bit adder                                           : 3
  4-bit adder                                           : 1
- 4-bit adder carry out                                 : 1
  4-bit subtractor                                      : 4
  6-bit subtractor                                      : 1
 # Latches                                              : 1
  8-bit latch                                           : 1
+# Xors                                                 : 7
+ 1-bit xor2                                            : 7
 
 =========================================================================
 
@@ -250,14 +294,14 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 18
+# IOs                              : 19
 
 Cell Usage :
 # BELS                             : 65
 #      GND                         : 1
-#      LUT2                        : 6
-#      LUT3                        : 15
-#      LUT4                        : 35
+#      LUT2                        : 7
+#      LUT3                        : 18
+#      LUT4                        : 31
 #      MUXF5                       : 8
 # IO Buffers                       : 18
 #      IBUF                        : 10
@@ -273,7 +317,7 @@ Selected Device : 3s100ecp132-5
 
  Number of Slices:                       31  out of    960     3%  
  Number of 4 input LUTs:                 56  out of   1920     2%  
- Number of IOs:                          18
+ Number of IOs:                          19
  Number of bonded IOBs:                  18  out of     83    21%  
  Number of MULT18X18SIOs:                 1  out of      4    25%  
 
@@ -308,7 +352,7 @@ Speed Grade: -5
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 18.836ns
+   Maximum combinational path delay: 19.121ns
 
 Timing Detail:
 --------------
@@ -316,48 +360,48 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1255 / 8
+  Total number of paths / destination ports: 1280 / 8
 -------------------------------------------------------------------------
-Delay:               18.836ns (Levels of Logic = 17)
-  Source:            sw<2> (PAD)
+Delay:               19.121ns (Levels of Logic = 17)
+  Source:            sw<1> (PAD)
   Destination:       led<0> (PAD)
 
-  Data Path: sw<2> to led<0>
+  Data Path: sw<1> to led<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            18   1.106   1.060  sw_2_IBUF (sw_2_IBUF)
-     LUT3:I0->O            1   0.612   0.000  b1/Msub__old_A_2_xor<3>111 (b1/Msub__old_A_2_xor<3>11)
-     MUXF5:I1->O           3   0.278   0.481  b1/Msub__old_A_2_xor<3>11_f5 (b1/_old_A_2<3>)
-     LUT3:I2->O            2   0.612   0.410  b1/_old_A_3<0>1 (b1/_old_A_3<0>)
-     LUT4:I2->O            2   0.612   0.410  b1/Msub__old_A_5_cy<1>11 (b1/Msub__old_A_5_cy<1>)
-     LUT4:I2->O            4   0.612   0.529  b1/Msub__old_A_5_xor<3>11 (b1/_old_A_5<3>)
-     LUT3:I2->O            2   0.612   0.410  b1/_old_A_6<0>1 (b1/_old_A_6<0>)
-     LUT4:I2->O            2   0.612   0.410  b1/Msub__old_A_8_cy<1>11 (b1/Msub__old_A_8_cy<1>)
-     LUT4:I2->O            1   0.612   0.509  b1/Msub__old_A_8_xor<3>11_SW0 (N25)
-     LUT4:I0->O            5   0.612   0.607  b1/Msub__old_A_8_xor<3>11 (b1/_old_A_8<3>)
-     LUT4:I1->O            1   0.612   0.000  b1/Msub__old_A_11_cy<1>112 (b1/Msub__old_A_11_cy<1>111)
-     MUXF5:I0->O           1   0.278   0.387  b1/Msub__old_A_11_cy<1>11_f5 (b1/Msub__old_A_11_cy<1>)
-     LUT4:I2->O            1   0.612   0.426  led<0>59_SW0 (N17)
-     LUT4:I1->O            1   0.612   0.387  led<0>59 (led<0>59)
-     LUT4:I2->O            1   0.612   0.000  led<0>1261 (led<0>126)
-     MUXF5:I1->O           1   0.278   0.357  led<0>126_f5 (led_0_OBUF)
+     IBUF:I->O            24   1.106   1.094  sw_1_IBUF (sw_1_IBUF)
+     LUT3:I2->O            1   0.612   0.000  b1/Msub__old_A_2_xor<3>111 (b1/Msub__old_A_2_xor<3>11)
+     MUXF5:I1->O           3   0.278   0.520  b1/Msub__old_A_2_xor<3>11_f5 (b1/_old_A_2<3>)
+     LUT3:I1->O            2   0.612   0.449  b1/_old_A_3<0>1 (b1/_old_A_3<0>)
+     LUT4:I1->O            2   0.612   0.410  b1/Msub__old_A_5_cy<1>11 (b1/Msub__old_A_5_cy<1>)
+     LUT4:I2->O            4   0.612   0.568  b1/Msub__old_A_5_xor<3>11 (b1/_old_A_5<3>)
+     LUT3:I1->O            2   0.612   0.449  b1/_old_A_6<0>1 (b1/_old_A_6<0>)
+     LUT4:I1->O            2   0.612   0.410  b1/Msub__old_A_8_cy<1>11 (b1/Msub__old_A_8_cy<1>)
+     LUT4:I2->O            1   0.612   0.509  b1/Msub__old_A_8_xor<3>11_SW0 (N30)
+     LUT4:I0->O            5   0.612   0.690  b1/Msub__old_A_8_xor<3>11 (b1/_old_A_8<3>)
+     LUT4:I0->O            1   0.612   0.000  b1/Msub__old_A_11_cy<1>111 (b1/Msub__old_A_11_cy<1>11)
+     MUXF5:I1->O           1   0.278   0.426  b1/Msub__old_A_11_cy<1>11_f5 (b1/Msub__old_A_11_cy<1>)
+     LUT3:I1->O            1   0.612   0.426  led<0>374_SW0 (N24)
+     LUT4:I1->O            1   0.612   0.000  led<0>3120_SW02 (led<0>3120_SW01)
+     MUXF5:I0->O           1   0.278   0.360  led<0>3120_SW0_f5 (N28)
+     LUT4:I3->O            1   0.612   0.357  led<0>3120 (led_0_OBUF)
      OBUF:I->O                 3.169          led_0_OBUF (led<0>)
     ----------------------------------------
-    Total                     18.836ns (12.453ns logic, 6.383ns route)
-                                       (66.1% logic, 33.9% route)
+    Total                     19.121ns (12.453ns logic, 6.668ns route)
+                                       (65.1% logic, 34.9% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.59 secs
+Total CPU time to Xst completion: 4.16 secs
  
 --> 
 
-Total memory usage is 4513656 kilobytes
+Total memory usage is 4513652 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   10 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

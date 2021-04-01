@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-IHPM5K3::  Mon Mar 08 21:00:45 2021
+DESKTOP-IHPM5K3::  Thu Apr 01 09:35:27 2021
 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd
 Calculator.pcf 
@@ -62,38 +62,38 @@ Total REAL time at the beginning of Placer: 0 secs
 Total CPU  time at the beginning of Placer: 0 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:38c4a6d) REAL time: 0 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:3771b38) REAL time: 0 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:38c4a6d) REAL time: 0 secs 
+Phase 2.7  Design Feasibility Check (Checksum:3771b38) REAL time: 0 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:38c4a6d) REAL time: 0 secs 
+Phase 3.31  Local Placement Optimization (Checksum:3771b38) REAL time: 0 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-Phase 4.2  Initial Clock and IO Placement (Checksum:38c4a6d) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:3771b38) REAL time: 0 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:38c4a6d) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:3771b38) REAL time: 0 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:38c4a6d) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:3771b38) REAL time: 0 secs 
 
 Phase 7.8  Global Placement
-......
 ....
-Phase 7.8  Global Placement (Checksum:1622899f) REAL time: 1 secs 
+.....
+Phase 7.8  Global Placement (Checksum:18fff6b5) REAL time: 0 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:1622899f) REAL time: 1 secs 
+Phase 8.5  Local Placement Optimization (Checksum:18fff6b5) REAL time: 0 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:168447e9) REAL time: 1 secs 
+Phase 9.18  Placement Optimization (Checksum:19941ba5) REAL time: 0 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:168447e9) REAL time: 1 secs 
+Phase 10.5  Local Placement Optimization (Checksum:19941ba5) REAL time: 0 secs 
 
-Total REAL time to Placer completion: 1 secs 
+Total REAL time to Placer completion: 0 secs 
 Total CPU  time to Placer completion: 0 secs 
 Writing design to file Calculator.ncd
 
@@ -102,13 +102,13 @@ Writing design to file Calculator.ncd
 Starting Router
 
 
-Phase  1  : 256 unrouted;      REAL time: 1 secs 
+Phase  1  : 251 unrouted;      REAL time: 1 secs 
 
-Phase  2  : 252 unrouted;      REAL time: 1 secs 
+Phase  2  : 247 unrouted;      REAL time: 1 secs 
 
-Phase  3  : 48 unrouted;      REAL time: 1 secs 
+Phase  3  : 57 unrouted;      REAL time: 1 secs 
 
-Phase  4  : 48 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
+Phase  4  : 57 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 secs 
 
