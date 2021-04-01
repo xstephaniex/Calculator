@@ -25,7 +25,7 @@ module Calculator(
     output [7:0]led
     );
 
-	//This are the wires for each operation, for displaying in the leds
+	//This are the testing wires for each operation, for displaying in the leds
 	wire [7:0] addition, substraction, multiplication;
 	
 	//Divider signals; outputs
@@ -37,24 +37,25 @@ module Calculator(
 	wire cout;
 	
 	
-	//Calculations
+	//Calculations testing
 	assign addition = sw[7:4] + sw[3:0];
 	assign substraction = sw[7:4] - sw[3:0];
 	assign multiplication = sw[7:4] * sw[3:0];
 	
 	
-	
+	//Blocks
 	Division b1(
 		.Q(sw[7:4]),
 		.M(sw[3:0]),
+		.clk(clk),
 		.Quotient(Quotient),
 		.Reminder(Reminder)
 		
 	);
 	
 	FourBitAdder b2 (
-		 .a(sw[3:0]), 
-		 .b(sw[7:4]), 
+		 .a(sw[7:4]), 
+		 .b(sw[3:0]), 
 		 .clk(clk), 
 		 .s(sum), 
 		 .cout(cout)

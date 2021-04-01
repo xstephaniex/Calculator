@@ -18,9 +18,10 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Division(Q, M, Quotient, Reminder);
+module Division(Q, M, clk, Quotient, Reminder);
 	 input [3:0]Q; //dividend
     input [3:0]M; //divisor
+	 input clk;
 	 output[7:0]Quotient;
 	 output[7:0]Reminder;
 	 
@@ -31,7 +32,7 @@ module Division(Q, M, Quotient, Reminder);
 	 reg[3:0] A;
 	 integer i; //keeps track of the number of times the loop will be running
 	 
-	  always@ (Q or M) begin
+	  always@ (posedge clk) begin
 	  
 	   a1 = Q;
 	   b1 = M;
