@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/User/Documents/CalculatorProject1/Calculator/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/User/Documents/CalculatorProject1/Calculator/xst"
+elaborate
+-ifn Division.prj
+-ifmt mixed
