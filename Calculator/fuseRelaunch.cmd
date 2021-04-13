@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/Calculator/Calculator/fourbitadder_tb_isim_beh.exe" -prj "C:/Users/User/dev/Calculator/Calculator/fourbitadder_tb_beh.prj" "work.fourbitadder_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/User/dev/Calculator/Calculator/fourbitaddersubstractor_tb_isim_beh.exe" -prj "C:/Users/User/dev/Calculator/Calculator/fourbitaddersubstractor_tb_beh.prj" "work.fourbitaddersubstractor_tb" "work.glbl" 
