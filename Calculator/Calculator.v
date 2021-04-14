@@ -24,18 +24,19 @@ module Calculator(
 	 input clk,
 	 input clr,
     output [7:0]led, 
+	 
 	 //seven segment display outputs
 	 output [6:0] seg,
-	 output [3:0] aen,
-	 output dp 
+	 output [3:0] aen
+
     );
 	
-	assign clr = 1'b0;
+	reg clr1 = 1'b0; //brute force 
 	reg [15:0] x;//input to seg7 to define segment pattern
 	
 	// 16 bit BCD Converter Signals
 	reg [15:0] B; // inputs to B will be Adder
-	wire[19:0] bcdout;// bcdout is sent to Scroll_Display Module
+	wire[19:0] bcdout;// bcdout 
 
 	
 	
@@ -51,7 +52,9 @@ module Calculator(
 	wire cout;
 	
 	//7segment display scroll signals
+	wire [19:0] scroll_datain;
 	wire [15:0] scroll_dataout;
+
 
 	
 	//Calculations testing
@@ -59,24 +62,40 @@ module Calculator(
 	assign substraction = sw[7:4] - sw[3:0];
 	assign multiplication = sw[7:4] * sw[3:0];
 	
-	
+	always @(*) begin
+	if({8{~btn[0]}} &  {8{~btn[1]}})begin
+	B = addition[7:0];
+		x[15:12] = scroll_dataout[15:12];	//'hC
+		x[11:8] 	= scroll_dataout[11:8]; 	//hundreds
+		x[7:4] 	= scroll_dataout[7:4];		//tens
+		x[3:0] 	= scroll_dataout[3:0];		//ones
+	end
+	end
 	//blocks
 	
 	binary_to_bcd b1(
-    .B(B), 
-    .bcdout(bcdout)
+		 .B(B), 
+		 .bcdout(bcdout)
+    );
+	 seg_scroll b2 (
+    .clk(clk), 
+    .clr(clr), 
+    .scroll_datain(scroll_datain), 
+    .scroll_dataout(scroll_dataout)
     );
 
-	Seven_SegmentDisplay  b2(
-		 .displayed_num(x), 
-		 .clk(clk), 
-		 .clr(clr), 
-		 .numberbox_out(seg), 
-		 .anode_activate(aen), 
-		 .dp(dp)
-		 );
 
-	Division b3(
+	Seven_SegmentDisplay  b3(
+			 .displayed_num(x), 
+			 .clk(clk), 
+			 .clr(clr), 
+			 .numberbox_out(seg), 
+			 .anode_activate(aen)
+			 );	
+			 
+			 
+
+	Division b4(
 		.Q(sw[7:4]),
 		.M(sw[3:0]),
 		.clk(clk),
@@ -84,7 +103,7 @@ module Calculator(
 		.Reminder(Reminder)	
 	);
 	
-	FourBitAdder b4 (
+	FourBitAdder b5 (
 		 .a(sw[7:4]), 
 		 .b(sw[3:0]), 
 		 .clk(clk), 
@@ -92,15 +111,7 @@ module Calculator(
 		 .cout(cout)
     );
 
-	always @(*) begin
-		if({8{~btn[0]}} &  {8{~btn[1]}})begin
-		B = sum[7:0];
-			x[15:12] = scroll_dataout[15:12];	//'hC
-			x[11:8] 	= scroll_dataout[11:8]; 	//hundreds
-			x[7:4] 	= scroll_dataout[7:4];		//tens
-			x[3:0] 	= scroll_dataout[3:0];		//ones
-		end
-	end
+
 	
 	
 	//output on the leds

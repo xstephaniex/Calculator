@@ -22,9 +22,8 @@ module Seven_SegmentDisplay(
     input [15:0] displayed_num,
     input clk,
     input clr,
-    output reg [6:0]numberbox_out,
-    output reg [3:0]anode_activate,
-    output wire dp
+    output reg [6:0]numberbox_out, //cathode patterns
+    output reg [3:0]anode_activate
     );
 
 	wire [1:0] 	numberbox_activator;
@@ -33,7 +32,7 @@ module Seven_SegmentDisplay(
 	reg  [17:0] delayclk; // 50Mhz; last 2 bits for activating signals; clock pink is B8 
 	
 	
-	assign dp = 1;
+
 	assign numberbox_activator = delayclk[17:16];
 	assign aen = 4'b1111; // all turned off initially
 
@@ -60,11 +59,11 @@ module Seven_SegmentDisplay(
 	always @(posedge clk)
 		
 		case(numberbox_activator)
-		0:number = displayed_num[3:0]; 
-		1:number = displayed_num[7:4]; 
-		2:number = displayed_num[11:8];
-		3:number = displayed_num[15:12];		
-		default:number = displayed_num[3:0];
+		3:number = displayed_num[3:0]; 
+		2:number = displayed_num[7:4]; 
+		1:number = displayed_num[11:8];
+		0:number = displayed_num[15:12];		
+		default:number = displayed_num[15:12];
 		endcase
 	
 	//decoder
@@ -72,17 +71,25 @@ module Seven_SegmentDisplay(
 	always @(*)
 	begin
 	case(number)
-	4'b0000: numberbox_out = 7'b1000000; // "0"  
-	4'b0001: numberbox_out = 7'b1111001; // "1" 
-	4'b0010: numberbox_out = 7'b0100100; // "2" 
-	4'b0011: numberbox_out = 7'b0110000; // "3" 
-	4'b0100: numberbox_out = 7'b0011001; // "4" 
-	4'b0101: numberbox_out = 7'b0010010; // "5" 
-	4'b0110: numberbox_out = 7'b0000010; // "6" 
-	4'b0111: numberbox_out = 7'b1111000; // "7" 
-	4'b1000: numberbox_out = 7'b0000000; // "8"  
-	4'b1001: numberbox_out = 7'b0010000; // "9" 
-	default: numberbox_out = 7'b0000000; // "0"
+				4'h0 : numberbox_out <= 7'b1000000;  // 0
+				4'h1 : numberbox_out <= 7'b1111001;  // 1
+				4'h2 : numberbox_out <= 7'b0100100;  // 2
+				4'h3 : numberbox_out <= 7'b0110000;  // 3
+				4'h4 : numberbox_out <= 7'b0011001;  // 4
+				4'h5 : numberbox_out <= 7'b0010010;  // 5
+				4'h6 : numberbox_out <= 7'b0000010;  // 6
+				4'h7 : numberbox_out <= 7'b1111000;  // 7
+				4'h8 : numberbox_out <= 7'b0000000;  // 8
+				4'h9 : numberbox_out <= 7'b0010000;  // 9
+				4'hA : numberbox_out <= 7'b0001000; // A
+				4'hB : numberbox_out <= 7'b0000011;	// B
+				4'hC : numberbox_out <= 7'b1000110;	// C
+				4'hD : numberbox_out <= 7'b0100001;	// D
+				4'hE : numberbox_out <= 7'b0000110;	// E
+				4'hF : numberbox_out <= 7'b0001110;	// F
+				default : numberbox_out <= 7'b0111111;
+
+
 	endcase
 	end
 		

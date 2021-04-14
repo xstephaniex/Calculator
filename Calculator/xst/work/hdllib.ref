@@ -1,9 +1,10 @@
-MO Seven_SegmentDisplay NULL Seven_SegmentDisplay.v vlg01/_seven___segment_display.bin 1618363505
+MO Seven_SegmentDisplay NULL Seven_SegmentDisplay.v vlg01/_seven___segment_display.bin 1618398345
 MO FourBitAdderSubstractor NULL FourBitAdderSubstractor.v vlg5B/_four_bit_adder_substractor.bin 1617391417
-MO FourBitAdder NULL FourBitAdder.v vlg43/_four_bit_adder.bin 1618363505
+MO FourBitAdder NULL FourBitAdder.v vlg43/_four_bit_adder.bin 1618398345
 MO divider NULL Division.v vlg4B/divider.bin 1615147924
-MO Calculator NULL Calculator.v vlg5A/_calculator.bin 1618363505
-MO Division NULL Division.v vlg6D/_division.bin 1618363505
-MO HalfAdder NULL HalfAdder.v vlg73/_half_adder.bin 1618363505
-MO FullAdder NULL FullAdder.v vlg73/_full_adder.bin 1618363505
-MO binary_to_bcd NULL binary_to_bcd.v vlg03/binary__to__bcd.bin 1618363505
+MO Calculator NULL Calculator.v vlg5A/_calculator.bin 1618398345
+MO seg_scroll NULL seg_scroll.v vlg21/seg__scroll.bin 1618398345
+MO Division NULL Division.v vlg6D/_division.bin 1618398345
+MO HalfAdder NULL HalfAdder.v vlg73/_half_adder.bin 1618398345
+MO FullAdder NULL FullAdder.v vlg73/_full_adder.bin 1618398345
+MO binary_to_bcd NULL binary_to_bcd.v vlg03/binary__to__bcd.bin 1618398345

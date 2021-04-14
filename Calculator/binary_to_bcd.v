@@ -31,7 +31,7 @@ module binary_to_bcd(
 	  begin
 		 for(i = 0; i <= 35; i = i+1)
 		 z[i] = 0;
-		 z[18:3] = B; 		 //shift b 3 places left
+		 z[18:3] = B; 		  //shift b 3 places left
 
 
 		 repeat(13)
@@ -46,10 +46,8 @@ module binary_to_bcd(
 			z[31:28] = z[31:28] + 3;
 		if(z[35:32] > 4) 	
 			z[35:32] = z[35:32] + 3;
-
-		z[35:1] = z[34:0];
+		 z[35:1] = z[34:0];
 		 end      
-		 bcdout = z[35:16];	//20 bits
+		 bcdout = z[35:16]; //20 bits
 	  end         
-	  
 endmodule

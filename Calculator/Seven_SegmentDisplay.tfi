@@ -7,8 +7,7 @@ Seven_SegmentDisplay instance_name (
     .clk(clk), 
     .clr(clr), 
     .numberbox_out(numberbox_out), 
-    .anode_activate(anode_activate), 
-    .dp(dp)
+    .anode_activate(anode_activate)
     );
 
 

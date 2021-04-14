@@ -17,10 +17,10 @@ Total CPU time to Xst completion: 0.09 secs
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "Seven_SegmentDisplay.v" in library work
-Module <Seven_SegmentDisplay> compiled
+Compiling verilog file "seg_scroll.v" in library work
+Module <seg_scroll> compiled
 No errors in compilation
-Analysis of file <"Seven_SegmentDisplay.prj"> succeeded.
+Analysis of file <"seg_scroll.prj"> succeeded.
  
 
 
@@ -29,7 +29,7 @@ Total CPU time to Xst completion: 0.10 secs
  
 --> 
 
-Total memory usage is 4468220 kilobytes
+Total memory usage is 4468224 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
