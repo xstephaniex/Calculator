@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+binary_to_bcd instance_name (
+    .B(B), 
+    .bcdout(bcdout)
+    );
+
+

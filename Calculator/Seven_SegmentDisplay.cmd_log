@@ -1,0 +1,3 @@
+vhdtdtfi -lib work C:/Users/User/dev/Calculator/Calculator/Seven_SegmentDisplay.v -lang verilog -prj Calculator -o Seven_SegmentDisplay.spl -module Seven_SegmentDisplay -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Seven_SegmentDisplay.spl C:/Users/User/dev/Calculator/Calculator/Seven_SegmentDisplay.sym 
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/Seven_SegmentDisplay.tfi -lib work C:/Users/User/dev/Calculator/Calculator//Seven_SegmentDisplay.v -module Seven_SegmentDisplay -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

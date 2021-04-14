@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/binary_to_bcd.tfi -lib work C:/Users/User/dev/Calculator/Calculator//binary_to_bcd.v -module binary_to_bcd -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

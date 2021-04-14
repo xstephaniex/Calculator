@@ -1,5 +1,5 @@
 set -tmpdir "C:/Users/User/dev/Calculator/Calculator/xst/projnav.tmp"
 set -xsthdpdir "C:/Users/User/dev/Calculator/Calculator/xst"
 elaborate
--ifn Calculator.prj
+-ifn binary_to_bcd.prj
 -ifmt mixed

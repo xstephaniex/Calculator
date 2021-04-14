@@ -82,7 +82,10 @@
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="HalfAdder.tfi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="HalfAdder.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Seven_SegmentDisplay.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="Seven_SegmentDisplay.spl"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Seven_SegmentDisplay.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Seven_SegmentDisplay.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="Seven_SegmentDisplay.tfi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Seven_SegmentDisplay.xst"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -91,6 +94,10 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="binary_to_bcd.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="binary_to_bcd.stx"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="binary_to_bcd.tfi"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="binary_to_bcd.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="calculator.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="calculator.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="calculator.drc" xil_pn:subbranch="FPGAConfiguration"/>
@@ -135,8 +142,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Calculator.v"/>
       <outfile xil_pn:name="Division.v"/>
       <outfile xil_pn:name="FourBitAdder.v"/>
@@ -163,7 +172,11 @@
     <transform xil_pn:end_ts="1617313727" xil_pn:in_ck="2271269479659963819" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1617313727">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Calculator.v"/>
       <outfile xil_pn:name="Division.v"/>
       <outfile xil_pn:name="FourBitAdder.v"/>
@@ -178,9 +191,11 @@
     <transform xil_pn:end_ts="1617313729" xil_pn:in_ck="2271269479659963819" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2511927775252609177" xil_pn:start_ts="1617313727">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fourbitaddersubstractor_tb_beh.prj"/>
       <outfile xil_pn:name="fourbitaddersubstractor_tb_isim_beh.exe"/>

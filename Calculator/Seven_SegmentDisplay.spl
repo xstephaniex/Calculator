@@ -1,0 +1,12 @@
+[Inputs]
+clk
+clr
+=displayed_num[15:0]=
+[Outputs]
+dp
+=numberbox_out[6:0]=
+=anode_activate[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Seven_SegmentDisplay
+
