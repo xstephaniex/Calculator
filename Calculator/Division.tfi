@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+Division instance_name (
+    .Q(Q), 
+    .M(M), 
+    .clk(clk), 
+    .Quotient(Quotient), 
+    .Reminder(Reminder)
+    );
+
+
