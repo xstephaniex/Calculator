@@ -3,6 +3,24 @@
 // Company: 
 // Engineer: 
 // 
+// Create Date:    21:58:24 04/14/2021 
+// Design Name: 
+// Module Name:    binary_to_BCD 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
 // Create Date:    19:54:49 04/14/2021 
 // Design Name: 
 // Module Name:    binary_to_BCD 
@@ -84,5 +102,4 @@ module binary_to_BCD(
       ones     = shift[11:8];
 
    end
-
 endmodule

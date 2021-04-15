@@ -203,20 +203,20 @@ INFO:Xst:2679 - Register <i> in unit <Division> has a constant value of 100 duri
 Synthesizing Unit <binary_to_BCD>.
     Related source file is "binary_to_BCD.v".
 WARNING:Xst:646 - Signal <shift> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 4-bit adder for signal <$add0000> created at line 54.
-    Found 4-bit adder for signal <$add0001> created at line 54.
-    Found 4-bit adder for signal <$add0002> created at line 54.
-    Found 4-bit adder for signal <$add0003> created at line 54.
-    Found 4-bit adder for signal <$add0004> created at line 60.
-    Found 4-bit adder for signal <$add0005> created at line 54.
-    Found 4-bit adder for signal <$add0006> created at line 60.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0000> created at line 52.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0001> created at line 52.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0002> created at line 52.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0003> created at line 58.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0004> created at line 52.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0005> created at line 58.
-    Found 4-bit comparator greatequal for signal <shift$cmp_ge0006> created at line 52.
+    Found 4-bit adder for signal <$add0000> created at line 72.
+    Found 4-bit adder for signal <$add0001> created at line 72.
+    Found 4-bit adder for signal <$add0002> created at line 72.
+    Found 4-bit adder for signal <$add0003> created at line 72.
+    Found 4-bit adder for signal <$add0004> created at line 78.
+    Found 4-bit adder for signal <$add0005> created at line 72.
+    Found 4-bit adder for signal <$add0006> created at line 78.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0000> created at line 70.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0001> created at line 70.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0002> created at line 70.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0003> created at line 76.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0004> created at line 70.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0005> created at line 76.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0006> created at line 70.
     Summary:
 	inferred   7 Adder/Subtractor(s).
 	inferred   7 Comparator(s).
@@ -687,11 +687,11 @@ Delay:               21.604ns (Levels of Logic = 15)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.89 secs
+Total CPU time to Xst completion: 5.00 secs
  
 --> 
 
-Total memory usage is 4513620 kilobytes
+Total memory usage is 4513628 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   18 (   0 filtered)

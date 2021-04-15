@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-IHPM5K3::  Wed Apr 14 21:41:28 2021
+DESKTOP-IHPM5K3::  Wed Apr 14 22:01:52 2021
 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd
 Calculator.pcf 
