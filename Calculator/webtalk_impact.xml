@@ -4,6 +4,7 @@
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <application name="impact" timeStamp="Wed Apr 14 21:20:05 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f5f8152cab264f22984c1764c4a4fa4d"/>
@@ -11,6 +12,11 @@ This means code written to parse this file will need to be revisited each subseq
 <application name="impact" timeStamp="Wed Apr 14 21:43:14 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="75747977826c431088df356de6e9dda8"/>
+>>>>>>> sevsegmentdisplay
+=======
+<application name="impact" timeStamp="Thu Apr 15 09:04:21 2021">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="e0df8db76a774250be99f2742e21c34a"/>
 >>>>>>> sevsegmentdisplay
 <property name="ProjectIteration" value="1"/>
 </section>

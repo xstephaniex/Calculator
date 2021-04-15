@@ -648,16 +648,9 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp1
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
-bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
-bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
-vhdtdtfi -lib work C:/Users/User/dev/Calculator/Calculator/Calculator.v -lang verilog -prj Calculator -o Calculator.spl -module Calculator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e Calculator.spl C:/Users/User/dev/Calculator/Calculator/Calculator.sym 
-xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
-map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
-netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
 bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
