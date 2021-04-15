@@ -23,11 +23,11 @@ module delay_clock(
     output reg clk_out
     );
 		
-	 reg [19:0]count = 0;
+	 reg [17:0]count = 0;
 	 always @(posedge clk_in)
 	 begin
 	 count <= count+1;
-	 if(count == 250000)
+	 if(count == 65000)
 	 begin
 	 count <= 0;
 	 clk_out = ~clk_out;
