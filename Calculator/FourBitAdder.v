@@ -63,6 +63,7 @@ FullAdder secondblk (
 	 .cout(cout)
  );
  
-assign s [7:4] = 4'b0;
- 
+assign s [7:5] = 4'b0;
+assign s [4] = cout;
+
  endmodule
