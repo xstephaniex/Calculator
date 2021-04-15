@@ -3,13 +3,19 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="impact" timeStamp="Wed Apr 14 21:20:05 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f5f8152cab264f22984c1764c4a4fa4d"/>
+=======
+<application name="impact" timeStamp="Wed Apr 14 21:43:14 2021">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="75747977826c431088df356de6e9dda8"/>
+>>>>>>> sevsegmentdisplay
 <property name="ProjectIteration" value="1"/>
 </section>
 <section name="iMPACT Project Info" visible="true">
-<property name="Use Project File" value="Yes"/>
+<property name="Use Project File" value="No"/>
 <property name="Project Entry" value="ise"/>
 <property name="OS Name" value="Microsoft Windows NT (64 Bit)"/>
 <property name="User Lic. Info" value="212143266_0_0_410"/>

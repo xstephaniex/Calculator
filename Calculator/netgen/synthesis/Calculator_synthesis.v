@@ -7,7 +7,7 @@
 // \   \   \/     Version: P.20131013
 //  \   \         Application: netgen
 //  /   /         Filename: Calculator_synthesis.v
-// /___/   /\     Timestamp: Wed Apr 14 21:12:50 2021
+// /___/   /\     Timestamp: Wed Apr 14 21:41:18 2021
 // \   \  /  \ 
 //  \___\/\___\
 //             
@@ -44,24 +44,28 @@ module Calculator (
   input [7 : 0] sw;
   wire N0;
   wire N02;
-  wire N10;
+  wire N11;
   wire N12;
-  wire N13;
-  wire N30;
+  wire N26;
   wire N38;
   wire N4;
+  wire N40;
   wire N42;
   wire N44;
   wire N46;
   wire N48;
+  wire N5;
+  wire N50;
   wire N52;
   wire N54;
-  wire N56;
-  wire N58;
   wire N6;
+  wire N60;
   wire N64;
   wire N68;
+  wire N69;
   wire N7;
+  wire N70;
+  wire N71;
   wire N72;
   wire N73;
   wire N74;
@@ -70,12 +74,9 @@ module Calculator (
   wire N77;
   wire N78;
   wire N79;
+  wire N8;
   wire N80;
   wire N81;
-  wire N82;
-  wire N83;
-  wire N84;
-  wire N85;
   wire N9;
   wire \Result<1>1 ;
   wire an_0_OBUF_65;
@@ -97,7 +98,7 @@ module Calculator (
   wire \b2/Mmux_out4162_84 ;
   wire \b2/Mmux_out4177_85 ;
   wire \b2/Mmux_out4215_86 ;
-  wire \b2/Mmux_out4260_87 ;
+  wire \b2/Mmux_out4261_87 ;
   wire \b2/Mmux_out427_88 ;
   wire \b2/Mmux_out460_89 ;
   wire \b2/Mmux_out6118_90 ;
@@ -160,31 +161,35 @@ module Calculator (
   wire \led<2>1_227 ;
   wire \led<2>2 ;
   wire \led<3>21_230 ;
-  wire \led<3>7_231 ;
-  wire \led<4>18_233 ;
-  wire led_0_OBUF_237;
-  wire led_1_OBUF_238;
-  wire led_2_OBUF_239;
-  wire led_3_OBUF_240;
-  wire led_4_OBUF_241;
-  wire led_5_OBUF_242;
-  wire led_6_OBUF_243;
-  wire led_7_OBUF_244;
-  wire segment_0_OBUF_263;
-  wire segment_1_OBUF_264;
-  wire segment_2_OBUF_265;
-  wire segment_3_OBUF_266;
-  wire segment_4_OBUF_267;
-  wire segment_5_OBUF_268;
-  wire segment_6_OBUF_269;
-  wire sw_0_IBUF_278;
-  wire sw_1_IBUF_279;
-  wire sw_2_IBUF_280;
-  wire sw_3_IBUF_281;
-  wire sw_4_IBUF_282;
-  wire sw_5_IBUF_283;
-  wire sw_6_IBUF_284;
-  wire sw_7_IBUF_285;
+  wire \led<3>211 ;
+  wire \led<3>2111_232 ;
+  wire \led<3>7_233 ;
+  wire \led<4>131 ;
+  wire \led<4>1311_236 ;
+  wire \led<4>18_237 ;
+  wire led_0_OBUF_241;
+  wire led_1_OBUF_242;
+  wire led_2_OBUF_243;
+  wire led_3_OBUF_244;
+  wire led_4_OBUF_245;
+  wire led_5_OBUF_246;
+  wire led_6_OBUF_247;
+  wire led_7_OBUF_248;
+  wire segment_0_OBUF_267;
+  wire segment_1_OBUF_268;
+  wire segment_2_OBUF_269;
+  wire segment_3_OBUF_270;
+  wire segment_4_OBUF_271;
+  wire segment_5_OBUF_272;
+  wire segment_6_OBUF_273;
+  wire sw_0_IBUF_282;
+  wire sw_1_IBUF_283;
+  wire sw_2_IBUF_284;
+  wire sw_3_IBUF_285;
+  wire sw_4_IBUF_286;
+  wire sw_5_IBUF_287;
+  wire sw_6_IBUF_288;
+  wire sw_7_IBUF_289;
   wire \NLW_Mmult_multiplication_BCIN<17>_UNCONNECTED ;
   wire \NLW_Mmult_multiplication_BCIN<16>_UNCONNECTED ;
   wire \NLW_Mmult_multiplication_BCIN<15>_UNCONNECTED ;
@@ -249,7 +254,7 @@ module Calculator (
   wire \NLW_Mmult_multiplication_BCOUT<2>_UNCONNECTED ;
   wire \NLW_Mmult_multiplication_BCOUT<1>_UNCONNECTED ;
   wire \NLW_Mmult_multiplication_BCOUT<0>_UNCONNECTED ;
-  wire [3 : 2] Msub_substraction_sub0000_lut;
+  wire [2 : 2] Msub_substraction_sub0000_lut;
   wire [19 : 0] Result;
   wire [3 : 2] \b1/Madd__add0003_lut ;
   wire [0 : 0] \b1/Madd__add0006_cy ;
@@ -302,9 +307,9 @@ module Calculator (
     .RSTB(an_4_OBUF_69),
     .RSTP(an_4_OBUF_69),
     .A({an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, 
-an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, sw_7_IBUF_285, sw_6_IBUF_284, sw_5_IBUF_283, sw_4_IBUF_282}),
+an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, sw_7_IBUF_289, sw_6_IBUF_288, sw_5_IBUF_287, sw_4_IBUF_286}),
     .B({an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, 
-an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, sw_3_IBUF_281, sw_2_IBUF_280, sw_1_IBUF_279, sw_0_IBUF_278}),
+an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, an_4_OBUF_69, sw_3_IBUF_285, sw_2_IBUF_284, sw_1_IBUF_283, sw_0_IBUF_282}),
     .BCIN({\NLW_Mmult_multiplication_BCIN<17>_UNCONNECTED , \NLW_Mmult_multiplication_BCIN<16>_UNCONNECTED , 
 \NLW_Mmult_multiplication_BCIN<15>_UNCONNECTED , \NLW_Mmult_multiplication_BCIN<14>_UNCONNECTED , \NLW_Mmult_multiplication_BCIN<13>_UNCONNECTED , 
 \NLW_Mmult_multiplication_BCIN<12>_UNCONNECTED , \NLW_Mmult_multiplication_BCIN<11>_UNCONNECTED , \NLW_Mmult_multiplication_BCIN<10>_UNCONNECTED , 
@@ -858,10 +863,10 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT4 #(
     .INIT ( 16'h0001 ))
   \b7/Quotient_cmp_eq00001  (
-    .I0(sw_1_IBUF_279),
-    .I1(sw_0_IBUF_278),
-    .I2(sw_3_IBUF_281),
-    .I3(sw_2_IBUF_280),
+    .I0(sw_1_IBUF_283),
+    .I1(sw_0_IBUF_282),
+    .I2(sw_3_IBUF_285),
+    .I3(sw_2_IBUF_284),
     .O(\b7/Quotient_not0001_inv )
   );
   LUT3 #(
@@ -876,7 +881,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(\led<0>2_221 ),
     .I1(\led<0>1_220 ),
     .S(btn_1_IBUF_216),
-    .O(led_0_OBUF_237)
+    .O(led_0_OBUF_241)
   );
   LUT3 #(
     .INIT ( 8'hEA ))
@@ -884,7 +889,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(\led<1>160_223 ),
     .I1(btn_0_IBUF_215),
     .I2(\led<1>34 ),
-    .O(led_1_OBUF_238)
+    .O(led_1_OBUF_242)
   );
   LUT3 #(
     .INIT ( 8'hE4 ))
@@ -907,14 +912,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(\led<2>2 ),
     .I1(\led<2>1_227 ),
     .S(btn_1_IBUF_216),
-    .O(led_2_OBUF_239)
-  );
-  LUT2 #(
-    .INIT ( 4'h9 ))
-  \Msub_substraction_sub0000_lut<3>1  (
-    .I0(sw_7_IBUF_285),
-    .I1(sw_3_IBUF_281),
-    .O(Msub_substraction_sub0000_lut[3])
+    .O(led_2_OBUF_243)
   );
   LUT2 #(
     .INIT ( 4'h1 ))
@@ -926,10 +924,10 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT4 #(
     .INIT ( 16'h2A08 ))
   \b2/Mmux_out8107  (
-    .I0(led_7_OBUF_244),
-    .I1(led_6_OBUF_243),
+    .I0(led_7_OBUF_248),
+    .I1(led_6_OBUF_247),
     .I2(\b1/N111 ),
-    .I3(led_5_OBUF_242),
+    .I3(led_5_OBUF_246),
     .O(\b2/Mmux_out8107_98 )
   );
   LUT2 #(
@@ -942,15 +940,15 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT3 #(
     .INIT ( 8'h65 ))
   \b7/Msub__old_A_3_xor<3>11  (
-    .I0(sw_3_IBUF_281),
-    .I1(sw_2_IBUF_280),
+    .I0(sw_3_IBUF_285),
+    .I1(sw_2_IBUF_284),
     .I2(\b7/Msub__old_A_3_cy [1]),
     .O(\b7/_old_A_3 [3])
   );
   LUT4 #(
     .INIT ( 16'h690F ))
   \b7/Msub__old_A_9_lut<3>  (
-    .I0(sw_2_IBUF_280),
+    .I0(sw_2_IBUF_284),
     .I1(\b7/Madd_old_A_7_addsub0000_Madd_cy [1]),
     .I2(N02),
     .I3(\b7/_old_A_6 [3]),
@@ -959,60 +957,68 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT2 #(
     .INIT ( 4'h9 ))
   \Msub_substraction_sub0000_lut<2>1  (
-    .I0(sw_6_IBUF_284),
-    .I1(sw_2_IBUF_280),
+    .I0(sw_6_IBUF_288),
+    .I1(sw_2_IBUF_284),
     .O(Msub_substraction_sub0000_lut[2])
-  );
-  LUT4 #(
-    .INIT ( 16'hEA80 ))
-  \b8/secondblk/cout1  (
-    .I0(sw_1_IBUF_279),
-    .I1(sw_0_IBUF_278),
-    .I2(sw_4_IBUF_282),
-    .I3(sw_5_IBUF_283),
-    .O(\b8/c1 )
   );
   LUT3 #(
     .INIT ( 8'hFE ))
   \b1/shift_mux002221  (
-    .I0(led_5_OBUF_242),
-    .I1(led_4_OBUF_241),
-    .I2(led_3_OBUF_240),
+    .I0(led_5_OBUF_246),
+    .I1(led_4_OBUF_245),
+    .I2(led_3_OBUF_244),
     .O(\b1/N111 )
+  );
+  LUT3 #(
+    .INIT ( 8'hE8 ))
+  \led<3>21  (
+    .I0(sw_2_IBUF_284),
+    .I1(sw_6_IBUF_288),
+    .I2(\b8/c1 ),
+    .O(N5)
+  );
+  LUT4 #(
+    .INIT ( 16'hEA80 ))
+  \b8/secondblk/cout1  (
+    .I0(sw_1_IBUF_283),
+    .I1(sw_0_IBUF_282),
+    .I2(sw_4_IBUF_286),
+    .I3(sw_5_IBUF_287),
+    .O(\b8/c1 )
   );
   LUT3 #(
     .INIT ( 8'h20 ))
   \b1/shift_mux00092  (
-    .I0(led_4_OBUF_241),
-    .I1(led_5_OBUF_242),
-    .I2(led_3_OBUF_240),
+    .I0(led_4_OBUF_245),
+    .I1(led_5_OBUF_246),
+    .I2(led_3_OBUF_244),
     .O(\b1/shift_mux00091_77 )
   );
   MUXF5   \b1/shift_mux0009_f5  (
     .I0(\b1/shift_mux00091_77 ),
     .I1(\b1/shift_mux0009 ),
-    .S(led_6_OBUF_243),
+    .S(led_6_OBUF_247),
     .O(\b1/shift_mux0009_f5_79 )
   );
   LUT4 #(
     .INIT ( 16'h0920 ))
   \b1/shift_mux00093  (
-    .I0(led_6_OBUF_243),
-    .I1(led_4_OBUF_241),
-    .I2(led_3_OBUF_240),
-    .I3(led_5_OBUF_242),
+    .I0(led_6_OBUF_247),
+    .I1(led_4_OBUF_245),
+    .I2(led_3_OBUF_244),
+    .I3(led_5_OBUF_246),
     .O(\b1/shift_mux00092_78 )
   );
   MUXF6   \b1/shift_mux0009_f6  (
     .I0(\b1/shift_mux00092_78 ),
     .I1(\b1/shift_mux0009_f5_79 ),
-    .S(led_7_OBUF_244),
+    .S(led_7_OBUF_248),
     .O(\b1/Madd__add0003_lut [3])
   );
   LUT4 #(
     .INIT ( 16'hF020 ))
   \b2/Mmux_out4162  (
-    .I0(led_2_OBUF_239),
+    .I0(led_2_OBUF_243),
     .I1(\b1/N0 ),
     .I2(\b2/Mmux_out4158_83 ),
     .I3(\b1/Madd__add0003_lut [3]),
@@ -1021,36 +1027,36 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT4 #(
     .INIT ( 16'h0600 ))
   \b2/Mmux_out4215  (
-    .I0(led_1_OBUF_238),
+    .I0(led_1_OBUF_242),
     .I1(\b1/N0 ),
-    .I2(led_2_OBUF_239),
+    .I2(led_2_OBUF_243),
     .I3(\b1/Madd__add0003_lut [2]),
     .O(\b2/Mmux_out4215_86 )
   );
   LUT4 #(
     .INIT ( 16'hAE75 ))
   \b1/shift_mux0010_SW0  (
-    .I0(led_6_OBUF_243),
-    .I1(led_5_OBUF_242),
-    .I2(led_3_OBUF_240),
-    .I3(led_4_OBUF_241),
-    .O(N9)
+    .I0(led_6_OBUF_247),
+    .I1(led_5_OBUF_246),
+    .I2(led_3_OBUF_244),
+    .I3(led_4_OBUF_245),
+    .O(N8)
   );
   LUT4 #(
-    .INIT ( 16'h9AE7 ))
+    .INIT ( 16'h9EA7 ))
   \b1/shift_mux0010_SW1  (
-    .I0(led_6_OBUF_243),
-    .I1(led_5_OBUF_242),
-    .I2(led_3_OBUF_240),
-    .I3(led_4_OBUF_241),
-    .O(N10)
+    .I0(led_6_OBUF_247),
+    .I1(led_5_OBUF_246),
+    .I2(led_4_OBUF_245),
+    .I3(led_3_OBUF_244),
+    .O(N9)
   );
   LUT3 #(
     .INIT ( 8'h27 ))
   \b1/shift_mux0010  (
-    .I0(led_7_OBUF_244),
-    .I1(N10),
-    .I2(N9),
+    .I0(led_7_OBUF_248),
+    .I1(N9),
+    .I2(N8),
     .O(\b1/Madd__add0003_lut [2])
   );
   LUT3 #(
@@ -1059,7 +1065,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(btn_1_IBUF_216),
     .I1(btn_0_IBUF_215),
     .I2(\b7/Quotient [4]),
-    .O(N12)
+    .O(N11)
   );
   LUT3 #(
     .INIT ( 8'hA8 ))
@@ -1067,25 +1073,16 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(btn_1_IBUF_216),
     .I1(\b7/Quotient [4]),
     .I2(btn_0_IBUF_215),
-    .O(N13)
+    .O(N12)
   );
   LUT4 #(
     .INIT ( 16'hFFD8 ))
   \led<5>  (
     .I0(multiplication[5]),
-    .I1(N13),
-    .I2(N12),
+    .I1(N12),
+    .I2(N11),
     .I3(N6),
-    .O(led_5_OBUF_242)
-  );
-  LUT4 #(
-    .INIT ( 16'hFFD8 ))
-  \led<4>  (
-    .I0(multiplication[4]),
-    .I1(N13),
-    .I2(N12),
-    .I3(N6),
-    .O(led_4_OBUF_241)
+    .O(led_5_OBUF_246)
   );
   LUT3 #(
     .INIT ( 8'hE4 ))
@@ -1093,20 +1090,20 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(btn_0_IBUF_215),
     .I1(\b7/Quotient [3]),
     .I2(multiplication[3]),
-    .O(\led<3>7_231 )
+    .O(\led<3>7_233 )
   );
   LUT3 #(
     .INIT ( 8'hE4 ))
   \led<3>32  (
     .I0(btn_1_IBUF_216),
     .I1(\led<3>21_230 ),
-    .I2(\led<3>7_231 ),
-    .O(led_3_OBUF_240)
+    .I2(\led<3>7_233 ),
+    .O(led_3_OBUF_244)
   );
   LUT2 #(
     .INIT ( 4'h2 ))
   \b6/Mrom_numtobedisplay3157  (
-    .I0(led_0_OBUF_237),
+    .I0(led_0_OBUF_241),
     .I1(\b4/temp [1]),
     .O(\b6/Mrom_numtobedisplay3157_177 )
   );
@@ -1114,8 +1111,8 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'hAA7E ))
   \b6/Mrom_numtobedisplay31143  (
     .I0(\b1/Madd__add0003_lut [3]),
-    .I1(led_2_OBUF_239),
-    .I2(led_1_OBUF_238),
+    .I1(led_2_OBUF_243),
+    .I2(led_1_OBUF_242),
     .I3(\b1/N0 ),
     .O(\b6/Mrom_numtobedisplay31143_174 )
   );
@@ -1132,10 +1129,10 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'hFFD8 ))
   \led<6>  (
     .I0(multiplication[6]),
-    .I1(N13),
-    .I2(N12),
+    .I1(N12),
+    .I2(N11),
     .I3(N6),
-    .O(led_6_OBUF_243)
+    .O(led_6_OBUF_247)
   );
   LUT4 #(
     .INIT ( 16'h0100 ))
@@ -1144,7 +1141,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(mux_out[3]),
     .I2(N0),
     .I3(mux_out[1]),
-    .O(segment_4_OBUF_267)
+    .O(segment_4_OBUF_271)
   );
   LUT4 #(
     .INIT ( 16'h0006 ))
@@ -1153,7 +1150,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(N0),
     .I2(mux_out[1]),
     .I3(mux_out[3]),
-    .O(segment_6_OBUF_269)
+    .O(segment_6_OBUF_273)
   );
   LUT4 #(
     .INIT ( 16'h0600 ))
@@ -1162,7 +1159,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(mux_out[1]),
     .I2(mux_out[3]),
     .I3(mux_out[2]),
-    .O(segment_5_OBUF_268)
+    .O(segment_5_OBUF_272)
   );
   LUT4 #(
     .INIT ( 16'h4504 ))
@@ -1171,7 +1168,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(N0),
     .I2(mux_out[2]),
     .I3(mux_out[1]),
-    .O(segment_1_OBUF_264)
+    .O(segment_1_OBUF_268)
   );
   LUT4 #(
     .INIT ( 16'h5710 ))
@@ -1180,7 +1177,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(mux_out[1]),
     .I2(mux_out[2]),
     .I3(N0),
-    .O(segment_2_OBUF_265)
+    .O(segment_2_OBUF_269)
   );
   LUT4 #(
     .INIT ( 16'h4110 ))
@@ -1189,7 +1186,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(mux_out[1]),
     .I2(mux_out[2]),
     .I3(N0),
-    .O(segment_3_OBUF_266)
+    .O(segment_3_OBUF_270)
   );
   LUT4 #(
     .INIT ( 16'hEE91 ))
@@ -1198,22 +1195,22 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(mux_out[1]),
     .I2(N0),
     .I3(mux_out[3]),
-    .O(segment_0_OBUF_263)
+    .O(segment_0_OBUF_267)
   );
   LUT4 #(
     .INIT ( 16'hFFD8 ))
   \led<7>  (
     .I0(multiplication[7]),
-    .I1(N13),
-    .I2(N12),
+    .I1(N12),
+    .I2(N11),
     .I3(N6),
-    .O(led_7_OBUF_244)
+    .O(led_7_OBUF_248)
   );
   LUT4 #(
     .INIT ( 16'h88F8 ))
   \b2/Mmux_out634  (
     .I0(\b1/Madd__add0003_lut [3]),
-    .I1(led_1_OBUF_238),
+    .I1(led_1_OBUF_242),
     .I2(\b1/Madd__add0003_lut [2]),
     .I3(\b1/N0 ),
     .O(\b2/Mmux_out634_95 )
@@ -1221,7 +1218,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT3 #(
     .INIT ( 8'h02 ))
   \b2/Mmux_out6118  (
-    .I0(led_6_OBUF_243),
+    .I0(led_6_OBUF_247),
     .I1(\b1/N111 ),
     .I2(\b1/Madd__add0006_cy [0]),
     .O(\b2/Mmux_out6118_90 )
@@ -1229,18 +1226,18 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT4 #(
     .INIT ( 16'h8A02 ))
   \b2/Mmux_out6147  (
-    .I0(led_7_OBUF_244),
-    .I1(led_6_OBUF_243),
+    .I0(led_7_OBUF_248),
+    .I1(led_6_OBUF_247),
     .I2(\b1/Madd__add0006_cy [0]),
-    .I3(led_4_OBUF_241),
+    .I3(led_4_OBUF_245),
     .O(\b2/Mmux_out6147_91 )
   );
   LUT4 #(
     .INIT ( 16'hB232 ))
   \b2/Mmux_out6166  (
-    .I0(led_3_OBUF_240),
-    .I1(led_6_OBUF_243),
-    .I2(led_4_OBUF_241),
+    .I0(led_3_OBUF_244),
+    .I1(led_6_OBUF_247),
+    .I2(led_4_OBUF_245),
     .I3(\b1/Madd__add0006_cy [0]),
     .O(\b2/Mmux_out6166_92 )
   );
@@ -1248,8 +1245,8 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'hF020 ))
   \b2/Mmux_out6195  (
     .I0(\b2/Mmux_out6166_92 ),
-    .I1(led_7_OBUF_244),
-    .I2(led_5_OBUF_242),
+    .I1(led_7_OBUF_248),
+    .I2(led_5_OBUF_246),
     .I3(\b2/Mmux_out6147_91 ),
     .O(\b2/Mmux_out6195_93 )
   );
@@ -1263,35 +1260,35 @@ multiplication[2], multiplication[1], multiplication[0]}),
   );
   IBUF   sw_7_IBUF (
     .I(sw[7]),
-    .O(sw_7_IBUF_285)
+    .O(sw_7_IBUF_289)
   );
   IBUF   sw_6_IBUF (
     .I(sw[6]),
-    .O(sw_6_IBUF_284)
+    .O(sw_6_IBUF_288)
   );
   IBUF   sw_5_IBUF (
     .I(sw[5]),
-    .O(sw_5_IBUF_283)
+    .O(sw_5_IBUF_287)
   );
   IBUF   sw_4_IBUF (
     .I(sw[4]),
-    .O(sw_4_IBUF_282)
+    .O(sw_4_IBUF_286)
   );
   IBUF   sw_3_IBUF (
     .I(sw[3]),
-    .O(sw_3_IBUF_281)
+    .O(sw_3_IBUF_285)
   );
   IBUF   sw_2_IBUF (
     .I(sw[2]),
-    .O(sw_2_IBUF_280)
+    .O(sw_2_IBUF_284)
   );
   IBUF   sw_1_IBUF (
     .I(sw[1]),
-    .O(sw_1_IBUF_279)
+    .O(sw_1_IBUF_283)
   );
   IBUF   sw_0_IBUF (
     .I(sw[0]),
-    .O(sw_0_IBUF_278)
+    .O(sw_0_IBUF_282)
   );
   OBUF   an_6_OBUF (
     .I(an_4_OBUF_69),
@@ -1322,63 +1319,63 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .O(an[0])
   );
   OBUF   segment_6_OBUF (
-    .I(segment_6_OBUF_269),
+    .I(segment_6_OBUF_273),
     .O(segment[6])
   );
   OBUF   segment_5_OBUF (
-    .I(segment_5_OBUF_268),
+    .I(segment_5_OBUF_272),
     .O(segment[5])
   );
   OBUF   segment_4_OBUF (
-    .I(segment_4_OBUF_267),
+    .I(segment_4_OBUF_271),
     .O(segment[4])
   );
   OBUF   segment_3_OBUF (
-    .I(segment_3_OBUF_266),
+    .I(segment_3_OBUF_270),
     .O(segment[3])
   );
   OBUF   segment_2_OBUF (
-    .I(segment_2_OBUF_265),
+    .I(segment_2_OBUF_269),
     .O(segment[2])
   );
   OBUF   segment_1_OBUF (
-    .I(segment_1_OBUF_264),
+    .I(segment_1_OBUF_268),
     .O(segment[1])
   );
   OBUF   segment_0_OBUF (
-    .I(segment_0_OBUF_263),
+    .I(segment_0_OBUF_267),
     .O(segment[0])
   );
   OBUF   led_7_OBUF (
-    .I(led_7_OBUF_244),
+    .I(led_7_OBUF_248),
     .O(led[7])
   );
   OBUF   led_6_OBUF (
-    .I(led_6_OBUF_243),
+    .I(led_6_OBUF_247),
     .O(led[6])
   );
   OBUF   led_5_OBUF (
-    .I(led_5_OBUF_242),
+    .I(led_5_OBUF_246),
     .O(led[5])
   );
   OBUF   led_4_OBUF (
-    .I(led_4_OBUF_241),
+    .I(led_4_OBUF_245),
     .O(led[4])
   );
   OBUF   led_3_OBUF (
-    .I(led_3_OBUF_240),
+    .I(led_3_OBUF_244),
     .O(led[3])
   );
   OBUF   led_2_OBUF (
-    .I(led_2_OBUF_239),
+    .I(led_2_OBUF_243),
     .O(led[2])
   );
   OBUF   led_1_OBUF (
-    .I(led_1_OBUF_238),
+    .I(led_1_OBUF_242),
     .O(led[1])
   );
   OBUF   led_0_OBUF (
-    .I(led_0_OBUF_237),
+    .I(led_0_OBUF_241),
     .O(led[0])
   );
   FDR #(
@@ -1507,50 +1504,34 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'h65E5 ))
   \b2/Mmux_out4105_SW0  (
     .I0(\b1/Madd__add0006_cy [0]),
-    .I1(led_3_OBUF_240),
-    .I2(led_7_OBUF_244),
-    .I3(led_6_OBUF_243),
-    .O(N30)
-  );
-  LUT2 #(
-    .INIT ( 4'hD ))
-  \led<4>131_SW0  (
-    .I0(btn_0_IBUF_215),
-    .I1(btn_1_IBUF_216),
-    .O(N38)
-  );
-  LUT4 #(
-    .INIT ( 16'h4504 ))
-  \led<4>131  (
-    .I0(N38),
-    .I1(\led<4>18_233 ),
-    .I2(sw_7_IBUF_285),
-    .I3(sw_3_IBUF_281),
-    .O(N6)
+    .I1(led_3_OBUF_244),
+    .I2(led_7_OBUF_248),
+    .I3(led_6_OBUF_247),
+    .O(N26)
   );
   LUT4 #(
     .INIT ( 16'h4062 ))
   \b2/Mmux_out6122_SW0  (
-    .I0(led_6_OBUF_243),
-    .I1(led_7_OBUF_244),
+    .I0(led_6_OBUF_247),
+    .I1(led_7_OBUF_248),
     .I2(\b1/Madd__add0006_cy [0]),
-    .I3(led_4_OBUF_241),
-    .O(N42)
+    .I3(led_4_OBUF_245),
+    .O(N38)
   );
   LUT4 #(
     .INIT ( 16'h965A ))
   \led<1>160_SW0  (
-    .I0(sw_1_IBUF_279),
-    .I1(sw_0_IBUF_278),
-    .I2(sw_5_IBUF_283),
-    .I3(sw_4_IBUF_282),
-    .O(N44)
+    .I0(sw_1_IBUF_283),
+    .I1(sw_0_IBUF_282),
+    .I2(sw_5_IBUF_287),
+    .I3(sw_4_IBUF_286),
+    .O(N40)
   );
   LUT4 #(
     .INIT ( 16'h0E04 ))
   \led<1>160  (
     .I0(btn_1_IBUF_216),
-    .I1(N44),
+    .I1(N40),
     .I2(btn_0_IBUF_215),
     .I3(\b7/Quotient [1]),
     .O(\led<1>160_223 )
@@ -1558,20 +1539,28 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT4 #(
     .INIT ( 16'h6A56 ))
   \b7/Quotient_mux00001_SW0  (
-    .I0(sw_3_IBUF_281),
+    .I0(sw_3_IBUF_285),
     .I1(\b7/_old_A_10 [1]),
     .I2(\b7/Msub__old_A_12_cy [1]),
-    .I3(sw_2_IBUF_280),
-    .O(N46)
+    .I3(sw_2_IBUF_284),
+    .O(N42)
   );
   LUT4 #(
     .INIT ( 16'h695A ))
   \b7/Quotient_mux00001  (
     .I0(\b7/_old_A_9 [2]),
     .I1(N4),
-    .I2(N46),
+    .I2(N42),
     .I3(\b7/_old_A_9 [3]),
     .O(\b7/Quotient_mux0000 )
+  );
+  LUT3 #(
+    .INIT ( 8'hE8 ))
+  \led<4>29_SW0  (
+    .I0(N5),
+    .I1(sw_3_IBUF_285),
+    .I2(sw_7_IBUF_289),
+    .O(N44)
   );
   LUT4 #(
     .INIT ( 16'h575F ))
@@ -1580,24 +1569,24 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(btn_0_IBUF_215),
     .I2(\led<1>160_223 ),
     .I3(\led<1>34 ),
-    .O(N48)
+    .O(N46)
   );
   LUT4 #(
     .INIT ( 16'h2301 ))
   \b2/Mmux_out4177  (
     .I0(\b1/Madd__add0003_lut [2]),
-    .I1(N48),
+    .I1(N46),
     .I2(\b1/Madd__add0003_lut [3]),
-    .I3(led_2_OBUF_239),
+    .I3(led_2_OBUF_243),
     .O(\b2/Mmux_out4177_85 )
   );
   LUT4 #(
     .INIT ( 16'h2A08 ))
   \b6/Mrom_numtobedisplay3144  (
     .I0(\b4/temp [1]),
-    .I1(led_6_OBUF_243),
-    .I2(N52),
-    .I3(led_7_OBUF_244),
+    .I1(led_6_OBUF_247),
+    .I2(N48),
+    .I3(led_7_OBUF_248),
     .O(\b6/Mrom_numtobedisplay3144_176 )
   );
   LUT4 #(
@@ -1605,15 +1594,15 @@ multiplication[2], multiplication[1], multiplication[0]}),
   \b6/Mrom_numtobedisplay31108_SW0  (
     .I0(\b1/N0 ),
     .I1(\b1/Madd__add0003_lut [3]),
-    .I2(led_2_OBUF_239),
-    .I3(led_1_OBUF_238),
-    .O(N54)
+    .I2(led_2_OBUF_243),
+    .I3(led_1_OBUF_242),
+    .O(N50)
   );
   LUT4 #(
     .INIT ( 16'hF020 ))
   \b2/Mmux_out663  (
     .I0(\b2/Mmux_out634_95 ),
-    .I1(led_2_OBUF_239),
+    .I1(led_2_OBUF_243),
     .I2(\b2/Mmux_out661 ),
     .I3(\b2/Mmux_out622_94 ),
     .O(\b2/Mmux_out663_97 )
@@ -1621,50 +1610,50 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT2 #(
     .INIT ( 4'h6 ))
   \led<0>2  (
-    .I0(sw_4_IBUF_282),
-    .I1(sw_0_IBUF_278),
+    .I0(sw_4_IBUF_286),
+    .I1(sw_0_IBUF_282),
     .O(\led<0>2_221 )
   );
   LUT3 #(
     .INIT ( 8'h09 ))
   \b1/shift_mux00091  (
-    .I0(led_3_OBUF_240),
-    .I1(led_5_OBUF_242),
-    .I2(led_4_OBUF_241),
+    .I0(led_3_OBUF_244),
+    .I1(led_5_OBUF_246),
+    .I2(led_4_OBUF_245),
     .O(\b1/shift_mux0009 )
   );
   LUT4 #(
     .INIT ( 16'hF571 ))
   \b7/Msub__old_A_9_cy<1>11  (
-    .I0(sw_1_IBUF_279),
-    .I1(sw_0_IBUF_278),
+    .I0(sw_1_IBUF_283),
+    .I1(sw_0_IBUF_282),
     .I2(\b7/_old_A_7 [0]),
-    .I3(sw_5_IBUF_283),
+    .I3(sw_5_IBUF_287),
     .O(\b7/Msub__old_A_9_cy [1])
   );
   LUT4 #(
     .INIT ( 16'hF571 ))
   \b7/Msub__old_A_6_cy<1>11  (
-    .I0(sw_1_IBUF_279),
-    .I1(sw_0_IBUF_278),
+    .I0(sw_1_IBUF_283),
+    .I1(sw_0_IBUF_282),
     .I2(\b7/_old_A_4 [0]),
-    .I3(sw_6_IBUF_284),
+    .I3(sw_6_IBUF_288),
     .O(\b7/Msub__old_A_6_cy [1])
   );
   LUT4 #(
     .INIT ( 16'h7510 ))
   \led<2>21  (
-    .I0(sw_5_IBUF_283),
-    .I1(sw_4_IBUF_282),
-    .I2(sw_0_IBUF_278),
-    .I3(sw_1_IBUF_279),
+    .I0(sw_5_IBUF_287),
+    .I1(sw_4_IBUF_286),
+    .I2(sw_0_IBUF_282),
+    .I3(sw_1_IBUF_283),
     .O(N7)
   );
   LUT2 #(
     .INIT ( 4'h2 ))
   \b7/Madd_old_A_10_addsub0000_Madd_cy<0>11  (
-    .I0(sw_0_IBUF_278),
-    .I1(sw_5_IBUF_283),
+    .I0(sw_0_IBUF_282),
+    .I1(sw_5_IBUF_287),
     .O(\b7/Madd_old_A_10_addsub0000_Madd_cy [0])
   );
   LUT4 #(
@@ -1672,23 +1661,23 @@ multiplication[2], multiplication[1], multiplication[0]}),
   \b7/_old_A_10<1>1  (
     .I0(\b7/_old_A_9 [1]),
     .I1(\b7/Madd_old_A_10_addsub0000_Madd_cy [0]),
-    .I2(sw_1_IBUF_279),
+    .I2(sw_1_IBUF_283),
     .I3(\b7/_old_A_9 [3]),
     .O(\b7/_old_A_10 [1])
   );
   LUT3 #(
     .INIT ( 8'h31 ))
   \b7/Msub__old_A_3_cy<1>11  (
-    .I0(sw_0_IBUF_278),
-    .I1(sw_1_IBUF_279),
-    .I2(sw_7_IBUF_285),
+    .I0(sw_0_IBUF_282),
+    .I1(sw_1_IBUF_283),
+    .I2(sw_7_IBUF_289),
     .O(\b7/Msub__old_A_3_cy [1])
   );
   LUT3 #(
     .INIT ( 8'hA6 ))
   \b7/_old_A_4<0>1  (
-    .I0(sw_7_IBUF_285),
-    .I1(sw_0_IBUF_278),
+    .I0(sw_7_IBUF_289),
+    .I1(sw_0_IBUF_282),
     .I2(\b7/_old_A_3 [3]),
     .O(\b7/_old_A_4 [0])
   );
@@ -1698,14 +1687,14 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(\b7/Msub__old_A_9_lut [3]),
     .I1(\b7/_old_A_7 [1]),
     .I2(\b7/Msub__old_A_9_cy [1]),
-    .I3(sw_2_IBUF_280),
+    .I3(sw_2_IBUF_284),
     .O(\b7/_old_A_9 [3])
   );
   LUT3 #(
     .INIT ( 8'hA6 ))
   \b7/_old_A_7<0>1  (
-    .I0(sw_6_IBUF_284),
-    .I1(sw_0_IBUF_278),
+    .I0(sw_6_IBUF_288),
+    .I1(sw_0_IBUF_282),
     .I2(\b7/_old_A_6 [3]),
     .O(\b7/_old_A_7 [0])
   );
@@ -1713,9 +1702,9 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'h695A ))
   \b7/Msub__old_A_9_xor<1>11  (
     .I0(\b7/_old_A_7 [0]),
-    .I1(sw_5_IBUF_283),
-    .I2(sw_1_IBUF_279),
-    .I3(sw_0_IBUF_278),
+    .I1(sw_5_IBUF_287),
+    .I2(sw_1_IBUF_283),
+    .I3(sw_0_IBUF_282),
     .O(\b7/_old_A_9 [1])
   );
   LUT4 #(
@@ -1724,40 +1713,40 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(\b7/Msub__old_A_6_lut [3]),
     .I1(\b7/_old_A_4 [1]),
     .I2(\b7/Msub__old_A_6_cy [1]),
-    .I3(sw_2_IBUF_280),
+    .I3(sw_2_IBUF_284),
     .O(\b7/_old_A_6 [3])
   );
   LUT3 #(
     .INIT ( 8'h8E ))
   \led<4>18  (
     .I0(N7),
-    .I1(sw_2_IBUF_280),
-    .I2(sw_6_IBUF_284),
-    .O(\led<4>18_233 )
+    .I1(sw_2_IBUF_284),
+    .I2(sw_6_IBUF_288),
+    .O(\led<4>18_237 )
   );
   LUT3 #(
     .INIT ( 8'hA6 ))
   \b7/a1_3_1_mux00001  (
-    .I0(sw_3_IBUF_281),
+    .I0(sw_3_IBUF_285),
     .I1(\b7/Msub__old_A_3_cy [1]),
-    .I2(sw_2_IBUF_280),
+    .I2(sw_2_IBUF_284),
     .O(\b7/a1_3_1_mux0000 )
   );
   LUT3 #(
     .INIT ( 8'h69 ))
   \b7/Msub__old_A_9_xor<2>11  (
     .I0(\b7/_old_A_7 [1]),
-    .I1(sw_2_IBUF_280),
+    .I1(sw_2_IBUF_284),
     .I2(\b7/Msub__old_A_9_cy [1]),
     .O(\b7/_old_A_9 [2])
   );
   LUT4 #(
     .INIT ( 16'h0E04 ))
   \b2/Mmux_out4158  (
-    .I0(led_7_OBUF_244),
-    .I1(N9),
-    .I2(led_1_OBUF_238),
-    .I3(N10),
+    .I0(led_7_OBUF_248),
+    .I1(N8),
+    .I2(led_1_OBUF_242),
+    .I3(N9),
     .O(\b2/Mmux_out4158_83 )
   );
   LUT4 #(
@@ -1766,15 +1755,15 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I0(\b1/shift_cmp_ge0002_75 ),
     .I1(btn_1_IBUF_216),
     .I2(\led<3>21_230 ),
-    .I3(\led<3>7_231 ),
+    .I3(\led<3>7_233 ),
     .O(\b1/N0 )
   );
   LUT4 #(
     .INIT ( 16'hA995 ))
   \b7/Msub__old_A_12_lut<3>_SW0  (
-    .I0(sw_2_IBUF_280),
+    .I0(sw_2_IBUF_284),
     .I1(\b7/_old_A_9 [1]),
-    .I2(sw_1_IBUF_279),
+    .I2(sw_1_IBUF_283),
     .I3(\b7/Madd_old_A_10_addsub0000_Madd_cy [0]),
     .O(N4)
   );
@@ -1785,13 +1774,13 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .I1(\b1/Madd__add0006_cy [0]),
     .I2(\b2/Mmux_out8137 ),
     .I3(\b2/Mmux_out8107_98 ),
-    .O(N58)
+    .O(N54)
   );
   LUT4 #(
     .INIT ( 16'hAAAB ))
   \b2/Mmux_out8187  (
-    .I0(N58),
-    .I1(N56),
+    .I0(N54),
+    .I1(N52),
     .I2(\b4/temp [0]),
     .I3(\b4/temp [1]),
     .O(mux_out[3])
@@ -1800,9 +1789,9 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'h9669 ))
   \b7/Msub__old_A_9_lut<3>_SW0  (
     .I0(\b7/_old_A_4 [1]),
-    .I1(sw_2_IBUF_280),
+    .I1(sw_2_IBUF_284),
     .I2(\b7/Msub__old_A_6_cy [1]),
-    .I3(sw_3_IBUF_281),
+    .I3(sw_3_IBUF_285),
     .O(N02)
   );
   LUT4 #(
@@ -1810,7 +1799,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
   \b6/Mrom_numtobedisplay31177  (
     .I0(\b2/Mmux_out4129 ),
     .I1(\b1/Madd__add0003_lut [2]),
-    .I2(N54),
+    .I2(N50),
     .I3(\b6/Mrom_numtobedisplay31143_174 ),
     .O(\b6/Mrom_numtobedisplay31177_175 )
   );
@@ -1818,9 +1807,9 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'h7510 ))
   \b7/Madd_old_A_7_addsub0000_Madd_cy<1>11  (
     .I0(\b7/_old_A_4 [0]),
-    .I1(sw_6_IBUF_284),
-    .I2(sw_0_IBUF_278),
-    .I3(sw_1_IBUF_279),
+    .I1(sw_6_IBUF_288),
+    .I2(sw_0_IBUF_282),
+    .I3(sw_1_IBUF_283),
     .O(\b7/Madd_old_A_7_addsub0000_Madd_cy [1])
   );
   LUT4 #(
@@ -1828,7 +1817,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
   \b7/a1_3_1_mux00011  (
     .I0(\b7/Msub__old_A_6_lut [3]),
     .I1(\b7/_old_A_4 [1]),
-    .I2(sw_2_IBUF_280),
+    .I2(sw_2_IBUF_284),
     .I3(\b7/Msub__old_A_6_cy [1]),
     .O(\b7/a1_3_1_mux0001 )
   );
@@ -1837,34 +1826,34 @@ multiplication[2], multiplication[1], multiplication[0]}),
   \b7/a1_3_1_mux00021  (
     .I0(\b7/Msub__old_A_9_lut [3]),
     .I1(\b7/_old_A_7 [1]),
-    .I2(sw_2_IBUF_280),
+    .I2(sw_2_IBUF_284),
     .I3(\b7/Msub__old_A_9_cy [1]),
     .O(\b7/a1_3_1_mux0002 )
   );
   LUT4 #(
     .INIT ( 16'hA820 ))
   \b2/Mmux_out427  (
-    .I0(led_4_OBUF_241),
+    .I0(led_4_OBUF_245),
     .I1(btn_1_IBUF_216),
     .I2(\led<3>21_230 ),
-    .I3(\led<3>7_231 ),
+    .I3(\led<3>7_233 ),
     .O(\b2/Mmux_out427_88 )
   );
   LUT4 #(
     .INIT ( 16'hFFAE ))
   \b2/Mmux_out6237_SW0  (
     .I0(\b2/Mmux_out6195_93 ),
-    .I1(N42),
-    .I2(led_5_OBUF_242),
+    .I1(N38),
+    .I2(led_5_OBUF_246),
     .I3(\b2/Mmux_out6118_90 ),
-    .O(N64)
+    .O(N60)
   );
   LUT4 #(
     .INIT ( 16'hFF20 ))
   \b2/Mmux_out6237  (
     .I0(\b4/temp [0]),
     .I1(\b4/temp [1]),
-    .I2(N64),
+    .I2(N60),
     .I3(\b2/Mmux_out663_97 ),
     .O(mux_out[2])
   );
@@ -1872,88 +1861,135 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'hAAAB ))
   \b2/Mmux_out4273_SW0  (
     .I0(\b2/Mmux_out460_89 ),
-    .I1(N30),
-    .I2(led_4_OBUF_241),
-    .I3(led_5_OBUF_242),
-    .O(N68)
+    .I1(N26),
+    .I2(led_4_OBUF_245),
+    .I3(led_5_OBUF_246),
+    .O(N64)
   );
   LUT4 #(
     .INIT ( 16'hFF20 ))
   \b2/Mmux_out4273  (
     .I0(\b4/temp [0]),
     .I1(\b4/temp [1]),
-    .I2(N68),
-    .I3(\b2/Mmux_out4260_87 ),
+    .I2(N64),
+    .I3(\b2/Mmux_out4261_87 ),
     .O(mux_out[1])
   );
   LUT4 #(
     .INIT ( 16'h4414 ))
   \b7/_old_A_4<1>1  (
     .I0(\b7/_old_A_3 [3]),
-    .I1(sw_1_IBUF_279),
-    .I2(sw_0_IBUF_278),
-    .I3(sw_7_IBUF_285),
+    .I1(sw_1_IBUF_283),
+    .I2(sw_0_IBUF_282),
+    .I3(sw_7_IBUF_289),
     .O(\b7/_old_A_4 [1])
   );
+  MUXF5   \b2/Mmux_out4261  (
+    .I0(N68),
+    .I1(N69),
+    .S(\b4/temp [1]),
+    .O(\b2/Mmux_out4261_87 )
+  );
+  LUT4 #(
+    .INIT ( 16'h3332 ))
+  \b2/Mmux_out4261_F  (
+    .I0(\b2/Mmux_out4177_85 ),
+    .I1(\b4/temp [0]),
+    .I2(\b2/Mmux_out4215_86 ),
+    .I3(\b2/Mmux_out4162_84 ),
+    .O(N68)
+  );
+  LUT4 #(
+    .INIT ( 16'h0800 ))
+  \b2/Mmux_out4261_G  (
+    .I0(led_6_OBUF_247),
+    .I1(led_7_OBUF_248),
+    .I2(\b4/temp [0]),
+    .I3(\b1/N111 ),
+    .O(N69)
+  );
   MUXF5   \b1/shift_cmp_ge0002  (
-    .I0(N72),
-    .I1(N73),
-    .S(led_6_OBUF_243),
+    .I0(N70),
+    .I1(N71),
+    .S(led_7_OBUF_248),
     .O(\b1/shift_cmp_ge0002_75 )
   );
   LUT4 #(
-    .INIT ( 16'h5A58 ))
+    .INIT ( 16'h83C8 ))
   \b1/shift_cmp_ge0002_F  (
-    .I0(led_5_OBUF_242),
-    .I1(led_3_OBUF_240),
-    .I2(led_7_OBUF_244),
-    .I3(led_4_OBUF_241),
-    .O(N72)
+    .I0(led_3_OBUF_244),
+    .I1(led_5_OBUF_246),
+    .I2(led_4_OBUF_245),
+    .I3(led_6_OBUF_247),
+    .O(N70)
   );
   LUT4 #(
-    .INIT ( 16'h6B29 ))
+    .INIT ( 16'h7363 ))
   \b1/shift_cmp_ge0002_G  (
-    .I0(led_7_OBUF_244),
-    .I1(led_5_OBUF_242),
-    .I2(led_4_OBUF_241),
-    .I3(led_3_OBUF_240),
-    .O(N73)
+    .I0(led_4_OBUF_245),
+    .I1(led_5_OBUF_246),
+    .I2(led_6_OBUF_247),
+    .I3(led_3_OBUF_244),
+    .O(N71)
   );
   MUXF5   \b2/Mmux_out622  (
-    .I0(N74),
-    .I1(N75),
+    .I0(N72),
+    .I1(N73),
     .S(\b1/Madd__add0003_lut [3]),
     .O(\b2/Mmux_out622_94 )
   );
   LUT4 #(
     .INIT ( 16'h2264 ))
   \b2/Mmux_out622_F  (
-    .I0(led_2_OBUF_239),
+    .I0(led_2_OBUF_243),
     .I1(\b1/Madd__add0003_lut [2]),
     .I2(\b1/N0 ),
-    .I3(led_1_OBUF_238),
-    .O(N74)
+    .I3(led_1_OBUF_242),
+    .O(N72)
   );
   LUT3 #(
     .INIT ( 8'h02 ))
   \b2/Mmux_out622_G  (
-    .I0(led_2_OBUF_239),
+    .I0(led_2_OBUF_243),
     .I1(\b1/Madd__add0003_lut [2]),
-    .I2(led_1_OBUF_238),
+    .I2(led_1_OBUF_242),
+    .O(N73)
+  );
+  MUXF5   \led<4>51  (
+    .I0(N74),
+    .I1(N75),
+    .S(btn_0_IBUF_215),
+    .O(led_4_OBUF_245)
+  );
+  LUT4 #(
+    .INIT ( 16'hFFD8 ))
+  \led<4>51_F  (
+    .I0(btn_1_IBUF_216),
+    .I1(\b7/Quotient [4]),
+    .I2(N44),
+    .I3(N6),
+    .O(N74)
+  );
+  LUT3 #(
+    .INIT ( 8'hEA ))
+  \led<4>51_G  (
+    .I0(N6),
+    .I1(multiplication[4]),
+    .I2(btn_1_IBUF_216),
     .O(N75)
   );
   MUXF5   \b2/Mmux_out460  (
     .I0(N76),
     .I1(N77),
-    .S(led_7_OBUF_244),
+    .S(led_7_OBUF_248),
     .O(\b2/Mmux_out460_89 )
   );
   LUT4 #(
     .INIT ( 16'h6222 ))
   \b2/Mmux_out460_F  (
     .I0(\b1/Madd__add0006_cy [0]),
-    .I1(led_6_OBUF_243),
-    .I2(led_5_OBUF_242),
+    .I1(led_6_OBUF_247),
+    .I2(led_5_OBUF_246),
     .I3(\b2/Mmux_out427_88 ),
     .O(N76)
   );
@@ -1961,106 +1997,58 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'h9991 ))
   \b2/Mmux_out460_G  (
     .I0(\b1/Madd__add0006_cy [0]),
-    .I1(led_6_OBUF_243),
-    .I2(led_4_OBUF_241),
-    .I3(led_5_OBUF_242),
+    .I1(led_6_OBUF_247),
+    .I2(led_4_OBUF_245),
+    .I3(led_5_OBUF_246),
     .O(N77)
   );
   MUXF5   \b2/Mmux_out880_SW0  (
     .I0(N78),
     .I1(N79),
     .S(\b1/Madd__add0003_lut [2]),
-    .O(N56)
+    .O(N52)
   );
   LUT4 #(
     .INIT ( 16'h6AFE ))
   \b2/Mmux_out880_SW0_F  (
     .I0(\b1/N0 ),
-    .I1(led_1_OBUF_238),
-    .I2(led_2_OBUF_239),
+    .I1(led_1_OBUF_242),
+    .I2(led_2_OBUF_243),
     .I3(\b1/Madd__add0003_lut [3]),
     .O(N78)
   );
   LUT4 #(
     .INIT ( 16'hFBDB ))
   \b2/Mmux_out880_SW0_G  (
-    .I0(led_1_OBUF_238),
-    .I1(led_2_OBUF_239),
+    .I0(led_1_OBUF_242),
+    .I1(led_2_OBUF_243),
     .I2(\b1/N0 ),
     .I3(\b1/Madd__add0003_lut [3]),
     .O(N79)
   );
-  MUXF5   \b2/Mmux_out4260  (
+  MUXF5   \b6/Mrom_numtobedisplay3144_SW0  (
     .I0(N80),
     .I1(N81),
-    .S(\b4/temp [1]),
-    .O(\b2/Mmux_out4260_87 )
-  );
-  LUT4 #(
-    .INIT ( 16'h3332 ))
-  \b2/Mmux_out4260_F  (
-    .I0(\b2/Mmux_out4177_85 ),
-    .I1(\b4/temp [0]),
-    .I2(\b2/Mmux_out4215_86 ),
-    .I3(\b2/Mmux_out4162_84 ),
-    .O(N80)
-  );
-  LUT4 #(
-    .INIT ( 16'h0800 ))
-  \b2/Mmux_out4260_G  (
-    .I0(led_7_OBUF_244),
-    .I1(led_6_OBUF_243),
-    .I2(\b4/temp [0]),
-    .I3(\b1/N111 ),
-    .O(N81)
-  );
-  MUXF5   \b6/Mrom_numtobedisplay3144_SW0  (
-    .I0(N82),
-    .I1(N83),
-    .S(led_5_OBUF_242),
-    .O(N52)
+    .S(led_5_OBUF_246),
+    .O(N48)
   );
   LUT4 #(
     .INIT ( 16'hADFD ))
   \b6/Mrom_numtobedisplay3144_SW0_F  (
-    .I0(led_7_OBUF_244),
-    .I1(led_3_OBUF_240),
-    .I2(led_4_OBUF_241),
+    .I0(led_7_OBUF_248),
+    .I1(led_3_OBUF_244),
+    .I2(led_4_OBUF_245),
     .I3(\b1/Madd__add0006_cy [0]),
-    .O(N82)
+    .O(N80)
   );
   LUT4 #(
     .INIT ( 16'hF1F5 ))
   \b6/Mrom_numtobedisplay3144_SW0_G  (
     .I0(\b1/Madd__add0006_cy [0]),
-    .I1(led_4_OBUF_241),
-    .I2(led_7_OBUF_244),
-    .I3(led_3_OBUF_240),
-    .O(N83)
-  );
-  MUXF5   \led<3>21  (
-    .I0(N84),
-    .I1(N85),
-    .S(btn_0_IBUF_215),
-    .O(\led<3>21_230 )
-  );
-  LUT4 #(
-    .INIT ( 16'hA995 ))
-  \led<3>21_F  (
-    .I0(Msub_substraction_sub0000_lut[3]),
-    .I1(sw_6_IBUF_284),
-    .I2(sw_2_IBUF_280),
-    .I3(\b8/c1 ),
-    .O(N84)
-  );
-  LUT4 #(
-    .INIT ( 16'h9A59 ))
-  \led<3>21_G  (
-    .I0(Msub_substraction_sub0000_lut[3]),
-    .I1(N7),
-    .I2(sw_6_IBUF_284),
-    .I3(sw_2_IBUF_280),
-    .O(N85)
+    .I1(led_4_OBUF_245),
+    .I2(led_7_OBUF_248),
+    .I3(led_3_OBUF_244),
+    .O(N81)
   );
   BUFGP   clk_BUFGP (
     .I(clk),
@@ -2078,7 +2066,7 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 8'h75 ))
   \b1/shift_mux00161  (
     .I0(\b1/Madd__add0003_lut [2]),
-    .I1(led_2_OBUF_239),
+    .I1(led_2_OBUF_243),
     .I2(\b1/N0 ),
     .O(\b1/shift_mux0016 )
   );
@@ -2086,9 +2074,9 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'hAA28 ))
   \b1/shift_mux00162  (
     .I0(\b1/Madd__add0003_lut [2]),
-    .I1(led_3_OBUF_240),
+    .I1(led_3_OBUF_244),
     .I2(\b1/shift_cmp_ge0002_75 ),
-    .I3(led_2_OBUF_239),
+    .I3(led_2_OBUF_243),
     .O(\b1/shift_mux00161_81 )
   );
   MUXF5   \b1/shift_mux0016_f5  (
@@ -2100,47 +2088,95 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT4 #(
     .INIT ( 16'h60E0 ))
   \b2/Mmux_out81371  (
-    .I0(led_4_OBUF_241),
-    .I1(led_5_OBUF_242),
-    .I2(led_6_OBUF_243),
-    .I3(led_3_OBUF_240),
+    .I0(led_4_OBUF_245),
+    .I1(led_5_OBUF_246),
+    .I2(led_6_OBUF_247),
+    .I3(led_3_OBUF_244),
     .O(\b2/Mmux_out81371_100 )
   );
   MUXF5   \b2/Mmux_out8137_f5  (
     .I0(\b2/Mmux_out81371_100 ),
     .I1(an_4_OBUF_69),
-    .S(led_7_OBUF_244),
+    .S(led_7_OBUF_248),
     .O(\b2/Mmux_out8137 )
+  );
+  LUT4 #(
+    .INIT ( 16'h0800 ))
+  \led<4>1311  (
+    .I0(\led<4>18_237 ),
+    .I1(btn_0_IBUF_215),
+    .I2(btn_1_IBUF_216),
+    .I3(sw_3_IBUF_285),
+    .O(\led<4>131 )
+  );
+  LUT4 #(
+    .INIT ( 16'h0C08 ))
+  \led<4>1312  (
+    .I0(\led<4>18_237 ),
+    .I1(btn_0_IBUF_215),
+    .I2(btn_1_IBUF_216),
+    .I3(sw_3_IBUF_285),
+    .O(\led<4>1311_236 )
+  );
+  MUXF5   \led<4>131_f5  (
+    .I0(\led<4>1311_236 ),
+    .I1(\led<4>131 ),
+    .S(sw_7_IBUF_289),
+    .O(N6)
   );
   LUT4 #(
     .INIT ( 16'h8EFF ))
   \b7/Msub__old_A_12_cy<1>111  (
     .I0(\b7/_old_A_9 [3]),
-    .I1(sw_4_IBUF_282),
-    .I2(sw_1_IBUF_279),
-    .I3(sw_0_IBUF_278),
+    .I1(sw_4_IBUF_286),
+    .I2(sw_1_IBUF_283),
+    .I3(sw_0_IBUF_282),
     .O(\b7/Msub__old_A_12_cy<1>11 )
   );
   LUT4 #(
     .INIT ( 16'h20F7 ))
   \b7/Msub__old_A_12_cy<1>112  (
-    .I0(sw_0_IBUF_278),
+    .I0(sw_0_IBUF_282),
     .I1(\b7/_old_A_9 [3]),
-    .I2(sw_4_IBUF_282),
-    .I3(sw_1_IBUF_279),
+    .I2(sw_4_IBUF_286),
+    .I3(sw_1_IBUF_283),
     .O(\b7/Msub__old_A_12_cy<1>111_182 )
   );
   MUXF5   \b7/Msub__old_A_12_cy<1>11_f5  (
     .I0(\b7/Msub__old_A_12_cy<1>111_182 ),
     .I1(\b7/Msub__old_A_12_cy<1>11 ),
-    .S(sw_5_IBUF_283),
+    .S(sw_5_IBUF_287),
     .O(\b7/Msub__old_A_12_cy [1])
+  );
+  LUT4 #(
+    .INIT ( 16'hA965 ))
+  \led<3>2111  (
+    .I0(sw_3_IBUF_285),
+    .I1(btn_0_IBUF_215),
+    .I2(N5),
+    .I3(\led<4>18_237 ),
+    .O(\led<3>211 )
+  );
+  LUT4 #(
+    .INIT ( 16'h569A ))
+  \led<3>2112  (
+    .I0(sw_3_IBUF_285),
+    .I1(btn_0_IBUF_215),
+    .I2(N5),
+    .I3(\led<4>18_237 ),
+    .O(\led<3>2111_232 )
+  );
+  MUXF5   \led<3>211_f5  (
+    .I0(\led<3>2111_232 ),
+    .I1(\led<3>211 ),
+    .S(sw_7_IBUF_289),
+    .O(\led<3>21_230 )
   );
   LUT3 #(
     .INIT ( 8'hA6 ))
   \b7/_old_A_7<1>11  (
     .I0(\b7/_old_A_4 [0]),
-    .I1(sw_1_IBUF_279),
+    .I1(sw_1_IBUF_283),
     .I2(\b7/_old_A_6 [3]),
     .O(\b7/_old_A_7<1>1 )
   );
@@ -2148,24 +2184,24 @@ multiplication[2], multiplication[1], multiplication[0]}),
     .INIT ( 16'hAA96 ))
   \b7/_old_A_7<1>12  (
     .I0(\b7/_old_A_4 [0]),
-    .I1(sw_1_IBUF_279),
-    .I2(sw_0_IBUF_278),
+    .I1(sw_1_IBUF_283),
+    .I2(sw_0_IBUF_282),
     .I3(\b7/_old_A_6 [3]),
     .O(\b7/_old_A_7<1>11_205 )
   );
   MUXF5   \b7/_old_A_7<1>1_f5  (
     .I0(\b7/_old_A_7<1>11_205 ),
     .I1(\b7/_old_A_7<1>1 ),
-    .S(sw_6_IBUF_284),
+    .S(sw_6_IBUF_288),
     .O(\b7/_old_A_7 [1])
   );
   LUT4 #(
     .INIT ( 16'h695A ))
   \led<1>341  (
-    .I0(sw_1_IBUF_279),
-    .I1(sw_4_IBUF_282),
-    .I2(sw_5_IBUF_283),
-    .I3(sw_0_IBUF_278),
+    .I0(sw_1_IBUF_283),
+    .I1(sw_4_IBUF_286),
+    .I2(sw_5_IBUF_287),
+    .I3(sw_0_IBUF_282),
     .O(\led<1>341_225 )
   );
   MUXF5   \led<1>34_f5  (
@@ -2177,24 +2213,24 @@ multiplication[2], multiplication[1], multiplication[0]}),
   LUT3 #(
     .INIT ( 8'h7D ))
   \b7/Msub__old_A_6_lut<3>1  (
-    .I0(sw_3_IBUF_281),
-    .I1(sw_2_IBUF_280),
-    .I2(sw_1_IBUF_279),
+    .I0(sw_3_IBUF_285),
+    .I1(sw_2_IBUF_284),
+    .I2(sw_1_IBUF_283),
     .O(\b7/Msub__old_A_6_lut<3>1_186 )
   );
   LUT4 #(
     .INIT ( 16'h56FF ))
   \b7/Msub__old_A_6_lut<3>2  (
-    .I0(sw_2_IBUF_280),
-    .I1(sw_0_IBUF_278),
-    .I2(sw_1_IBUF_279),
-    .I3(sw_3_IBUF_281),
+    .I0(sw_2_IBUF_284),
+    .I1(sw_0_IBUF_282),
+    .I2(sw_1_IBUF_283),
+    .I3(sw_3_IBUF_285),
     .O(\b7/Msub__old_A_6_lut<3>2_187 )
   );
   MUXF5   \b7/Msub__old_A_6_lut<3>_f5  (
     .I0(\b7/Msub__old_A_6_lut<3>2_187 ),
     .I1(\b7/Msub__old_A_6_lut<3>1_186 ),
-    .S(sw_7_IBUF_285),
+    .S(sw_7_IBUF_289),
     .O(\b7/Msub__old_A_6_lut [3])
   );
 endmodule
