@@ -396,7 +396,7 @@ WARNING:Xst:2677 - Node <b7/rem_1> of sequential type is unconnected in block <C
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Calculator, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block Calculator, actual ratio is 10.
 
 Final Macro Processing ...
 
@@ -434,15 +434,15 @@ Design Statistics
 # IOs                              : 33
 
 Cell Usage :
-# BELS                             : 196
+# BELS                             : 201
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 19
 #      LUT2                        : 12
-#      LUT3                        : 22
-#      LUT4                        : 79
+#      LUT3                        : 23
+#      LUT4                        : 81
 #      MUXCY                       : 24
-#      MUXF5                       : 15
+#      MUXF5                       : 17
 #      MUXF6                       : 1
 #      VCC                         : 1
 #      XORCY                       : 20
@@ -465,9 +465,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                       75  out of    960     7%  
+ Number of Slices:                       76  out of    960     7%  
  Number of Slice Flip Flops:             28  out of   1920     1%  
- Number of 4 input LUTs:                134  out of   1920     6%  
+ Number of 4 input LUTs:                137  out of   1920     7%  
  Number of IOs:                          33
  Number of bonded IOBs:                  33  out of     83    39%  
  Number of MULT18X18SIOs:                 1  out of      4    25%  
@@ -508,9 +508,9 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 4.259ns (Maximum Frequency: 234.811MHz)
-   Minimum input arrival time before clock: 16.162ns
-   Maximum output required time after clock: 16.899ns
-   Maximum combinational path delay: 20.867ns
+   Minimum input arrival time before clock: 16.174ns
+   Maximum output required time after clock: 16.937ns
+   Maximum combinational path delay: 20.882ns
 
 Timing Detail:
 --------------
@@ -569,18 +569,18 @@ Delay:               2.382ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 1968 / 9
 -------------------------------------------------------------------------
-Offset:              16.162ns (Levels of Logic = 14)
-  Source:            sw<0> (PAD)
+Offset:              16.174ns (Levels of Logic = 14)
+  Source:            sw<3> (PAD)
   Destination:       b7/qu_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: sw<0> to b7/qu_0
+  Data Path: sw<3> to b7/qu_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   1.106   0.933  sw_0_IBUF (sw_0_IBUF)
-     LUT4:I1->O            1   0.612   0.000  b7/rem_cmp_ge0000112 (b7/rem_cmp_ge0000111)
-     MUXF5:I0->O           4   0.278   0.651  b7/rem_cmp_ge000011_f5 (b7/rem_cmp_ge0000)
+     IBUF:I->O            11   1.106   0.945  sw_3_IBUF (sw_3_IBUF)
+     LUT3:I0->O            1   0.612   0.000  b7/rem_cmp_ge0000111 (b7/rem_cmp_ge000011)
+     MUXF5:I1->O           4   0.278   0.651  b7/rem_cmp_ge000011_f5 (b7/rem_cmp_ge0000)
      LUT3:I0->O            2   0.612   0.532  b7/rem_mux00031 (b7/rem_mux0003)
      LUT4:I0->O            1   0.612   0.509  b7/rem_cmp_ge00012 (b7/rem_cmp_ge00011)
      LUT3:I0->O            4   0.612   0.651  b7/rem_cmp_ge00011 (b7/rem_cmp_ge0001)
@@ -589,13 +589,13 @@ Offset:              16.162ns (Levels of Logic = 14)
      LUT4:I3->O            8   0.612   0.795  b7/rem_cmp_ge00021 (b7/rem_cmp_ge0002)
      LUT3:I0->O            1   0.612   0.000  b7/rem_mux001011 (b7/rem_mux00101)
      MUXF5:I1->O           1   0.278   0.426  b7/rem_mux00101_f5 (b7/rem_mux0010)
-     LUT3:I1->O            1   0.612   0.387  b7/mux0000_cmp_ge00001_SW0 (N19)
+     LUT3:I1->O            1   0.612   0.387  b7/mux0000_cmp_ge00001_SW0 (N16)
      LUT3:I2->O            3   0.612   0.603  b7/mux0000_cmp_ge00001 (b7/mux0000_cmp_ge0000)
      LUT4:I0->O            4   0.612   0.499  b7/qu_3_cmp_eq00001 (b7/qu_3_cmp_eq0000)
      FDS:S                     0.795          b7/qu_3
     ----------------------------------------
-    Total                     16.162ns (9.189ns logic, 6.973ns route)
-                                       (56.9% logic, 43.1% route)
+    Total                     16.174ns (9.189ns logic, 6.985ns route)
+                                       (56.8% logic, 43.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'b3/clk_out'
@@ -612,7 +612,7 @@ Offset:              9.079ns (Levels of Logic = 5)
     ----------------------------------------  ------------
      FDR:C->Q             11   0.514   0.945  b4/temp_0 (b4/temp_0)
      LUT2:I0->O            2   0.612   0.532  b2/Mmux_out8172 (b2/Mmux_out4128)
-     LUT4:I0->O            1   0.612   0.360  b2/Mmux_out8187_SW0 (N56)
+     LUT4:I0->O            1   0.612   0.360  b2/Mmux_out8187_SW0 (N57)
      LUT4:I3->O            7   0.612   0.754  b2/Mmux_out8187 (mux_out<3>)
      LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay111 (segment_1_OBUF)
      OBUF:I->O                 3.169          segment_1_OBUF (segment<1>)
@@ -622,9 +622,9 @@ Offset:              9.079ns (Levels of Logic = 5)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 11646 / 15
+  Total number of paths / destination ports: 10175 / 15
 -------------------------------------------------------------------------
-Offset:              16.899ns (Levels of Logic = 12)
+Offset:              16.937ns (Levels of Logic = 12)
   Source:            b7/qu_4 (FF)
   Destination:       segment<6> (PAD)
   Source Clock:      clk rising
@@ -633,28 +633,28 @@ Offset:              16.899ns (Levels of Logic = 12)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.449  b7/qu_4 (b7/qu_4)
-     LUT3:I1->O            4   0.612   0.568  led<5>_SW1 (N71)
-     LUT4:I1->O           18   0.612   1.060  led<6> (led_6_OBUF)
+     FDR:C->Q              3   0.514   0.520  b7/qu_4 (b7/qu_4)
+     LUT3:I1->O            3   0.612   0.520  led<5>_SW1 (N71)
+     LUT4:I1->O           19   0.612   1.074  led<6> (led_6_OBUF)
      LUT4:I0->O            2   0.612   0.449  b1/shift_mux0010_SW1 (N4)
      LUT3:I1->O           10   0.612   0.902  b1/shift_mux0010 (b1/Madd__add0003_lut<2>)
      LUT4:I0->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
      MUXF5:I1->O          10   0.278   0.753  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
      LUT4:I3->O            1   0.612   0.509  b2/Mmux_out6166 (b2/Mmux_out6166)
      LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6195 (b2/Mmux_out6195)
-     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6237_SW0 (N62)
+     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6237_SW0 (N63)
      LUT4:I0->O            7   0.612   0.754  b2/Mmux_out6237 (mux_out<2>)
      LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
      OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
     ----------------------------------------
-    Total                     16.899ns (10.081ns logic, 6.818ns route)
-                                       (59.7% logic, 40.3% route)
+    Total                     16.937ns (10.081ns logic, 6.856ns route)
+                                       (59.5% logic, 40.5% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 153749 / 15
+  Total number of paths / destination ports: 189053 / 15
 -------------------------------------------------------------------------
-Delay:               20.867ns (Levels of Logic = 13)
+Delay:               20.882ns (Levels of Logic = 13)
   Source:            sw<0> (PAD)
   Destination:       segment<6> (PAD)
 
@@ -664,30 +664,30 @@ Delay:               20.867ns (Levels of Logic = 13)
     ----------------------------------------  ------------
      IBUF:I->O            15   1.106   0.864  sw_0_IBUF (sw_0_IBUF)
      MULT18X18SIO:B0->P6    1   3.632   0.509  Mmult_multiplication (multiplication<6>)
-     LUT4:I0->O           18   0.612   1.060  led<6> (led_6_OBUF)
+     LUT4:I0->O           19   0.612   1.074  led<6> (led_6_OBUF)
      LUT4:I0->O            2   0.612   0.449  b1/shift_mux0010_SW1 (N4)
      LUT3:I1->O           10   0.612   0.902  b1/shift_mux0010 (b1/Madd__add0003_lut<2>)
      LUT4:I0->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
      MUXF5:I1->O          10   0.278   0.753  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
      LUT4:I3->O            1   0.612   0.509  b2/Mmux_out6166 (b2/Mmux_out6166)
      LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6195 (b2/Mmux_out6195)
-     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6237_SW0 (N62)
+     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6237_SW0 (N63)
      LUT4:I0->O            7   0.612   0.754  b2/Mmux_out6237 (mux_out<2>)
      LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
      OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
     ----------------------------------------
-    Total                     20.867ns (13.693ns logic, 7.174ns route)
+    Total                     20.882ns (13.693ns logic, 7.189ns route)
                                        (65.6% logic, 34.4% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.82 secs
+Total CPU time to Xst completion: 4.87 secs
  
 --> 
 
-Total memory usage is 4513668 kilobytes
+Total memory usage is 4513708 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)
