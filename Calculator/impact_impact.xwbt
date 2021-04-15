@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=C:\Users\User\Documents\CalculatorProject\Calculator\impact.xsl
-OUTFILE=C:\Users\User\Documents\CalculatorProject\Calculator\impact.xsl
+INFILE=C:\Users\User\dev\Calculator\Calculator\impact.xsl
+OUTFILE=C:\Users\User\dev\Calculator\Calculator\impact.xsl
 FAMILY=Multiple
 PART=Multiple
-WORKINGDIR=C:\Users\User\Documents\CalculatorProject\Calculator
+WORKINGDIR=C:\Users\User\dev\Calculator\Calculator
 LICENSE=iMPACT
 USER_INFO=iMPACT
