@@ -1,0 +1,10 @@
+[Inputs]
+=sw[7:0]=
+[Outputs]
+=ones[3:0]=
+=tens[3:0]=
+=hundreds[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel binary_to_BCD_converter
+

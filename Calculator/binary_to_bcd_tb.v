@@ -4,15 +4,15 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   00:09:52 04/14/2021
-// Design Name:   binary_to_bcd
-// Module Name:   C:/Users/User/dev/Calculator/Calculator/binary_to_bcd_tb.v
+// Create Date:   20:32:06 04/14/2021
+// Design Name:   binary_to_BCD
+// Module Name:   C:/Users/User/dev/Calculator/Calculator/binary_to_BCD_tb.v
 // Project Name:  Calculator
 // Target Device:  
 // Tool versions:  
 // Description: 
 //
-// Verilog Test Fixture created by ISE for module: binary_to_bcd
+// Verilog Test Fixture created by ISE for module: binary_to_BCD
 //
 // Dependencies:
 // 
@@ -22,28 +22,40 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module binary_to_bcd_tb;
+module binary_to_BCD_tb;
 
 	// Inputs
-	reg [15:0] B;
+	reg [7:0] number;
 
 	// Outputs
-	wire [19:0] bcdout;
+	wire [3:0] ones;
+	wire [3:0] tens;
+	wire [3:0] hundreds;
 
 	// Instantiate the Unit Under Test (UUT)
-	binary_to_bcd uut (
-		.B(B), 
-		.bcdout(bcdout)
+	binary_to_BCD uut (
+		.number(number), 
+		.ones(ones), 
+		.tens(tens), 
+		.hundreds(hundreds)
 	);
 
 	initial begin
 		// Initialize Inputs
-		B = 1110000000011000;
+		number = 8'b0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
         
-		// Add stimulus here
+		number = 8'b11101111;
+	
+		#100;
+        
+		number = 8'b01101111;
+		
+		#100;
+		number = 8'b11111111;
+	
 
 	end
       

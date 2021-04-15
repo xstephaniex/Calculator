@@ -1,0 +1,4 @@
+verilog work "shift_or_addthree.v"
+verilog work "binary_to_BCD_converter.v"
+verilog work "binarytobcd_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+four_to_one_mux instance_name (
+    .ones(ones), 
+    .tens(tens), 
+    .hundreds(hundreds), 
+    .ss(ss), 
+    .out(out)
+    );
+
+

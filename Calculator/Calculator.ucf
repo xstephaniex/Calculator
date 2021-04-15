@@ -26,19 +26,16 @@ NET "clk" LOC = B8;
 
 #seven segment display signals
 
-NET "seg[0]" LOC = L14;
-NET "seg[1]" LOC = H12;
-NET "seg[2]" LOC = N14;
-NET "seg[3]" LOC = N11;
-NET "seg[4]" LOC = P12;
-NET "seg[5]" LOC = L13;
-NET "seg[6]" LOC = M12;
+NET "segment[6]" LOC = L14;
+NET "segment[5]" LOC = H12;
+NET "segment[4]" LOC = N14;
+NET "segment[3]" LOC = N11;
+NET "segment[2]" LOC = P12;
+NET "segment[1]" LOC = L13;
+NET "segment[0]" LOC = M12;
 
 
-NET "aen[0]" LOC = F12;
-NET "aen[1]" LOC = J12;
-NET "aen[2]" LOC = M13;
-NET "aen[3]" LOC = K14;
-
-
-
+NET "an[0]" LOC = F12;
+NET "an[1]" LOC = J12;
+NET "an[2]" LOC = M13;
+NET "an[3]" LOC = K14;

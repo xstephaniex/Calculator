@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+binary_to_BCD_converter instance_name (
+    .sw(sw), 
+    .ones(ones), 
+    .tens(tens), 
+    .hundreds(hundreds)
+    );
+
+

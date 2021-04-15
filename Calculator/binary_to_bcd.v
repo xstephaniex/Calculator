@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    20:06:11 04/13/2021 
+// Create Date:    19:54:49 04/14/2021 
 // Design Name: 
-// Module Name:    binary_to_bcd 
+// Module Name:    binary_to_BCD 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,36 +18,71 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module binary_to_bcd(
-    input [15:0] B,
-    output reg [19:0] bcdout
+module binary_to_BCD(
+    input [7:0] number,
+    output reg [3:0] ones,
+    output reg[3:0] tens,
+    output reg[3:0] hundreds
     );
-	 
-	 	
-	reg [35:0] z;
-	integer i;
 
-	always @(*)
-	  begin
-		 for(i = 0; i <= 35; i = i+1)
-		 z[i] = 0;
-		 z[18:3] = B; 		  //shift b 3 places left
+   // Internal variable for storing bits
 
+   reg [19:0] shift;
 
-		 repeat(13)
-		 begin
-		if(z[19:16] > 4)	
-			z[19:16] = z[19:16] + 3;
-		if(z[23:20] > 4) 	
-			z[23:20] = z[23:20] + 3;
-		if(z[27:24] > 4) 	
-			z[27:24] = z[27:24] + 3;
-		if(z[31:28] > 4) 	
-			z[31:28] = z[31:28] + 3;
-		if(z[35:32] > 4) 	
-			z[35:32] = z[35:32] + 3;
-		 z[35:1] = z[34:0];
-		 end      
-		 bcdout = z[35:16]; //20 bits
-	  end         
+   integer i;
+
+  
+
+   always @(number)
+
+   begin
+
+      // Clear previous number and store new number in shift register
+
+      shift[19:8] = 0;
+
+      shift[7:0] = number;
+
+      
+
+      // Loop eight times
+
+      for (i=0; i<8; i=i+1) begin
+
+         if (shift[11:8] >= 5)
+
+            shift[11:8] = shift[11:8] + 3;
+
+            
+
+         if (shift[15:12] >= 5)
+
+            shift[15:12] = shift[15:12] + 3;
+
+            
+
+         if (shift[19:16] >= 5)
+
+            shift[19:16] = shift[19:16] + 3;
+
+        
+
+         // Shift entire register left once
+
+         shift = shift << 1;
+
+      end
+
+      
+
+      // Push decimal numbers to output
+
+      hundreds = shift[19:16];
+
+      tens     = shift[15:12];
+
+      ones     = shift[11:8];
+
+   end
+
 endmodule

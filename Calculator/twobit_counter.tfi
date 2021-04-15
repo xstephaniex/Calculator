@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+twobit_counter instance_name (
+    .clk(clk), 
+    .r(r)
+    );
+
+

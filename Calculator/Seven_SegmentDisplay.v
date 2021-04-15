@@ -21,7 +21,6 @@
 module Seven_SegmentDisplay(
     input [15:0] displayed_num,
     input clk,
-    input clr,
     output reg [6:0]numberbox_out, //cathode patterns
     output reg [3:0]anode_activate
     );
@@ -47,8 +46,8 @@ module Seven_SegmentDisplay(
 		
 	//slow clock generation
 
-	always @(posedge clk or posedge clr) begin
-	if(clr == 1)
+	always @(posedge clk) begin
+	if(delayclk == 2500000)
 	delayclk <= 0;
 	else
 	delayclk <= delayclk + 1;
@@ -59,10 +58,10 @@ module Seven_SegmentDisplay(
 	always @(posedge clk)
 		
 		case(numberbox_activator)
-		3:number = displayed_num[3:0]; 
-		2:number = displayed_num[7:4]; 
-		1:number = displayed_num[11:8];
-		0:number = displayed_num[15:12];		
+		0:number = displayed_num[3:0]; 
+		1:number = displayed_num[7:4]; 
+		2:number = displayed_num[11:8];
+		3:number = displayed_num[15:12];		
 		default:number = displayed_num[15:12];
 		endcase
 	

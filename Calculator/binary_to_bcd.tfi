@@ -2,9 +2,11 @@
 
 
 // Instantiate the module
-binary_to_bcd instance_name (
-    .B(B), 
-    .bcdout(bcdout)
+binary_to_BCD instance_name (
+    .number(number), 
+    .ones(ones), 
+    .tens(tens), 
+    .hundreds(hundreds)
     );
 
 

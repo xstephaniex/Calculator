@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+BCD_sevensegment instance_name (
+    .x(x), 
+    .numtobedisplay(numtobedisplay)
+    );
+
+

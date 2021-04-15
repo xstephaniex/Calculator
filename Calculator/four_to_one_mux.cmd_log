@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/four_to_one_mux.tfi -lib work C:/Users/User/dev/Calculator/Calculator//four_to_one_mux.v -module four_to_one_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

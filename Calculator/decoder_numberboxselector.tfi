@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+decoder_numberboxselector instance_name (
+    .selected(selected), 
+    .numberbox(numberbox)
+    );
+
+

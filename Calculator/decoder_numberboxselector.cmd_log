@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/decoder_numberboxselector.tfi -lib work C:/Users/User/dev/Calculator/Calculator//decoder_numberboxselector.v -module decoder_numberboxselector -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

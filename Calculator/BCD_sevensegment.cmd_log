@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/BCD_sevensegment.tfi -lib work C:/Users/User/dev/Calculator/Calculator//BCD_sevensegment.v -module BCD_sevensegment -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

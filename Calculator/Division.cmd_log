@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Division.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Division.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Division.ngc Division.ngd  

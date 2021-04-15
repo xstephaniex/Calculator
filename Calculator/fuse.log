@@ -1,20 +1,19 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/User/dev/Calculator/Calculator/fourbitaddersubstractor_tb_isim_beh.exe -prj C:/Users/User/dev/Calculator/Calculator/fourbitaddersubstractor_tb_beh.prj work.fourbitaddersubstractor_tb work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/User/dev/Calculator/Calculator/binary_to_BCD_tb_isim_beh.exe -prj C:/Users/User/dev/Calculator/Calculator/binary_to_BCD_tb_beh.prj work.binary_to_BCD_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/FullAdder.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/FourBitAdderSubstractor.v" into library work
-Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/fourbitaddersubstractor_tb.v" into library work
+Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/binary_to_BCD.v" into library work
+Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/binary_to_BCD_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module FullAdder
-Compiling module FourBitAdderSubstractor
-Compiling module fourbitaddersubstractor_tb
+Compiling module binary_to_BCD
+Compiling module binary_to_BCD_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 4 Verilog Units
-Built simulation executable C:/Users/User/dev/Calculator/Calculator/fourbitaddersubstractor_tb_isim_beh.exe
-Fuse Memory Usage: 27824 KB
-Fuse CPU Usage: 374 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable C:/Users/User/dev/Calculator/Calculator/binary_to_BCD_tb_isim_beh.exe
+Fuse Memory Usage: 27904 KB
+Fuse CPU Usage: 296 ms

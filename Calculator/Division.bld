@@ -1,0 +1,298 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5
+Division.ngc Division.ngd
+
+Reading NGO file "C:/Users/User/dev/Calculator/Calculator/Division.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "Calculator.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[0]" LOC = P11;>
+   [Calculator.ucf(3)]: NET "sw[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[0]" LOC = P11;> [Calculator.ucf(3)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[1]" LOC = L3;>
+   [Calculator.ucf(4)]: NET "sw[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[1]" LOC = L3;> [Calculator.ucf(4)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[2]" LOC = K3;>
+   [Calculator.ucf(5)]: NET "sw[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[2]" LOC = K3;> [Calculator.ucf(5)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[3]" LOC = B4;>
+   [Calculator.ucf(6)]: NET "sw[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[3]" LOC = B4;> [Calculator.ucf(6)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[4]" LOC = G3;>
+   [Calculator.ucf(7)]: NET "sw[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[4]" LOC = G3;> [Calculator.ucf(7)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[5]" LOC = F3;>
+   [Calculator.ucf(8)]: NET "sw[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[5]" LOC = F3;> [Calculator.ucf(8)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[6]" LOC = E2;>
+   [Calculator.ucf(9)]: NET "sw[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[6]" LOC = E2;> [Calculator.ucf(9)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "sw[7]" LOC = N3;>
+   [Calculator.ucf(10)]: NET "sw[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "sw[7]" LOC = N3;> [Calculator.ucf(10)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "btn[0]" LOC = G12;>
+   [Calculator.ucf(12)]: NET "btn[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "btn[0]" LOC = G12;> [Calculator.ucf(12)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "btn[1]" LOC = C11;>
+   [Calculator.ucf(13)]: NET "btn[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "btn[1]" LOC = C11;> [Calculator.ucf(13)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[0]" LOC = M5;>
+   [Calculator.ucf(15)]: NET "led[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[0]" LOC = M5;> [Calculator.ucf(15)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[1]" LOC = M11;>
+   [Calculator.ucf(16)]: NET "led[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[1]" LOC = M11;> [Calculator.ucf(16)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[2]" LOC = P7;>
+   [Calculator.ucf(17)]: NET "led[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[2]" LOC = P7;> [Calculator.ucf(17)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[3]" LOC = P6;>
+   [Calculator.ucf(18)]: NET "led[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[3]" LOC = P6;> [Calculator.ucf(18)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[4]" LOC = N5;>
+   [Calculator.ucf(19)]: NET "led[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[4]" LOC = N5;> [Calculator.ucf(19)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[5]" LOC = N4;>
+   [Calculator.ucf(20)]: NET "led[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[5]" LOC = N4;> [Calculator.ucf(20)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[6]" LOC = P4;>
+   [Calculator.ucf(21)]: NET "led[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[6]" LOC = P4;> [Calculator.ucf(21)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "led[7]" LOC = G1;>
+   [Calculator.ucf(22)]: NET "led[7]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "led[7]" LOC = G1;> [Calculator.ucf(22)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[6]" LOC = L14;>
+   [Calculator.ucf(29)]: NET "segment[6]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[6]" LOC = L14;> [Calculator.ucf(29)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[5]" LOC = H12;>
+   [Calculator.ucf(30)]: NET "segment[5]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[5]" LOC = H12;> [Calculator.ucf(30)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[4]" LOC = N14;>
+   [Calculator.ucf(31)]: NET "segment[4]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[4]" LOC = N14;> [Calculator.ucf(31)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[3]" LOC = N11;>
+   [Calculator.ucf(32)]: NET "segment[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[3]" LOC = N11;> [Calculator.ucf(32)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[2]" LOC = P12;>
+   [Calculator.ucf(33)]: NET "segment[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[2]" LOC = P12;> [Calculator.ucf(33)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[1]" LOC = L13;>
+   [Calculator.ucf(34)]: NET "segment[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[1]" LOC = L13;> [Calculator.ucf(34)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "segment[0]" LOC = M12;>
+   [Calculator.ucf(35)]: NET "segment[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "segment[0]" LOC = M12;> [Calculator.ucf(35)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "an[0]" LOC = F12;>
+   [Calculator.ucf(38)]: NET "an[0]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "an[0]" LOC = F12;> [Calculator.ucf(38)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "an[1]" LOC = J12;>
+   [Calculator.ucf(39)]: NET "an[1]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "an[1]" LOC = J12;> [Calculator.ucf(39)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "an[2]" LOC = M13;>
+   [Calculator.ucf(40)]: NET "an[2]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "an[2]" LOC = M13;> [Calculator.ucf(40)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "an[3]" LOC = K14;>
+   [Calculator.ucf(41)]: NET "an[3]" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "an[3]" LOC = K14;> [Calculator.ucf(41)]' could not be found and so the
+   Locate constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:    29
+  Number of warnings:  29
+
+Total memory usage is 4397320 kilobytes
+
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "Division.bld"...
