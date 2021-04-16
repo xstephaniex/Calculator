@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -111,8 +111,10 @@ Compiling verilog file "twobit_counter.v" in library work
 Module <FullAdder> compiled
 Compiling verilog file "four_to_one_mux.v" in library work
 Module <twobit_counter> compiled
-Compiling verilog file "FourBitAdder.v" in library work
+Compiling verilog file "FourBitAdderSubstractor.v" in library work
 Module <four_to_one_mux> compiled
+Compiling verilog file "FourBitAdder.v" in library work
+Module <FourBitAdderSubstractor> compiled
 Compiling verilog file "Division.v" in library work
 Module <FourBitAdder> compiled
 Compiling verilog file "delay_clock.v" in library work
@@ -150,6 +152,8 @@ Analyzing hierarchy for module <BCD_sevensegment> in library <work>.
 Analyzing hierarchy for module <Division> in library <work>.
 
 Analyzing hierarchy for module <FourBitAdder> in library <work>.
+
+Analyzing hierarchy for module <FourBitAdderSubstractor> in library <work>.
 
 Analyzing hierarchy for module <HalfAdder> in library <work>.
 
@@ -191,6 +195,9 @@ Module <HalfAdder> is correct for synthesis.
  
 Analyzing module <FullAdder> in library <work>.
 Module <FullAdder> is correct for synthesis.
+ 
+Analyzing module <FourBitAdderSubstractor> in library <work>.
+Module <FourBitAdderSubstractor> is correct for synthesis.
  
 
 =========================================================================
@@ -307,15 +314,25 @@ Synthesizing Unit <FourBitAdder>.
 Unit <FourBitAdder> synthesized.
 
 
+Synthesizing Unit <FourBitAdderSubstractor>.
+    Related source file is "FourBitAdderSubstractor.v".
+WARNING:Xst:1305 - Output <addsub<4>> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <b1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit comparator greater for signal <a1$cmp_gt0000> created at line 43.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <FourBitAdderSubstractor> synthesized.
+
+
 Synthesizing Unit <Calculator>.
     Related source file is "Calculator.v".
+WARNING:Xst:646 - Signal <substraction> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <cout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <co> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <addition> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Reminder> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 4x4-bit multiplier for signal <multiplication>.
-    Found 6-bit subtractor for signal <substraction$sub0000> created at line 54.
     Summary:
-	inferred   1 Adder/Subtractor(s).
 	inferred   1 Multiplier(s).
 Unit <Calculator> synthesized.
 
@@ -329,21 +346,21 @@ Macro Statistics
  4x4-bit ROM                                           : 1
 # Multipliers                                          : 1
  4x4-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 12
+# Adders/Subtractors                                   : 11
  4-bit adder                                           : 7
  4-bit subtractor                                      : 4
- 6-bit subtractor                                      : 1
 # Counters                                             : 2
  2-bit up counter                                      : 1
  20-bit up counter                                     : 1
 # Registers                                            : 10
  1-bit register                                        : 10
-# Comparators                                          : 11
+# Comparators                                          : 12
  4-bit comparator greatequal                           : 11
+ 4-bit comparator greater                              : 1
 # Multiplexers                                         : 1
  4-bit 4-to-1 multiplexer                              : 1
-# Xors                                                 : 7
- 1-bit xor2                                            : 7
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
 
 =========================================================================
 
@@ -361,22 +378,22 @@ Macro Statistics
  4x4-bit ROM                                           : 1
 # Multipliers                                          : 1
  4x4-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 12
+# Adders/Subtractors                                   : 11
  3-bit subtractor                                      : 3
  4-bit adder                                           : 7
  4-bit subtractor                                      : 1
- 6-bit subtractor                                      : 1
 # Counters                                             : 2
  2-bit up counter                                      : 1
  20-bit up counter                                     : 1
 # Registers                                            : 10
  Flip-Flops                                            : 10
-# Comparators                                          : 11
+# Comparators                                          : 12
  4-bit comparator greatequal                           : 11
+ 4-bit comparator greater                              : 1
 # Multiplexers                                         : 1
  4-bit 4-to-1 multiplexer                              : 1
-# Xors                                                 : 7
- 1-bit xor2                                            : 7
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
 
 =========================================================================
 
@@ -431,16 +448,16 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 33
+# IOs                              : 34
 
 Cell Usage :
-# BELS                             : 201
+# BELS                             : 219
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 19
-#      LUT2                        : 12
+#      LUT2                        : 10
 #      LUT3                        : 23
-#      LUT4                        : 81
+#      LUT4                        : 101
 #      MUXCY                       : 24
 #      MUXF5                       : 17
 #      MUXF6                       : 1
@@ -453,8 +470,8 @@ Cell Usage :
 #      FDS                         : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 32
-#      IBUF                        : 10
+# IO Buffers                       : 33
+#      IBUF                        : 11
 #      OBUF                        : 22
 # MULTs                            : 1
 #      MULT18X18SIO                : 1
@@ -465,11 +482,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                       76  out of    960     7%  
+ Number of Slices:                       85  out of    960     8%  
  Number of Slice Flip Flops:             28  out of   1920     1%  
- Number of 4 input LUTs:                137  out of   1920     7%  
- Number of IOs:                          33
- Number of bonded IOBs:                  33  out of     83    39%  
+ Number of 4 input LUTs:                155  out of   1920     8%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of     83    40%  
  Number of MULT18X18SIOs:                 1  out of      4    25%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -508,9 +525,9 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 4.259ns (Maximum Frequency: 234.811MHz)
-   Minimum input arrival time before clock: 16.174ns
-   Maximum output required time after clock: 16.937ns
-   Maximum combinational path delay: 20.882ns
+   Minimum input arrival time before clock: 16.409ns
+   Maximum output required time after clock: 16.041ns
+   Maximum combinational path delay: 20.651ns
 
 Timing Detail:
 --------------
@@ -569,7 +586,7 @@ Delay:               2.382ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 1968 / 9
 -------------------------------------------------------------------------
-Offset:              16.174ns (Levels of Logic = 14)
+Offset:              16.409ns (Levels of Logic = 14)
   Source:            sw<3> (PAD)
   Destination:       b7/qu_0 (FF)
   Destination Clock: clk rising
@@ -578,53 +595,53 @@ Offset:              16.174ns (Levels of Logic = 14)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   1.106   0.945  sw_3_IBUF (sw_3_IBUF)
+     IBUF:I->O            16   1.106   1.031  sw_3_IBUF (sw_3_IBUF)
      LUT3:I0->O            1   0.612   0.000  b7/rem_cmp_ge0000111 (b7/rem_cmp_ge000011)
      MUXF5:I1->O           4   0.278   0.651  b7/rem_cmp_ge000011_f5 (b7/rem_cmp_ge0000)
      LUT3:I0->O            2   0.612   0.532  b7/rem_mux00031 (b7/rem_mux0003)
      LUT4:I0->O            1   0.612   0.509  b7/rem_cmp_ge00012 (b7/rem_cmp_ge00011)
      LUT3:I0->O            4   0.612   0.651  b7/rem_cmp_ge00011 (b7/rem_cmp_ge0001)
      LUT3:I0->O            3   0.612   0.603  b7/rem_mux00071 (b7/rem_mux0007)
-     LUT4:I0->O            2   0.612   0.383  b7/rem_cmp_ge00022 (b7/Msub__sub0002_Madd_cy<1>)
-     LUT4:I3->O            8   0.612   0.795  b7/rem_cmp_ge00021 (b7/rem_cmp_ge0002)
+     LUT4:I0->O            2   0.612   0.410  b7/rem_cmp_ge00022 (b7/Msub__sub0002_Madd_cy<1>)
+     LUT4:I2->O            8   0.612   0.795  b7/rem_cmp_ge00021 (b7/rem_cmp_ge0002)
      LUT3:I0->O            1   0.612   0.000  b7/rem_mux001011 (b7/rem_mux00101)
-     MUXF5:I1->O           1   0.278   0.426  b7/rem_mux00101_f5 (b7/rem_mux0010)
-     LUT3:I1->O            1   0.612   0.387  b7/mux0000_cmp_ge00001_SW0 (N16)
-     LUT3:I2->O            3   0.612   0.603  b7/mux0000_cmp_ge00001 (b7/mux0000_cmp_ge0000)
+     MUXF5:I1->O           1   0.278   0.509  b7/rem_mux00101_f5 (b7/rem_mux0010)
+     LUT3:I0->O            1   0.612   0.426  b7/mux0000_cmp_ge00001_SW0 (N22)
+     LUT3:I1->O            3   0.612   0.603  b7/mux0000_cmp_ge00001 (b7/mux0000_cmp_ge0000)
      LUT4:I0->O            4   0.612   0.499  b7/qu_3_cmp_eq00001 (b7/qu_3_cmp_eq0000)
      FDS:S                     0.795          b7/qu_3
     ----------------------------------------
-    Total                     16.174ns (9.189ns logic, 6.985ns route)
-                                       (56.8% logic, 43.2% route)
+    Total                     16.409ns (9.189ns logic, 7.220ns route)
+                                       (56.0% logic, 44.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'b3/clk_out'
-  Total number of paths / destination ports: 125 / 10
+  Total number of paths / destination ports: 167 / 10
 -------------------------------------------------------------------------
-Offset:              9.079ns (Levels of Logic = 5)
+Offset:              9.285ns (Levels of Logic = 5)
   Source:            b4/temp_0 (FF)
-  Destination:       segment<5> (PAD)
+  Destination:       segment<3> (PAD)
   Source Clock:      b3/clk_out rising
 
-  Data Path: b4/temp_0 to segment<5>
+  Data Path: b4/temp_0 to segment<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             11   0.514   0.945  b4/temp_0 (b4/temp_0)
-     LUT2:I0->O            2   0.612   0.532  b2/Mmux_out8172 (b2/Mmux_out4128)
-     LUT4:I0->O            1   0.612   0.360  b2/Mmux_out8187_SW0 (N57)
-     LUT4:I3->O            7   0.612   0.754  b2/Mmux_out8187 (mux_out<3>)
+     FDR:C->Q             14   0.514   1.002  b4/temp_0 (b4/temp_0)
+     LUT2:I0->O            2   0.612   0.532  b2/Mmux_out8168 (b2/Mmux_out4128)
+     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out8173 (b2/Mmux_out8173)
+     LUT4:I0->O            7   0.612   0.754  b2/Mmux_out8184 (mux_out<3>)
      LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay111 (segment_1_OBUF)
      OBUF:I->O                 3.169          segment_1_OBUF (segment<1>)
     ----------------------------------------
-    Total                      9.079ns (6.131ns logic, 2.948ns route)
-                                       (67.5% logic, 32.5% route)
+    Total                      9.285ns (6.131ns logic, 3.154ns route)
+                                       (66.0% logic, 34.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 10175 / 15
+  Total number of paths / destination ports: 7029 / 15
 -------------------------------------------------------------------------
-Offset:              16.937ns (Levels of Logic = 12)
+Offset:              16.041ns (Levels of Logic = 13)
   Source:            b7/qu_4 (FF)
   Destination:       segment<6> (PAD)
   Source Clock:      clk rising
@@ -633,63 +650,66 @@ Offset:              16.937ns (Levels of Logic = 12)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.514   0.520  b7/qu_4 (b7/qu_4)
-     LUT3:I1->O            3   0.612   0.520  led<5>_SW1 (N71)
-     LUT4:I1->O           19   0.612   1.074  led<6> (led_6_OBUF)
-     LUT4:I0->O            2   0.612   0.449  b1/shift_mux0010_SW1 (N4)
-     LUT3:I1->O           10   0.612   0.902  b1/shift_mux0010 (b1/Madd__add0003_lut<2>)
-     LUT4:I0->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
-     MUXF5:I1->O          10   0.278   0.753  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
-     LUT4:I3->O            1   0.612   0.509  b2/Mmux_out6166 (b2/Mmux_out6166)
-     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6195 (b2/Mmux_out6195)
-     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6237_SW0 (N63)
-     LUT4:I0->O            7   0.612   0.754  b2/Mmux_out6237 (mux_out<2>)
+     FDR:C->Q              4   0.514   0.529  b7/qu_4 (b7/qu_4)
+     LUT4:I2->O            2   0.612   0.410  led<4>112 (led<4>112)
+     LUT3:I2->O           16   0.612   1.031  led<4>168 (led_4_OBUF)
+     LUT3:I0->O            1   0.612   0.000  b1/shift_mux00092 (b1/shift_mux00091)
+     MUXF5:I0->O           1   0.278   0.000  b1/shift_mux0009_f5 (b1/shift_mux0009_f5)
+     MUXF6:I1->O          11   0.451   0.862  b1/shift_mux0009_f6 (b1/Madd__add0003_lut<3>)
+     LUT4:I1->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
+     MUXF5:I1->O           9   0.278   0.727  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
+     LUT4:I2->O            1   0.612   0.426  b2/Mmux_out6146 (b2/Mmux_out6146)
+     LUT4:I1->O            1   0.612   0.360  b2/Mmux_out6194 (b2/Mmux_out6194)
+     LUT4:I3->O            1   0.612   0.387  b2/Mmux_out6236_SW0 (N36)
+     LUT4:I2->O            7   0.612   0.754  b2/Mmux_out6236 (mux_out<2>)
      LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
      OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
     ----------------------------------------
-    Total                     16.937ns (10.081ns logic, 6.856ns route)
-                                       (59.5% logic, 40.5% route)
+    Total                     16.041ns (10.198ns logic, 5.843ns route)
+                                       (63.6% logic, 36.4% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 189053 / 15
+  Total number of paths / destination ports: 190960 / 15
 -------------------------------------------------------------------------
-Delay:               20.882ns (Levels of Logic = 13)
-  Source:            sw<0> (PAD)
+Delay:               20.651ns (Levels of Logic = 15)
+  Source:            sw<2> (PAD)
   Destination:       segment<6> (PAD)
 
-  Data Path: sw<0> to segment<6>
+  Data Path: sw<2> to segment<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   1.106   0.864  sw_0_IBUF (sw_0_IBUF)
-     MULT18X18SIO:B0->P6    1   3.632   0.509  Mmult_multiplication (multiplication<6>)
-     LUT4:I0->O           19   0.612   1.074  led<6> (led_6_OBUF)
-     LUT4:I0->O            2   0.612   0.449  b1/shift_mux0010_SW1 (N4)
-     LUT3:I1->O           10   0.612   0.902  b1/shift_mux0010 (b1/Madd__add0003_lut<2>)
-     LUT4:I0->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
-     MUXF5:I1->O          10   0.278   0.753  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
-     LUT4:I3->O            1   0.612   0.509  b2/Mmux_out6166 (b2/Mmux_out6166)
-     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6195 (b2/Mmux_out6195)
-     LUT4:I0->O            1   0.612   0.509  b2/Mmux_out6237_SW0 (N63)
-     LUT4:I0->O            7   0.612   0.754  b2/Mmux_out6237 (mux_out<2>)
+     IBUF:I->O            19   1.106   0.922  sw_2_IBUF (sw_2_IBUF)
+     MULT18X18SIO:B2->P3    1   3.251   0.360  Mmult_multiplication (multiplication<3>)
+     LUT4:I3->O            2   0.612   0.410  led<3>112 (led<3>112)
+     LUT3:I2->O           17   0.612   1.045  led<3>1169 (led_3_OBUF)
+     LUT3:I0->O            1   0.612   0.000  b1/shift_mux00091 (b1/shift_mux0009)
+     MUXF5:I1->O           1   0.278   0.000  b1/shift_mux0009_f5 (b1/shift_mux0009_f5)
+     MUXF6:I1->O          11   0.451   0.862  b1/shift_mux0009_f6 (b1/Madd__add0003_lut<3>)
+     LUT4:I1->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
+     MUXF5:I1->O           9   0.278   0.727  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
+     LUT4:I2->O            1   0.612   0.426  b2/Mmux_out6146 (b2/Mmux_out6146)
+     LUT4:I1->O            1   0.612   0.360  b2/Mmux_out6194 (b2/Mmux_out6194)
+     LUT4:I3->O            1   0.612   0.387  b2/Mmux_out6236_SW0 (N36)
+     LUT4:I2->O            7   0.612   0.754  b2/Mmux_out6236 (mux_out<2>)
      LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
      OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
     ----------------------------------------
-    Total                     20.882ns (13.693ns logic, 7.189ns route)
-                                       (65.6% logic, 34.4% route)
+    Total                     20.651ns (14.041ns logic, 6.610ns route)
+                                       (68.0% logic, 32.0% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.87 secs
+Total CPU time to Xst completion: 5.04 secs
  
 --> 
 
-Total memory usage is 4513708 kilobytes
+Total memory usage is 4513656 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

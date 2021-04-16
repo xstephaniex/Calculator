@@ -1,0 +1,12 @@
+[Inputs]
+clk
+cin
+=a[3:0]=
+=b[3:0]=
+[Outputs]
+cout
+=addsub[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel FourBitAdderSubstractor
+

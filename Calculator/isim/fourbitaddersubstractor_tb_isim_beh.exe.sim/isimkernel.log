@@ -1,0 +1,29 @@
+Command line:
+   fourbitaddersubstractor_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55784
+
+Thu Apr 15 13:25:39 2021
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5149.94 Meg
+
+ Total Signals          : 40
+ Total Nets             : 43
+ Total Signal Drivers   : 27
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 43
+ Total Traceable Variables  : 33
+ Total Scalar Nets and Variables : 153
+Total Line Count : 83
+
+ Total Simulation Time: 0.53125 sec
+
+ Current Memory Usage: 4678.08 Meg
+
+Thu Apr 15 13:27:59 2021
+

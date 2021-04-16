@@ -20,9 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Calculator(
     input [7:0]sw,
-	 input [1:0] btn,
+	 input [2:0] btn,
 	 input clk,
-	 //input clr,
     output [7:0]led,  
 	 output[6:0]an,
 	 output[6:0]segment
@@ -41,6 +40,11 @@ module Calculator(
 	wire [7:0] sum;
 	wire cout;
 	
+	//substractor signals: outputs
+	wire [7:0] substract;
+	wire co;
+	wire cin = 1'b1; 
+	
 	//segment control signals
 	wire clk_out;
 	wire[1:0] counter_out;
@@ -55,7 +59,7 @@ module Calculator(
 	assign multiplication = sw[7:4] * sw[3:0];
 	
 	//output on the leds
-	assign led = ({8{~btn[0]}} &  {8{~btn[1]}} & sum ) |({8{btn[0]}} &  {8{~btn[1]}} & substraction ) |({8{~btn[0]}} &  {8{btn[1]}} & Quotient ) |({8{btn[0]}} &  {8{btn[1]}} & multiplication );
+	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) |({8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient ) |({8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication );
 	
 	 
 	 binary_to_BCD b1 (
@@ -95,7 +99,7 @@ module Calculator(
     .numtobedisplay(segment)
     );
  
-	Division b7(
+	 Division b7(
 		.Q(sw[7:4]),
 		.M(sw[3:0]),
 		.clk(clk),
@@ -103,7 +107,7 @@ module Calculator(
 		.Reminder(Reminder)	
 	);
 	
-	FourBitAdder b8 (
+	 FourBitAdder b8 (
 		 .a(sw[7:4]), 
 		 .b(sw[3:0]), 
 		 .clk(clk), 
@@ -111,7 +115,14 @@ module Calculator(
 		 .cout(cout)
     );
 
-
+	FourBitAdderSubstractor b9 (
+    .a(sw[7:4]), 
+    .b(sw[3:0]), 
+    .clk(clk), 
+    .cin(cin), 
+    .cout(co), 
+    .addsub(substract)
+    );
 	
 	
 	
