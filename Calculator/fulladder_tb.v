@@ -94,6 +94,7 @@ module fulladder_tb;
 		a = 1;
 		b = 1;
 		cin = 1;
+	
 
 	end
       

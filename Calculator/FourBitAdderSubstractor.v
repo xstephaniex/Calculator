@@ -23,22 +23,36 @@ module FourBitAdderSubstractor(
     input [3:0]b,
     input clk,
     input cin,
-    input cout,
+    output cout,
 	 output [7:0] addsub
     );
 
 wire c0, c1, c2; //to carry the value from one to another block 
 
 reg [3:0] b_changer; //change the value of B depending if it's addition or substraction
-
-always @ * begin
+reg [3:0] a1;
+reg [3:0] b1;
+always @ (*) begin
+	a1 = a;
+	b1 = b;
 case(cin)
-	1'b0: b_changer = b;
-	1'b1: b_changer = ~b;
+	1'b0: 
+		b_changer = b;
+ 
+	1'b1:
+	   if(a > b)begin
+	    b_changer = ~b;
+	end
+	else begin
+	     a1 = b; 
+		  b1 = a; 
+		  b_changer = ~b1;
+		  end
 	endcase
+	
 end
 FullAdder firstblk (
-    .a(a[0]), 
+    .a(a1[0]), 
     .b(b_changer[0]), 
     .clk(clk), 
 	 .cin(cin),
@@ -47,7 +61,7 @@ FullAdder firstblk (
     );
 	 
 FullAdder secondblk (
-	 .a(a[1]), 
+	 .a(a1[1]), 
 	 .b(b_changer[1]), 
 	 .clk(clk), 
 	 .cin(c0), 
@@ -56,7 +70,7 @@ FullAdder secondblk (
  );
  
  FullAdder thirdblk (
-	 .a(a[2]), 
+	 .a(a1[2]), 
 	 .b(b_changer[2]), 
 	 .clk(clk), 
 	 .cin(c1), 
@@ -65,7 +79,7 @@ FullAdder secondblk (
  );
  
  FullAdder fourthblk (
-	 .a(a[3]), 
+	 .a(a1[3]), 
 	 .b(b_changer[3]), 
 	 .clk(clk), 
 	 .cin(c2), 
@@ -73,6 +87,7 @@ FullAdder secondblk (
 	 .cout(cout)
  );
  
-assign addsub [7:4] = 4'b0;
- 
+assign addsub [7:5] = 4'b0;
+
+
 endmodule

@@ -29,10 +29,11 @@ module fourbitaddersubstractor_tb;
 	reg [3:0] b;
 	reg clk;
 	reg cin;
-	reg cout;
+
 
 	// Outputs
 	wire [7:0] addsub;
+   wire cout;
 
 	// Instantiate the Unit Under Test (UUT)
 	FourBitAdderSubstractor uut (
@@ -45,7 +46,7 @@ module fourbitaddersubstractor_tb;
 	);
 
 	always 
-   #10 clk = ~clk;
+   #5 clk = ~clk;
 	
 	initial begin
 		// Initialize Inputs
@@ -53,7 +54,7 @@ module fourbitaddersubstractor_tb;
 		a = 0;
 		b = 0;
 		cin = 0;
-		cout = 0;
+
 
 		#60;
 
@@ -61,24 +62,47 @@ module fourbitaddersubstractor_tb;
 		a = 4'b0000;
 		b = 4'b0001;
 		cin = 1;
-		cout = 0;
+
 		#60;
 		
 		a = 4'b0001;
 		b = 4'b0001;
 		cin = 0;
-		cout = 0;
+
 	   #60;
 		cin = 1;
-		cout = 0;		
+		
 		a = 4'b0110;
 		b = 4'b0011;
 		
 		#60;
 		cin = 1;
-		cout = 0;		
+	
 		a = 4'b1000;
 		b = 4'b0010;
+		
+		#60
+		cin = 1;
+		a = 4'b0010;
+		b = 4'b0110;
+		
+		#60
+		cin = 1;
+			
+		a = 4'b0010;
+		b = 4'b1000;
+		
+		#60 
+		cin = 1;
+		a = 4'b0111;
+		b = 4'b1000;
+		
+		
+		#60 
+		cin = 1;
+		a = 4'b1000;
+		b = 4'b0111;
+
 		end   
 endmodule
 
