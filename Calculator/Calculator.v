@@ -31,6 +31,9 @@ module Calculator(
 	//Divider signals; outputs
 	wire [7:0] Quotient;   
 	wire [7:0] Reminder;
+	
+	//Multiplication signals; outputs
+	wire [7:0] product;
 
 	//Adder signals; outputs
 	wire [7:0] sum;
@@ -60,6 +63,13 @@ module Calculator(
 		 .s(sum), 
 		 .cout(cout)
     );
+	 
+	 Multiplication b4(
+		.mc(sw[7:4]),
+		.mp(sw[3:0]),
+		.clk(clk),
+		.product(product)
+	);
 
 	
 	//Output on the leds
