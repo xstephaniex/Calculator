@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+FourBitAdder instance_name (
+    .a(a), 
+    .b(b), 
+    .clk(clk), 
+    .s(s), 
+    .cout(cout)
+    );
+
+

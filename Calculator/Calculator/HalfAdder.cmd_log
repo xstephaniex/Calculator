@@ -1,0 +1,3 @@
+vhdtdtfi -lib work C:/Users/User/dev/Calculator/Calculator/HalfAdder.v -lang verilog -prj Calculator -o HalfAdder.spl -module HalfAdder -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e HalfAdder.spl C:/Users/User/dev/Calculator/Calculator/HalfAdder.sym 
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/HalfAdder.tfi -lib work C:/Users/User/dev/Calculator/Calculator//HalfAdder.v -module HalfAdder -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

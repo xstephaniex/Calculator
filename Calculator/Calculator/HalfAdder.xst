@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/User/dev/Calculator/Calculator/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/User/dev/Calculator/Calculator/xst"
+elaborate
+-ifn HalfAdder.prj
+-ifmt mixed

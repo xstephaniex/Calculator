@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/angel/Documents/ise_projects/Calculator/Calculator/MultiplicationTest_isim_beh.exe" -prj "/home/angel/Documents/ise_projects/Calculator/Calculator/MultiplicationTest_beh.prj" "work.MultiplicationTest" "work.glbl" 

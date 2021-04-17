@@ -1,0 +1,5 @@
+verilog work "HalfAdder.v"
+verilog work "FullAdder.v"
+verilog work "FourBitAdder.v"
+verilog work "Division.v"
+verilog work "Calculator.v"

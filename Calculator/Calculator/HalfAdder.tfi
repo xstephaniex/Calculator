@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+HalfAdder instance_name (
+    .a(a), 
+    .b(b), 
+    .clk(clk), 
+    .s(s), 
+    .carryout(carryout)
+    );
+
+
