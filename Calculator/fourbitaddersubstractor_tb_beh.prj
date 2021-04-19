@@ -1,0 +1,4 @@
+verilog work "FullAdder.v"
+verilog work "FourBitAdderSubstractor.v"
+verilog work "fourbitaddersubstractor_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

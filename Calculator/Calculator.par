@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-IHPM5K3::  Sun Apr 18 21:54:22 2021
+DESKTOP-IHPM5K3::  Sun Apr 18 22:17:04 2021
 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd
 Calculator.pcf 
@@ -80,20 +80,20 @@ Phase 3.31  Local Placement Optimization (Checksum:3f743a58) REAL time: 0 secs
 
 Phase 4.2  Initial Clock and IO Placement
 .......
-Phase 4.2  Initial Clock and IO Placement (Checksum:44e01460) REAL time: 0 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:44e01460) REAL time: 1 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:44e01460) REAL time: 0 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:44e01460) REAL time: 1 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:44e01460) REAL time: 0 secs 
+Phase 6.36  Local Placement Optimization (Checksum:44e01460) REAL time: 1 secs 
 
 Phase 7.3  Local Placement Optimization
 .......
-Phase 7.3  Local Placement Optimization (Checksum:88d3908a) REAL time: 0 secs 
+Phase 7.3  Local Placement Optimization (Checksum:88d3908a) REAL time: 1 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:88d3908a) REAL time: 0 secs 
+Phase 8.5  Local Placement Optimization (Checksum:88d3908a) REAL time: 1 secs 
 
 Phase 9.8  Global Placement
 ...........................
@@ -133,7 +133,7 @@ Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 2
 
 Updating file: Calculator.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
 Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 3 secs 
 
