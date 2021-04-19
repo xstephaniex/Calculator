@@ -30,8 +30,8 @@ module Calculator(
 	
 	
 	//this are the testing wires for each operation, for displaying in the leds
-	wire [7:0] addition, substraction, multiplication;
-	
+	//wire [7:0] addition, substraction;
+	//	wire [7:0] multiplication;
 	//divider signals; outputs
 	wire [7:0] Quotient;   
 	wire [7:0] Reminder;
@@ -42,8 +42,14 @@ module Calculator(
 	
 	//substractor signals: outputs
 	wire [7:0] substract;
-	wire co;
-	wire cin = 1'b1; 
+	wire co;				
+	wire cin = 1'b1;  //input
+	
+	//square root signals; outputs
+	wire [7:0] sqrt; 
+	
+	//multiplication signals
+	wire [7:0] multiplication; 
 	
 	//segment control signals
 	wire clk_out;
@@ -53,23 +59,23 @@ module Calculator(
 	wire[3:0] tens;
 	wire[3:0] hundreds;
 	
-	//calculations testing
-	assign addition = sw[7:4] + sw[3:0];
-	assign substraction = sw[7:4] - sw[3:0];
-	assign multiplication = sw[7:4] * sw[3:0];
+	// verilog calculations testing
+//	assign addition = sw[7:4] + sw[3:0];
+//	assign substraction = sw[7:4] - sw[3:0];
+//	assign multiplication = sw[7:4] * sw[3:0];
 	
 	//output on the leds
-	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) |({8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient ) |({8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication );
+	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
+	|({8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient ) |({8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication | ({8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder )
+	 | ({8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt ));
 	
-	 
+	
 	 binary_to_BCD b1 (
     .number(led), 
     .ones(ones), 
     .tens(tens), 
     .hundreds(hundreds)
     );
-
-
 	
 	four_to_one_mux b2 (
     .ones(ones), 
@@ -123,8 +129,19 @@ module Calculator(
     .cout(co), 
     .addsub(substract)
     );
+	 	 
+	Squareroot b10 (
+    .clk(clk), 
+    .Radicand(sw[7:0]), 
+    .SquareRoot(sqrt)
+    );
 	
-	
+	Multiplication b11 (
+    .multiplicand(sw[7:4]), 
+    .multiplier(sw[3:0]), 
+    .clk(clk), 
+    .product(multiplication)
+    );
 	
 
 endmodule

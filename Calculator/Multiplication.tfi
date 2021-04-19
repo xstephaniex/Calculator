@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+Multiplication instance_name (
+    .multiplicand(multiplicand), 
+    .multiplier(multiplier), 
+    .clk(clk), 
+    .product(product)
+    );
+
+
