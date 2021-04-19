@@ -65,8 +65,8 @@ module Calculator(
     );
 	 
 	 Multiplication b4(
-		.mc(sw[7:4]),
-		.mp(sw[3:0]),
+		.q(sw[7:4]),
+		.m(sw[3:0]),
 		.clk(clk),
 		.product(product)
 	);

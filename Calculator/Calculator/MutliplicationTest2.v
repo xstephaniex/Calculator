@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   10:41:20 04/17/2021
+// Create Date:   20:10:20 04/18/2021
 // Design Name:   Multiplication
 // Module Name:   /home/angel/Documents/ise_projects/Calculator/Calculator/MutliplicationTest2.v
 // Project Name:  Calculator
@@ -22,7 +22,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module MutliplicationTest;
+module MutliplicationTest2;
 
 	// Inputs
 	reg [3:0] multiplicand;
