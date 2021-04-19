@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Squareroot instance_name (
+    .clk(clk), 
+    .Radicand(Radicand), 
+    .SquareRoot(SquareRoot)
+    );
+
+

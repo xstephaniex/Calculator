@@ -14,6 +14,10 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/Calculator.v&quot; into library work</arg>
 </msg>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> sevsegmentdisplay
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/Division.v&quot; into library work</arg>
 </msg>
 
@@ -29,6 +33,12 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/HalfAdder.v&quot; into library work</arg>
 </msg>
 
+<<<<<<< HEAD
+=======
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/Squareroot.v&quot; into library work</arg>
+</msg>
+
+>>>>>>> sevsegmentdisplay
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/binary_to_BCD.v&quot; into library work</arg>
 </msg>
 
@@ -41,8 +51,19 @@
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/four_to_one_mux.v&quot; into library work</arg>
 </msg>
 
+<<<<<<< HEAD
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/twobit_counter.v&quot; into library work</arg>
 </msg>
 
+=======
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/multiplication.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/User/dev/Calculator/Calculator/twobit_counter.v&quot; into library work</arg>
+</msg>
+
+=======
+>>>>>>> d52795dc7e025919dfb9ebbe316a044ffc0c884a
+>>>>>>> sevsegmentdisplay
 </messages>
 
