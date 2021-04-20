@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/Xilinx/Calculator/Calculator/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/Xilinx/Calculator/Calculator/xst"
+elaborate
+-ifn Keypad.prj
+-ifmt mixed

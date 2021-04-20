@@ -27,6 +27,11 @@ module Calculator(
 	 output[6:0]segment
 
     );
+	 
+	 
+	//Registers
+	reg [1:0] flags;
+	reg [3:0] value;
 	
 	
 	//this are the testing wires for each operation, for displaying in the leds
@@ -123,6 +128,15 @@ module Calculator(
     .cout(co), 
     .addsub(substract)
     );
+	 
+	KeypadDecoder b10(
+		.clk(clk),
+		.flags(flags),
+		.row(row),
+		.col(col),
+		.value(value)
+	 
+	 );
 	
 	
 	
