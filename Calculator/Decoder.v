@@ -57,19 +57,19 @@ module KeypadDecoder(
 			else if(sclk == 20'b00011000011010101000) begin
 				//R1
 				if (Row == 4'b0111) begin
-					DecodeOut <= 4'b0001;		//1
+					value <= 4'b0001;		//1
 				end
 				//R2
 				else if(Row == 4'b1011) begin
-					DecodeOut <= 4'b0100; 		//4
+					value <= 4'b0100; 		//4
 				end
 				//R3
 				else if(Row == 4'b1101) begin
-					DecodeOut <= 4'b0111; 		//7
+					value <= 4'b0111; 		//7
 				end
 				//R4
 				else if(Row == 4'b1110) begin
-					DecodeOut <= 4'b0000; 		//0
+					value <= 4'b0000; 		//0
 				end
 				sclk <= sclk + 1'b1;
 			end
@@ -85,19 +85,19 @@ module KeypadDecoder(
 			else if(sclk == 20'b00110000110101001000) begin
 				//R1
 				if (Row == 4'b0111) begin
-					DecodeOut <= 4'b0010; 		//2
+					value <= 4'b0010; 		//2
 				end
 				//R2
 				else if(Row == 4'b1011) begin
-					DecodeOut <= 4'b0101; 		//5
+					value <= 4'b0101; 		//5
 				end
 				//R3
 				else if(Row == 4'b1101) begin
-					DecodeOut <= 4'b1000; 		//8
+					value <= 4'b1000; 		//8
 				end
 				//R4
 				else if(Row == 4'b1110) begin
-					DecodeOut <= 4'b1111; 		//F
+					value <= 4'b1111; 		//F
 				end
 				sclk <= sclk + 1'b1;
 			end
@@ -113,19 +113,19 @@ module KeypadDecoder(
 			else if(sclk == 20'b01001001001111101000) begin
 				//R1
 				if(Row == 4'b0111) begin
-					DecodeOut <= 4'b0011; 		//3	
+					value <= 4'b0011; 		//3	
 				end
 				//R2
 				else if(Row == 4'b1011) begin
-					DecodeOut <= 4'b0110; 		//6
+					value <= 4'b0110; 		//6
 				end
 				//R3
 				else if(Row == 4'b1101) begin
-					DecodeOut <= 4'b1001; 		//9
+					value <= 4'b1001; 		//9
 				end
 				//R4
 				else if(Row == 4'b1110) begin
-					DecodeOut <= 4'b1110; 		//E
+					value <= 4'b1110; 		//E
 				end
 
 				sclk <= sclk + 1'b1;
@@ -142,19 +142,19 @@ module KeypadDecoder(
 			else if(sclk == 20'b01100001101010001000) begin
 				//R1
 				if(Row == 4'b0111) begin
-					DecodeOut <= 4'b1010; //A
+					value <= 4'b1010; //A
 				end
 				//R2
 				else if(Row == 4'b1011) begin
-					DecodeOut <= 4'b1011; //B
+					value <= 4'b1011; //B
 				end
 				//R3
 				else if(Row == 4'b1101) begin
-					DecodeOut <= 4'b1100; //C
+					value <= 4'b1100; //C
 				end
 				//R4
 				else if(Row == 4'b1110) begin
-					DecodeOut <= 4'b1101; //D
+					value <= 4'b1101; //D
 				end
 				sclk <= 20'b00000000000000000000;
 			end
