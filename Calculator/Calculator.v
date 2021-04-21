@@ -33,6 +33,9 @@ module Calculator(
 	//wire [7:0] addition, substraction;
 	//	wire [7:0] multiplication;
 	//divider signals; outputs
+	reg valueA [3:0];
+	reg valueB [3:0];
+	
 	wire [7:0] Quotient;   
 	wire [7:0] Reminder;
 
@@ -63,6 +66,12 @@ module Calculator(
 //	assign addition = sw[7:4] + sw[3:0];
 //	assign substraction = sw[7:4] - sw[3:0];
 //	assign multiplication = sw[7:4] * sw[3:0];
+
+	//Assing Values to Registers
+	always(@posedge){
+		valueA = sw[0:3];
+		valueB = sw[7:4];
+	}
 	
 	//output on the leds
 	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
@@ -106,24 +115,24 @@ module Calculator(
     );
  
 	 Division b7(
-		.Q(sw[7:4]),
-		.M(sw[3:0]),
+		.Q(valueA),
+		.M(valueB),
 		.clk(clk),
 		.Quotient(Quotient),
 		.Reminder(Reminder)	
 	);
 	
 	 FourBitAdder b8 (
-		 .a(sw[7:4]), 
-		 .b(sw[3:0]), 
+		 .a(valueA), 
+		 .b(valueB), 
 		 .clk(clk), 
 		 .s(sum), 
 		 .cout(cout)
     );
 
 	FourBitAdderSubstractor b9 (
-    .a(sw[7:4]), 
-    .b(sw[3:0]), 
+    .a(valueA), 
+    .b(valueB), 
     .clk(clk), 
     .cin(cin), 
     .cout(co), 
@@ -137,8 +146,8 @@ module Calculator(
     );
 	
 	Multiplication b11 (
-    .multiplicand(sw[7:4]), 
-    .multiplier(sw[3:0]), 
+    .multiplicand(valueB), 
+    .multiplier(valueA), 
     .clk(clk), 
     .product(multiplication)
     );
