@@ -1,0 +1,3 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/Power.tfi -lib work C:/Users/User/dev/Calculator/Calculator//Power.v -module Power -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work C:/Users/User/dev/Calculator/Calculator/Power.v -lang verilog -prj Calculator -o Power.spl -module Power -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Power.spl C:/Users/User/dev/Calculator/Calculator/Power.sym 

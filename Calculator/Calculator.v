@@ -32,6 +32,7 @@ module Calculator(
 	//this are the testing wires for each operation, for displaying in the leds
 	//wire [7:0] addition, substraction;
 	//	wire [7:0] multiplication;
+	wire [7:0] exponential;
 	//divider signals; outputs
 	wire [7:0] Quotient;   
 	wire [7:0] Reminder;
@@ -63,6 +64,7 @@ module Calculator(
 //	assign addition = sw[7:4] + sw[3:0];
 //	assign substraction = sw[7:4] - sw[3:0];
 //	assign multiplication = sw[7:4] * sw[3:0];
+
 	
 	//output on the leds
 	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
