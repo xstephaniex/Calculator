@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\User\dev\Calculator\Calculator\multiplication_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/User/dev/Calculator/Calculator/multiplication_tb_isim_beh.wdb 
+Running: C:\Users\User\dev\Calculator\Calculator\power_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/User/dev/Calculator/Calculator/power_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,3 +11,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+power1 =  0 power =  0
+power1 =  3 power =  3
+power1 = 15 power = 15
+power1 = 14 power = 14
+power1 =  1 power =  1

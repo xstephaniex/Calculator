@@ -33,9 +33,11 @@ module Calculator(
 	//wire [7:0] addition, substraction;
 	//	wire [7:0] multiplication;
 	//divider signals; outputs
-	reg valueA [3:0];
-	reg valueB [3:0];
+	reg [3:0]valueA ;
+	reg [3:0]valueB ;
 	
+	
+	//division signals; outputs
 	wire [7:0] Quotient;   
 	wire [7:0] Reminder;
 
@@ -51,8 +53,12 @@ module Calculator(
 	//square root signals; outputs
 	wire [7:0] sqrt; 
 	
-	//multiplication signals
+	//multiplication signals; outputs
 	wire [7:0] multiplication; 
+	
+	//multiplication signals; outputs
+	wire [7:0] power; 
+	
 	
 	//segment control signals
 	wire clk_out;
@@ -68,15 +74,17 @@ module Calculator(
 //	assign multiplication = sw[7:4] * sw[3:0];
 
 	//Assing Values to Registers
-	always(@posedge){
-		valueA = sw[0:3];
+	always @(posedge clk)begin
+		valueA = sw[3:0];
 		valueB = sw[7:4];
-	}
+	end
 	
 	//output on the leds
 	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
 	|({8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient ) |({8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication | ({8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder )
-	 | ({8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt ));
+	 | ({8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt ) | ({8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & power));
+	
+	
 	
 	
 	 binary_to_BCD b1 (
@@ -150,6 +158,13 @@ module Calculator(
     .multiplier(valueA), 
     .clk(clk), 
     .product(multiplication)
+    );
+	 
+	 Power b12 (
+    .clk(clk), 
+    .base(valueA), 
+    .power(valueB), 
+    .result(power)
     );
 	
 

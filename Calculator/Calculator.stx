@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to C:/Users/User/dev/Calculator/Calculator/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -24,8 +24,10 @@ Compiling verilog file "twobit_counter.v" in library work
 Module <FullAdder> compiled
 Compiling verilog file "Squareroot.v" in library work
 Module <twobit_counter> compiled
-Compiling verilog file "multiplication.v" in library work
+Compiling verilog file "power.v" in library work
 Module <Squareroot> compiled
+Compiling verilog file "multiplication.v" in library work
+Module <power> compiled
 Compiling verilog file "four_to_one_mux.v" in library work
 Module <Multiplication> compiled
 Compiling verilog file "FourBitAdderSubstractor.v" in library work
@@ -51,11 +53,11 @@ Analysis of file <"Calculator.prj"> succeeded.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.37 secs
  
 --> 
 
-Total memory usage is 4468140 kilobytes
+Total memory usage is 4468172 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

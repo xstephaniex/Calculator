@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+power instance_name (
+    .clk(clk), 
+    .base(base), 
+    .power(power), 
+    .result(result)
+    );
+
+
