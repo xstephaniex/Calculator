@@ -22,6 +22,7 @@ module Power(
 	 input clk,
     input [3:0]base,
     input [3:0]power,
+//	 inout [1:0] flag, 
     output [7:0]result
     );
 	
@@ -30,8 +31,9 @@ module Power(
 	assign i = 1'b1;
 	reg [10:0] result1  = 8'b0; 
 	 
-		always @(posedge result1[8] or posedge result1[9] or posedge result1[10])begin 	
+		always @(posedge result1[8] or posedge result1[9] or posedge result1[10])begin 	//Overflow Check
 			result1[7:0] = 8'b11111111;
+			/*flag[0] = 1;*/
 		end
 	
 	always@(power or base)begin

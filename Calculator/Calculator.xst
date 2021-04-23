@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/User/dev/Calculator/Calculator/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/User/dev/Calculator/Calculator/xst"
+set -tmpdir "/home/ise/Xilinx/Calculator/Calculator/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/Xilinx/Calculator/Calculator/xst"
 elaborate
 -ifn Calculator.prj
 -ifmt mixed

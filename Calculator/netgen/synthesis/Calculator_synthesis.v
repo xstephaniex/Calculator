@@ -7,17 +7,17 @@
 // \   \   \/     Version: P.20131013
 //  \   \         Application: netgen
 //  /   /         Filename: Calculator_synthesis.v
-// /___/   /\     Timestamp: Sun Apr 18 22:16:41 2021
+// /___/   /\     Timestamp: Fri Apr 23 00:37:04 2021
 // \   \  /  \ 
 //  \___\/\___\
 //             
 // Command	: -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 // Device	: xc3s100e-5-cp132
 // Input file	: Calculator.ngc
-// Output file	: C:\Users\User\dev\Calculator\Calculator\netgen\synthesis\Calculator_synthesis.v
+// Output file	: /home/ise/Xilinx/Calculator/Calculator/netgen/synthesis/Calculator_synthesis.v
 // # of Modules	: 1
 // Design Name	: Calculator
-// Xilinx        : C:\Xilinx\14.7\ISE_DS\ISE\
+// Xilinx        : /opt/Xilinx/14.7/ISE_DS/ISE/
 //             
 // Purpose:    
 //     This verilog netlist is a verification model and uses simulation 

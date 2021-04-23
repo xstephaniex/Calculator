@@ -47,22 +47,106 @@ module calculator_tb;
 	#15 clk = ~clk; 
 	initial begin
 		// Initialize Inputs
-		sw = 0;
-		btn = 0;
+		sw = 8'b00110010;
 		clk = 0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
+		
+		
+		btn[0] = 0;
+		
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
         
-		sw = 8'b00010001;
-		btn = 3'b000;
+		
+		
+		btn[0] = 0;
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
+		
+		
+		btn[0] = 0;
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
 	
-		#100;
+		
+		btn[0] = 0;
+		
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
         
-		sw = 8'b00010001;
-		btn = 3'b000;
+		
+		
+		btn[0] = 0;
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
+		
+		
+		
+		btn[0] = 0;
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
 	
-
+		
+		btn[0] = 0;
+		
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
+        
+		
+		
+		btn[0] = 0;
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
+		
+		
+		
+		btn[0] = 0;
+		#20;
+		btn[0] = 1;
+		#20;
+		btn[0] = 0;
+	
+		
+		btn[0] = 0;
+		
+		#5;
+		btn[0] = 1;
+		#100;
+		btn[0] = 0;
+        
+		
+		
+		btn[0] = 0;
+		#5;
+		btn[0] = 1;
+		#100;
+		btn[0] = 0;
+		
+		
+		
+		btn[0] = 0;
+		#5;
+		btn[0] = 1;
+		#100;
+		btn[0] = 0;
+	
+		
+		
 	end
       
 endmodule

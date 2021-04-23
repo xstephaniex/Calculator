@@ -762,3 +762,5 @@ bitgen -intstyle ise -f Calculator.ut Calculator.ncd
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 

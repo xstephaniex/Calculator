@@ -22,7 +22,7 @@ module Calculator(
     input [7:0]sw,
 	 input [2:0] btn,
 	 input clk,
-    output [7:0]led,  
+    output reg [7:0]led = 8'b00000000,  
 	 output[6:0]an,
 	 output[6:0]segment
 
@@ -33,8 +33,11 @@ module Calculator(
 	//wire [7:0] addition, substraction;
 	//	wire [7:0] multiplication;
 	//divider signals; outputs
-	reg [3:0]valueA ;
-	reg [3:0]valueB ;
+	
+	reg [3:0] STATE = 4'b0000;
+	reg [3:0] valueA ;
+	reg [3:0] valueB ;
+	reg flag [1:0]; //Flag[0] = Overflow - Flag[1] = Key Pressed
 	
 	
 	//division signals; outputs
@@ -77,12 +80,45 @@ module Calculator(
 	always @(posedge clk)begin
 		valueA = sw[3:0];
 		valueB = sw[7:4];
+		
+		case(STATE)
+			4'b0000: assign led = sum;
+			4'b0001: assign led = substract;
+			4'b0010: assign led = Quotient;
+			4'b0011: assign led = multiplication;
+			4'b0100: assign led = Reminder;
+			4'b0101: assign led = sqrt;
+			4'b0110: assign led = power;
+			4'b0111: assign led = 8'b11111111;
+						
+			
+			default: STATE = 4'b0000;
+			
+		endcase
 	end
 	
+	
+	always @(posedge btn[0])begin
+		STATE = STATE + 1;
+		$monitor("State = %d" , STATE);
+		if(STATE == 4'b1000)
+			STATE = 4'b0000;
+	end
+	
+//	always @(posedge flag[0])begin
+//		STATE = STATE + 1;
+//		$monitor("State = %d" , STATE);
+//		if(STATE == 4'b1000)
+//			STATE = 4'b0000;
+//	end
+	
+			
+	
+	
 	//output on the leds
-	assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
+	/*assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
 	|({8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient ) |({8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication | ({8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder )
-	 | ({8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt ) | ({8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & power));
+	 | ({8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt ) | ({8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & power));*/
 	
 	
 	
