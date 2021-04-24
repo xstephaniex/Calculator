@@ -1,0 +1,3 @@
+verilog work "Power_root2.v"
+verilog work "power_root2_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

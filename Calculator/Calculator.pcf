@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Apr 18 21:54:19 2021
+// Written by: Map P.20131013 on Sat Apr 24 15:18:25 2021
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,9 +11,6 @@ COMP "segment<3>" LOCATE = SITE "N11" LEVEL 1;
 COMP "segment<4>" LOCATE = SITE "N14" LEVEL 1;
 COMP "segment<5>" LOCATE = SITE "H12" LEVEL 1;
 COMP "segment<6>" LOCATE = SITE "L14" LEVEL 1;
-COMP "led<5>" LOCATE = SITE "N4" LEVEL 1;
-COMP "led<6>" LOCATE = SITE "P4" LEVEL 1;
-COMP "led<7>" LOCATE = SITE "G1" LEVEL 1;
 COMP "an<0>" LOCATE = SITE "F12" LEVEL 1;
 COMP "an<1>" LOCATE = SITE "J12" LEVEL 1;
 COMP "an<2>" LOCATE = SITE "M13" LEVEL 1;
@@ -33,7 +30,11 @@ COMP "btn<1>" LOCATE = SITE "C11" LEVEL 1;
 COMP "led<2>" LOCATE = SITE "P7" LEVEL 1;
 COMP "btn<2>" LOCATE = SITE "M4" LEVEL 1;
 COMP "led<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "A7" LEVEL 1;
 COMP "led<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "G1" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

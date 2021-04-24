@@ -45,14 +45,14 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-sw<0>       |   13.727(R)|    0.062(R)|clk_BUFGP         |   0.000|
-sw<1>       |   12.568(R)|    0.156(R)|clk_BUFGP         |   0.000|
-sw<2>       |   11.352(R)|    0.755(R)|clk_BUFGP         |   0.000|
-sw<3>       |   12.453(R)|    0.486(R)|clk_BUFGP         |   0.000|
-sw<4>       |    7.608(R)|    0.520(R)|clk_BUFGP         |   0.000|
-sw<5>       |    7.699(R)|    0.468(R)|clk_BUFGP         |   0.000|
-sw<6>       |    9.996(R)|   -0.127(R)|clk_BUFGP         |   0.000|
-sw<7>       |   12.654(R)|   -0.215(R)|clk_BUFGP         |   0.000|
+sw<0>       |    2.511(R)|   -0.045(R)|clk_BUFGP         |   0.000|
+sw<1>       |    2.256(R)|    0.343(R)|clk_BUFGP         |   0.000|
+sw<2>       |    1.480(R)|    0.627(R)|clk_BUFGP         |   0.000|
+sw<3>       |    2.130(R)|    0.383(R)|clk_BUFGP         |   0.000|
+sw<4>       |    1.100(R)|    1.332(R)|clk_BUFGP         |   0.000|
+sw<5>       |    1.326(R)|    0.478(R)|clk_BUFGP         |   0.000|
+sw<6>       |    4.135(R)|    1.098(R)|clk_BUFGP         |   0.000|
+sw<7>       |    5.922(R)|    0.229(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -60,21 +60,21 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-led<0>      |    9.470(R)|clk_BUFGP         |   0.000|
-led<1>      |   10.819(R)|clk_BUFGP         |   0.000|
-led<2>      |    9.746(R)|clk_BUFGP         |   0.000|
-led<3>      |   11.701(R)|clk_BUFGP         |   0.000|
-led<4>      |   10.307(R)|clk_BUFGP         |   0.000|
-led<5>      |    9.415(R)|clk_BUFGP         |   0.000|
-led<6>      |    9.108(R)|clk_BUFGP         |   0.000|
-led<7>      |    9.587(R)|clk_BUFGP         |   0.000|
-segment<0>  |   20.188(R)|clk_BUFGP         |   0.000|
-segment<1>  |   19.695(R)|clk_BUFGP         |   0.000|
-segment<2>  |   19.986(R)|clk_BUFGP         |   0.000|
-segment<3>  |   20.011(R)|clk_BUFGP         |   0.000|
-segment<4>  |   19.724(R)|clk_BUFGP         |   0.000|
-segment<5>  |   20.236(R)|clk_BUFGP         |   0.000|
-segment<6>  |   19.708(R)|clk_BUFGP         |   0.000|
+led<0>      |   17.222(R)|clk_BUFGP         |   0.000|
+led<1>      |   17.449(R)|clk_BUFGP         |   0.000|
+led<2>      |   17.381(R)|clk_BUFGP         |   0.000|
+led<3>      |   17.615(R)|clk_BUFGP         |   0.000|
+led<4>      |   20.172(R)|clk_BUFGP         |   0.000|
+led<5>      |   24.924(R)|clk_BUFGP         |   0.000|
+led<6>      |   31.792(R)|clk_BUFGP         |   0.000|
+led<7>      |   31.929(R)|clk_BUFGP         |   0.000|
+segment<0>  |   42.834(R)|clk_BUFGP         |   0.000|
+segment<1>  |   43.304(R)|clk_BUFGP         |   0.000|
+segment<2>  |   43.130(R)|clk_BUFGP         |   0.000|
+segment<3>  |   42.758(R)|clk_BUFGP         |   0.000|
+segment<4>  |   42.519(R)|clk_BUFGP         |   0.000|
+segment<5>  |   43.278(R)|clk_BUFGP         |   0.000|
+segment<6>  |   43.407(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -82,152 +82,77 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    8.585|         |         |         |
+clk            |    8.325|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-btn<0>         |led<0>         |    8.461|
-btn<0>         |led<1>         |   10.590|
-btn<0>         |led<2>         |    8.498|
-btn<0>         |led<3>         |   10.759|
-btn<0>         |led<4>         |    8.566|
-btn<0>         |led<5>         |    7.173|
-btn<0>         |led<6>         |    7.085|
-btn<0>         |led<7>         |    7.723|
-btn<0>         |segment<0>     |   19.243|
-btn<0>         |segment<1>     |   18.750|
-btn<0>         |segment<2>     |   19.041|
-btn<0>         |segment<3>     |   19.066|
-btn<0>         |segment<4>     |   18.779|
-btn<0>         |segment<5>     |   19.291|
-btn<0>         |segment<6>     |   18.763|
-btn<1>         |led<0>         |    9.949|
-btn<1>         |led<1>         |   11.447|
-btn<1>         |led<2>         |    9.426|
-btn<1>         |led<3>         |   10.930|
-btn<1>         |led<4>         |    9.754|
-btn<1>         |led<5>         |    8.840|
-btn<1>         |led<6>         |    8.445|
-btn<1>         |led<7>         |    9.461|
-btn<1>         |segment<0>     |   19.414|
-btn<1>         |segment<1>     |   18.921|
-btn<1>         |segment<2>     |   19.212|
-btn<1>         |segment<3>     |   19.237|
-btn<1>         |segment<4>     |   18.950|
-btn<1>         |segment<5>     |   19.462|
-btn<1>         |segment<6>     |   18.934|
-btn<2>         |led<0>         |    9.582|
-btn<2>         |led<1>         |   11.080|
-btn<2>         |led<2>         |    9.059|
-btn<2>         |led<3>         |   10.563|
-btn<2>         |led<4>         |    9.387|
-btn<2>         |led<5>         |    7.923|
-btn<2>         |led<6>         |    7.528|
-btn<2>         |led<7>         |    8.544|
-btn<2>         |segment<0>     |   19.047|
-btn<2>         |segment<1>     |   18.554|
-btn<2>         |segment<2>     |   18.845|
-btn<2>         |segment<3>     |   18.870|
-btn<2>         |segment<4>     |   18.583|
-btn<2>         |segment<5>     |   19.095|
-btn<2>         |segment<6>     |   18.567|
-sw<0>          |led<0>         |    8.054|
-sw<0>          |led<1>         |   14.384|
-sw<0>          |led<2>         |   14.507|
-sw<0>          |led<3>         |   17.017|
-sw<0>          |led<4>         |    9.835|
-sw<0>          |segment<0>     |   25.501|
-sw<0>          |segment<1>     |   25.008|
-sw<0>          |segment<2>     |   25.299|
-sw<0>          |segment<3>     |   25.324|
-sw<0>          |segment<4>     |   25.037|
-sw<0>          |segment<5>     |   25.549|
-sw<0>          |segment<6>     |   25.021|
-sw<1>          |led<1>         |   12.117|
-sw<1>          |led<2>         |   12.240|
-sw<1>          |led<3>         |   14.750|
-sw<1>          |led<4>         |   10.306|
-sw<1>          |segment<0>     |   23.234|
-sw<1>          |segment<1>     |   22.741|
-sw<1>          |segment<2>     |   23.032|
-sw<1>          |segment<3>     |   23.057|
-sw<1>          |segment<4>     |   22.770|
-sw<1>          |segment<5>     |   23.282|
-sw<1>          |segment<6>     |   22.754|
-sw<2>          |led<1>         |   11.597|
-sw<2>          |led<2>         |   11.720|
-sw<2>          |led<3>         |   14.230|
-sw<2>          |led<4>         |    9.887|
-sw<2>          |segment<0>     |   22.714|
-sw<2>          |segment<1>     |   22.221|
-sw<2>          |segment<2>     |   22.512|
-sw<2>          |segment<3>     |   22.537|
-sw<2>          |segment<4>     |   22.250|
-sw<2>          |segment<5>     |   22.762|
-sw<2>          |segment<6>     |   22.234|
-sw<3>          |led<1>         |   10.943|
-sw<3>          |led<2>         |   11.066|
-sw<3>          |led<3>         |   13.576|
-sw<3>          |led<4>         |    9.653|
-sw<3>          |segment<0>     |   22.060|
-sw<3>          |segment<1>     |   21.567|
-sw<3>          |segment<2>     |   21.858|
-sw<3>          |segment<3>     |   21.883|
-sw<3>          |segment<4>     |   21.596|
-sw<3>          |segment<5>     |   22.108|
-sw<3>          |segment<6>     |   21.580|
-sw<4>          |led<0>         |    7.517|
-sw<4>          |led<1>         |   11.751|
-sw<4>          |led<2>         |   11.874|
-sw<4>          |led<3>         |   14.384|
-sw<4>          |led<4>         |   10.095|
-sw<4>          |segment<0>     |   22.868|
-sw<4>          |segment<1>     |   22.375|
-sw<4>          |segment<2>     |   22.666|
-sw<4>          |segment<3>     |   22.691|
-sw<4>          |segment<4>     |   22.404|
-sw<4>          |segment<5>     |   22.916|
-sw<4>          |segment<6>     |   22.388|
-sw<5>          |led<1>         |   11.863|
-sw<5>          |led<2>         |   11.986|
-sw<5>          |led<3>         |   14.496|
-sw<5>          |led<4>         |    9.831|
-sw<5>          |segment<0>     |   22.980|
-sw<5>          |segment<1>     |   22.487|
-sw<5>          |segment<2>     |   22.778|
-sw<5>          |segment<3>     |   22.803|
-sw<5>          |segment<4>     |   22.516|
-sw<5>          |segment<5>     |   23.028|
-sw<5>          |segment<6>     |   22.500|
-sw<6>          |led<1>         |   12.202|
-sw<6>          |led<2>         |   12.325|
-sw<6>          |led<3>         |   14.835|
-sw<6>          |led<4>         |    9.481|
-sw<6>          |segment<0>     |   23.319|
-sw<6>          |segment<1>     |   22.826|
-sw<6>          |segment<2>     |   23.117|
-sw<6>          |segment<3>     |   23.142|
-sw<6>          |segment<4>     |   22.855|
-sw<6>          |segment<5>     |   23.367|
-sw<6>          |segment<6>     |   22.839|
-sw<7>          |led<1>         |   11.107|
-sw<7>          |led<2>         |   11.230|
-sw<7>          |led<3>         |   13.740|
-sw<7>          |led<4>         |    7.837|
-sw<7>          |segment<0>     |   22.224|
-sw<7>          |segment<1>     |   21.731|
-sw<7>          |segment<2>     |   22.022|
-sw<7>          |segment<3>     |   22.047|
-sw<7>          |segment<4>     |   21.760|
-sw<7>          |segment<5>     |   22.272|
-sw<7>          |segment<6>     |   21.744|
+btn<0>         |led<0>         |   13.251|
+btn<0>         |led<1>         |   12.176|
+btn<0>         |led<2>         |   13.217|
+btn<0>         |led<3>         |   12.508|
+btn<0>         |led<4>         |   10.765|
+btn<0>         |led<5>         |   11.630|
+btn<0>         |led<6>         |   11.347|
+btn<0>         |led<7>         |   12.504|
+btn<0>         |segment<0>     |   22.514|
+btn<0>         |segment<1>     |   22.984|
+btn<0>         |segment<2>     |   22.810|
+btn<0>         |segment<3>     |   22.438|
+btn<0>         |segment<4>     |   22.199|
+btn<0>         |segment<5>     |   22.958|
+btn<0>         |segment<6>     |   23.087|
+btn<1>         |led<0>         |   10.014|
+btn<1>         |led<1>         |   10.560|
+btn<1>         |led<2>         |   11.590|
+btn<1>         |led<3>         |   11.172|
+btn<1>         |led<4>         |   11.814|
+btn<1>         |led<5>         |   11.502|
+btn<1>         |led<6>         |   11.402|
+btn<1>         |led<7>         |   13.052|
+btn<1>         |segment<0>     |   22.441|
+btn<1>         |segment<1>     |   22.911|
+btn<1>         |segment<2>     |   22.737|
+btn<1>         |segment<3>     |   22.365|
+btn<1>         |segment<4>     |   22.126|
+btn<1>         |segment<5>     |   22.885|
+btn<1>         |segment<6>     |   23.014|
+btn<2>         |led<0>         |   11.233|
+btn<2>         |led<1>         |   11.218|
+btn<2>         |led<2>         |   12.087|
+btn<2>         |led<3>         |   11.796|
+btn<2>         |led<4>         |   10.754|
+btn<2>         |led<5>         |   10.939|
+btn<2>         |led<6>         |   11.057|
+btn<2>         |led<7>         |   12.170|
+btn<2>         |segment<0>     |   22.096|
+btn<2>         |segment<1>     |   22.566|
+btn<2>         |segment<2>     |   22.392|
+btn<2>         |segment<3>     |   22.020|
+btn<2>         |segment<4>     |   21.781|
+btn<2>         |segment<5>     |   22.540|
+btn<2>         |segment<6>     |   22.669|
+btn<3>         |led<0>         |   12.406|
+btn<3>         |led<1>         |   11.331|
+btn<3>         |led<2>         |   12.372|
+btn<3>         |led<3>         |   11.663|
+btn<3>         |led<4>         |   11.804|
+btn<3>         |led<5>         |   10.785|
+btn<3>         |led<6>         |   10.608|
+btn<3>         |led<7>         |   11.659|
+btn<3>         |segment<0>     |   21.777|
+btn<3>         |segment<1>     |   22.247|
+btn<3>         |segment<2>     |   22.073|
+btn<3>         |segment<3>     |   21.701|
+btn<3>         |segment<4>     |   21.462|
+btn<3>         |segment<5>     |   22.221|
+btn<3>         |segment<6>     |   22.350|
 ---------------+---------------+---------+
 
 
-Analysis completed Sun Apr 18 22:17:10 2021 
+Analysis completed Sat Apr 24 15:18:36 2021 
 --------------------------------------------------------------------------------
 
 Trace Settings:

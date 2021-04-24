@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+Power_root2 instance_name (
+    .base(base), 
+    .result(result)
+    );
+
+
