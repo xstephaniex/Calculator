@@ -23,7 +23,7 @@ module Calculator(
 	 input [3:0] btn,
 	 input clk,
     output[7:0]led,  
-	 output[6:0]an,
+	 output[3:0]an,
 	 output[6:0]segment
 
     );
@@ -197,13 +197,28 @@ module Calculator(
     .out(comparator)
     );
 	 
+//test of derivative logic
+//	 SimpleDerivativeRoot b13 (
+//    .root(valueA), 
+//    .rootout(X) 
+//    );
+//	 
+//	  Multiplication simpleDerivativeBase (
+//    .multiplicand(valueA), 
+//    .multiplier(valueB), 
+//    .clk(clk), 
+//    .product(base)
+//    );
+
 	 SimpleDerivative b13 (
+	 .clk(clk), 
     .base(valueB), 
     .root(valueA), 
     .rootout(X), 
     .baseout(base)
     );
-	 
+
+
 	 Power_root2 b14 (
     .base(valueA), 
     .result(powerA)

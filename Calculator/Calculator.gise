@@ -119,6 +119,10 @@
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="Seven_SegmentDisplay.tfi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Seven_SegmentDisplay.xst"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="SimpleDerivative.tfi"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="SimpleDerivativeBase.tfi"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SimpleDerivativeRoot.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="SimpleDerivativeRoot.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="SimpleDerivativeRoot.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Squareroot.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Squareroot.stx"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="Squareroot.tfi"/>
@@ -242,6 +246,13 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="shift_or_addthree.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="simplederivative_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="simplederivative_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="simplederivativebase.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="simplederivativebase.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="simplederivativebase.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="simplederivativetest.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="simplederivativetest.stx"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="simplederivativetest.tfi"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="simplederivativetest.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="squareroot_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="squareroot_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="squareroot_tb_stx_beh.prj"/>
@@ -269,41 +280,11 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="BCD_sevensegment.v"/>
-      <outfile xil_pn:name="Calculator.v"/>
-      <outfile xil_pn:name="Division.v"/>
-      <outfile xil_pn:name="FourBitAdder.v"/>
-      <outfile xil_pn:name="FourBitAdderSubstractor.v"/>
-      <outfile xil_pn:name="FullAdder.v"/>
-      <outfile xil_pn:name="HalfAdder.v"/>
-      <outfile xil_pn:name="Power_root2.v"/>
-      <outfile xil_pn:name="SimpleDerivative.v"/>
-      <outfile xil_pn:name="Squareroot.v"/>
-      <outfile xil_pn:name="binary_to_BCD.v"/>
-      <outfile xil_pn:name="binary_to_BCD_tb.v"/>
-      <outfile xil_pn:name="calculator_tb.v"/>
-      <outfile xil_pn:name="comparator.v"/>
-      <outfile xil_pn:name="comparator_tb.v"/>
-      <outfile xil_pn:name="decoder_numberboxselector.v"/>
-      <outfile xil_pn:name="delay_clock.v"/>
-      <outfile xil_pn:name="division_tb.v"/>
-      <outfile xil_pn:name="four_bit_adder_substractor_tb.v"/>
-      <outfile xil_pn:name="four_to_one_mux.v"/>
-      <outfile xil_pn:name="fourbitadder_tb.v"/>
-      <outfile xil_pn:name="fourbitaddersubstractor_tb.v"/>
-      <outfile xil_pn:name="fulladder_tb.v"/>
-      <outfile xil_pn:name="halfadder_tb.v"/>
-      <outfile xil_pn:name="multiplication.v"/>
-      <outfile xil_pn:name="multiplication_tb.v"/>
-      <outfile xil_pn:name="power.v"/>
-      <outfile xil_pn:name="power_root2_tb.v"/>
-      <outfile xil_pn:name="power_tb.v"/>
-      <outfile xil_pn:name="simplederivative_tb.v"/>
-      <outfile xil_pn:name="squareroot_tb.v"/>
-      <outfile xil_pn:name="twobit_counter.v"/>
-      <outfile xil_pn:name="twobit_counter_tb.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1619294998" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1457811647224000014" xil_pn:start_ts="1619294998">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -324,65 +305,32 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="BCD_sevensegment.v"/>
-      <outfile xil_pn:name="Calculator.v"/>
-      <outfile xil_pn:name="Division.v"/>
-      <outfile xil_pn:name="FourBitAdder.v"/>
-      <outfile xil_pn:name="FourBitAdderSubstractor.v"/>
-      <outfile xil_pn:name="FullAdder.v"/>
-      <outfile xil_pn:name="HalfAdder.v"/>
-      <outfile xil_pn:name="Power_root2.v"/>
-      <outfile xil_pn:name="SimpleDerivative.v"/>
-      <outfile xil_pn:name="Squareroot.v"/>
-      <outfile xil_pn:name="binary_to_BCD.v"/>
-      <outfile xil_pn:name="binary_to_BCD_tb.v"/>
-      <outfile xil_pn:name="calculator_tb.v"/>
-      <outfile xil_pn:name="comparator.v"/>
-      <outfile xil_pn:name="comparator_tb.v"/>
-      <outfile xil_pn:name="decoder_numberboxselector.v"/>
-      <outfile xil_pn:name="delay_clock.v"/>
-      <outfile xil_pn:name="division_tb.v"/>
-      <outfile xil_pn:name="four_bit_adder_substractor_tb.v"/>
-      <outfile xil_pn:name="four_to_one_mux.v"/>
-      <outfile xil_pn:name="fourbitadder_tb.v"/>
-      <outfile xil_pn:name="fourbitaddersubstractor_tb.v"/>
-      <outfile xil_pn:name="fulladder_tb.v"/>
-      <outfile xil_pn:name="halfadder_tb.v"/>
-      <outfile xil_pn:name="multiplication.v"/>
-      <outfile xil_pn:name="multiplication_tb.v"/>
-      <outfile xil_pn:name="power.v"/>
-      <outfile xil_pn:name="power_root2_tb.v"/>
-      <outfile xil_pn:name="power_tb.v"/>
-      <outfile xil_pn:name="simplederivative_tb.v"/>
-      <outfile xil_pn:name="squareroot_tb.v"/>
-      <outfile xil_pn:name="twobit_counter.v"/>
-      <outfile xil_pn:name="twobit_counter_tb.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1619295052" xil_pn:in_ck="-4815245001378054685" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6123061728547364861" xil_pn:start_ts="1619295050">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="power_root2_tb_beh.prj"/>
-      <outfile xil_pn:name="power_root2_tb_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1619295052" xil_pn:in_ck="5456956182122228951" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4045275119032518560" xil_pn:start_ts="1619295052">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="power_root2_tb_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1619279456" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1619279456">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -412,7 +360,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619295496" xil_pn:in_ck="1511299651700581883" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4824649475537146944" xil_pn:start_ts="1619295488">
+    <transform xil_pn:end_ts="1619385443" xil_pn:in_ck="-6580905228647295236" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="4824649475537146944" xil_pn:start_ts="1619385434">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -438,7 +386,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1619295504" xil_pn:in_ck="-5042597057210609167" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2003301636685945712" xil_pn:start_ts="1619295499">
+    <transform xil_pn:end_ts="1619385449" xil_pn:in_ck="-5042597057210609167" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2003301636685945712" xil_pn:start_ts="1619385445">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Calculator.bld"/>
@@ -447,12 +395,10 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1619295507" xil_pn:in_ck="-6580327111008614873" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1619295504">
+    <transform xil_pn:end_ts="1619385453" xil_pn:in_ck="-6580327111008614873" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1619385449">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Calculator.pcf"/>
       <outfile xil_pn:name="Calculator_map.map"/>
       <outfile xil_pn:name="Calculator_map.mrp"/>
@@ -463,7 +409,7 @@
       <outfile xil_pn:name="Calculator_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1619295517" xil_pn:in_ck="-240373242724170368" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1619295507">
+    <transform xil_pn:end_ts="1619385461" xil_pn:in_ck="-240373242724170368" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1619385453">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -478,11 +424,9 @@
       <outfile xil_pn:name="Calculator_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1619295522" xil_pn:in_ck="-264750746697269491" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1619295518">
+    <transform xil_pn:end_ts="1619385474" xil_pn:in_ck="-264750746697269491" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1619385470">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Calculator.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="calculator.bgn"/>
@@ -492,24 +436,28 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1619295524" xil_pn:in_ck="8585890041247432951" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1619295523">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1618799439" xil_pn:in_ck="8585890041247432951" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="2003301636685945712" xil_pn:start_ts="1618799439">
+    <transform xil_pn:end_ts="1619385185" xil_pn:in_ck="8585890041247432951" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1619385184">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1619295517" xil_pn:in_ck="8417147504061116067" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1619295515">
+    <transform xil_pn:end_ts="1618799439" xil_pn:in_ck="8585890041247432951" xil_pn:name="TRAN_analyzeDesignUsingChipscope" xil_pn:prop_ck="2003301636685945712" xil_pn:start_ts="1618799439">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1619385461" xil_pn:in_ck="8417147504061116067" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1619385459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Calculator.twr"/>
       <outfile xil_pn:name="Calculator.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1619295498" xil_pn:in_ck="9196518543919351835" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="-4615964425441611522" xil_pn:start_ts="1619295496">
+    <transform xil_pn:end_ts="1619385445" xil_pn:in_ck="9196518543919351835" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="-4615964425441611522" xil_pn:start_ts="1619385443">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="netgen"/>

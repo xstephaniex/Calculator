@@ -1,0 +1,2 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/simplederivativebase.tfi -lib work C:/Users/User/dev/Calculator/Calculator//simplederivativebase.v -module simplederivativebase -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/SimpleDerivativeBase.tfi -lib work C:/Users/User/dev/Calculator/Calculator//simplederivativebase.v -module SimpleDerivativeBase -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

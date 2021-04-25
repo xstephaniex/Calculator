@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+simplederivativetest instance_name (
+    .base(base), 
+    .root(root), 
+    .rootout(rootout), 
+    .baseout(baseout)
+    );
+
+

@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+SimpleDerivativeBase instance_name (
+    .base(base), 
+    .root(root), 
+    .baseout(baseout)
+    );
+
+
