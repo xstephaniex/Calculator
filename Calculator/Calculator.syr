@@ -114,10 +114,8 @@ Compiling verilog file "twobit_counter.v" in library work
 Module <FullAdder> compiled
 Compiling verilog file "Squareroot.v" in library work
 Module <twobit_counter> compiled
-Compiling verilog file "power.v" in library work
-Module <Squareroot> compiled
 Compiling verilog file "multiplication.v" in library work
-Module <Power> compiled
+Module <Squareroot> compiled
 Compiling verilog file "four_to_one_mux.v" in library work
 Module <Multiplication> compiled
 Compiling verilog file "FourBitAdderSubstractor.v" in library work
@@ -168,8 +166,6 @@ Analyzing hierarchy for module <Squareroot> in library <work>.
 
 Analyzing hierarchy for module <Multiplication> in library <work>.
 
-Analyzing hierarchy for module <Power> in library <work>.
-
 Analyzing hierarchy for module <HalfAdder> in library <work>.
 
 Analyzing hierarchy for module <FullAdder> in library <work>.
@@ -179,6 +175,9 @@ Analyzing hierarchy for module <FullAdder> in library <work>.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <Calculator>.
+WARNING:Xst:916 - "Calculator.v" line 107: Delay is ignored for synthesis.
+WARNING:Xst:916 - "Calculator.v" line 114: Delay is ignored for synthesis.
+WARNING:Xst:916 - "Calculator.v" line 121: Delay is ignored for synthesis.
 Module <Calculator> is correct for synthesis.
  
 Analyzing module <binary_to_BCD> in library <work>.
@@ -220,27 +219,614 @@ Module <Squareroot> is correct for synthesis.
 Analyzing module <Multiplication> in library <work>.
 Module <Multiplication> is correct for synthesis.
  
-Analyzing module <Power> in library <work>.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[7]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[6]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[5]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[4]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[3]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[2]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[1]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:899 - "power.v" line 0: The logic for <result1[0]> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
-ERROR:Xst:888 - "power.v" line 49: For statement is only supported when the new step evaluation is an assignment to the signal used in the initialization part.
-ERROR:Xst:891 - "power.v" line 49: For Statement is only supported when the new step evaluation is constant increment or decrement of the loop variable.
-WARNING:Xst:905 - "power.v" line 37: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <power1>
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <binary_to_BCD>.
+    Related source file is "binary_to_BCD.v".
+WARNING:Xst:646 - Signal <shift> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit adder for signal <$add0000> created at line 54.
+    Found 4-bit adder for signal <$add0001> created at line 54.
+    Found 4-bit adder for signal <$add0002> created at line 54.
+    Found 4-bit adder for signal <$add0003> created at line 54.
+    Found 4-bit adder for signal <$add0004> created at line 60.
+    Found 4-bit adder for signal <$add0005> created at line 54.
+    Found 4-bit adder for signal <$add0006> created at line 60.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0000> created at line 52.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0001> created at line 52.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0002> created at line 52.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0003> created at line 58.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0004> created at line 52.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0005> created at line 58.
+    Found 4-bit comparator greatequal for signal <shift$cmp_ge0006> created at line 52.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+Unit <binary_to_BCD> synthesized.
+
+
+Synthesizing Unit <four_to_one_mux>.
+    Related source file is "four_to_one_mux.v".
+    Found 4-bit 4-to-1 multiplexer for signal <out>.
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <four_to_one_mux> synthesized.
+
+
+Synthesizing Unit <delay_clock>.
+    Related source file is "delay_clock.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 20-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <delay_clock> synthesized.
+
+
+Synthesizing Unit <twobit_counter>.
+    Related source file is "twobit_counter.v".
+    Found 2-bit up counter for signal <temp>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <twobit_counter> synthesized.
+
+
+Synthesizing Unit <decoder_numberboxselector>.
+    Related source file is "decoder_numberboxselector.v".
+    Found 4x4-bit ROM for signal <numberbox>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder_numberboxselector> synthesized.
+
+
+Synthesizing Unit <BCD_sevensegment>.
+    Related source file is "BCD_sevensegment.v".
+    Found 16x7-bit ROM for signal <numtobedisplay>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <BCD_sevensegment> synthesized.
+
+
+Synthesizing Unit <Division>.
+    Related source file is "Division.v".
+WARNING:Xst:1780 - Signal <diff> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Register <qu<5>> equivalent to <qu<4>> has been removed
+    Register <qu<6>> equivalent to <qu<4>> has been removed
+    Register <qu<7>> equivalent to <qu<4>> has been removed
+    Found 4-bit subtractor for signal <$sub0000> created at line 56.
+    Found 4-bit subtractor for signal <$sub0001> created at line 56.
+    Found 4-bit subtractor for signal <$sub0002> created at line 56.
+    Found 4-bit subtractor for signal <$sub0003> created at line 56.
+    Found 4-bit comparator greatequal for signal <mux0000$cmp_ge0000> created at line 54.
+    Found 5-bit register for signal <qu<4:0>>.
+    Found 4-bit register for signal <rem>.
+    Found 4-bit comparator greatequal for signal <rem$cmp_ge0000> created at line 54.
+    Found 4-bit comparator greatequal for signal <rem$cmp_ge0001> created at line 54.
+    Found 4-bit comparator greatequal for signal <rem$cmp_ge0002> created at line 54.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <Division> synthesized.
+
+
+Synthesizing Unit <Squareroot>.
+    Related source file is "Squareroot.v".
+WARNING:Xst:646 - Signal <right> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r<4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <left> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <a>.
+    Found 32-bit register for signal <i>.
+    Found 33-bit comparator less for signal <old_i_7$cmp_lt0000> created at line 44.
+    Found 32-bit adder for signal <old_i_7$share0000>.
+    Found 4-bit register for signal <q>.
+    Found 6-bit register for signal <r>.
+    Found 4-bit register for signal <sqrt>.
+    Summary:
+	inferred  54 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <Squareroot> synthesized.
+
+
+Synthesizing Unit <Multiplication>.
+    Related source file is "multiplication.v".
+WARNING:Xst:646 - Signal <q> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <product1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <m> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <product>.
+    Found 8-bit adder for signal <old_product1_10$addsub0000> created at line 42.
+    Found 8-bit adder for signal <old_product1_11$addsub0000> created at line 42.
+    Found 8-bit adder for signal <old_product1_12$addsub0000> created at line 42.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <Multiplication> synthesized.
+
+
+Synthesizing Unit <HalfAdder>.
+    Related source file is "HalfAdder.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit xor2 for signal <s>.
+Unit <HalfAdder> synthesized.
+
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "FullAdder.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit xor2 for signal <s>.
+    Found 1-bit xor2 for signal <cout$xor0000> created at line 33.
+Unit <FullAdder> synthesized.
+
+
+Synthesizing Unit <FourBitAdder>.
+    Related source file is "FourBitAdder.v".
+Unit <FourBitAdder> synthesized.
+
+
+Synthesizing Unit <FourBitAdderSubstractor>.
+    Related source file is "FourBitAdderSubstractor.v".
+WARNING:Xst:1305 - Output <addsub<4>> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <b1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit comparator greater for signal <a1$cmp_gt0000> created at line 43.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <FourBitAdderSubstractor> synthesized.
+
+
+Synthesizing Unit <Calculator>.
+    Related source file is "Calculator.v".
+WARNING:Xst:647 - Input <btn<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <switchMode> is used but never assigned. This sourceless signal will be automatically connected to value 1.
+WARNING:Xst:653 - Signal <power> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:1780 - Signal <flag> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <co> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <buttonpressed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit adder for signal <old_STATE_1$add0000> created at line 108.
+    Found 4-bit up counter for signal <STATE>.
+    Found 4-bit register for signal <valueA>.
+    Found 4-bit register for signal <valueB>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Calculator> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+# Adders/Subtractors                                   : 17
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 4-bit subtractor                                      : 4
+ 6-bit addsub                                          : 1
+ 8-bit adder                                           : 3
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 18
+ 1-bit register                                        : 10
+ 32-bit register                                       : 1
+ 4-bit register                                        : 4
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 13
+ 33-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 11
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <a_0> in Unit <b10> is equivalent to the following FF/Latch, which will be removed : <a_1> 
+WARNING:Xst:1293 - FF/Latch <a_0> has a constant value of 0 in block <b10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <r_4> of sequential type is unconnected in block <b10>.
+WARNING:Xst:2677 - Node <r_4> of sequential type is unconnected in block <Squareroot>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+# Adders/Subtractors                                   : 17
+ 3-bit subtractor                                      : 3
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 4-bit subtractor                                      : 1
+ 6-bit addsub                                          : 1
+ 8-bit adder                                           : 3
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 79
+ Flip-Flops                                            : 79
+# Comparators                                          : 13
+ 33-bit comparator less                                : 1
+ 4-bit comparator greatequal                           : 11
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 15
+ 1-bit xor2                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <a_0> has a constant value of 0 in block <Squareroot>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_1> has a constant value of 0 in block <Squareroot>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Calculator> ...
+
+Optimizing unit <binary_to_BCD> ...
+
+Optimizing unit <Division> ...
+
+Optimizing unit <Squareroot> ...
+
+Optimizing unit <Multiplication> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Calculator, actual ratio is 20.
+FlipFlop valueB_0 has been replicated 1 time(s)
+FlipFlop valueB_1 has been replicated 1 time(s)
+FlipFlop valueB_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 106
+ Flip-Flops                                            : 106
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Calculator.ngr
+Top Level Output File Name         : Calculator
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 34
+
+Cell Usage :
+# BELS                             : 501
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 51
+#      LUT2                        : 21
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 54
+#      LUT3_D                      : 1
+#      LUT3_L                      : 4
+#      LUT4                        : 169
+#      LUT4_D                      : 3
+#      LUT4_L                      : 4
+#      MUXCY                       : 94
+#      MUXF5                       : 18
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 67
+# FlipFlops/Latches                : 106
+#      FD                          : 19
+#      FDE                         : 16
+#      FDR                         : 35
+#      FDRE                        : 32
+#      FDS                         : 4
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 30
+#      IBUF                        : 8
+#      OBUF                        : 22
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      171  out of    960    17%  
+ Number of Slice Flip Flops:            106  out of   1920     5%  
+ Number of 4 input LUTs:                319  out of   1920    16%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  32  out of     83    38%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 100   |
+btn<0>                             | BUFGP                  | 4     |
+b3/clk_out                         | NONE(b4/temp_1)        | 2     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.631ns (Maximum Frequency: 103.832MHz)
+   Minimum input arrival time before clock: 6.198ns
+   Maximum output required time after clock: 23.585ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.631ns (frequency: 103.832MHz)
+  Total number of paths / destination ports: 55197 / 191
+-------------------------------------------------------------------------
+Delay:               9.631ns (Levels of Logic = 7)
+  Source:            valueB_2 (FF)
+  Destination:       b7/qu_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: valueB_2 to b7/qu_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             33   0.514   1.103  valueB_2 (valueB_2)
+     LUT3_L:I2->LO         1   0.612   0.130  b7/rem_cmp_ge000011_SW0 (N28)
+     LUT3:I2->O            1   0.612   0.360  b7/rem_mux00031 (b7/rem_mux0003)
+     LUT4:I3->O            5   0.612   0.568  b7/rem_mux00061 (b7/rem_mux0006)
+     LUT3:I2->O            1   0.612   0.357  b7/rem_cmp_ge00021_SW0 (N42)
+     MUXF5:S->O            1   0.641   0.387  b7/mux0000_cmp_ge00002 (b7/mux0000_cmp_ge00001)
+     LUT3:I2->O            7   0.612   0.605  b7/mux0000_cmp_ge00001_SW0 (N44)
+     LUT4:I3->O            4   0.612   0.499  b7/qu_3_cmp_eq00001 (b7/qu_3_cmp_eq0000)
+     FDS:S                     0.795          b7/qu_3
+    ----------------------------------------
+    Total                      9.631ns (5.622ns logic, 4.009ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'btn<0>'
+  Clock period: 3.561ns (frequency: 280.792MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               3.561ns (Levels of Logic = 1)
+  Source:            STATE_0 (FF)
+  Destination:       STATE_0 (FF)
+  Source Clock:      btn<0> rising
+  Destination Clock: btn<0> rising
+
+  Data Path: STATE_0 to STATE_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.514   1.141  STATE_0 (STATE_0)
+     LUT4:I0->O            4   0.612   0.499  STATE_cmp_eq00002 (STATE_cmp_eq0000)
+     FDR:R                     0.795          STATE_0
+    ----------------------------------------
+    Total                      3.561ns (1.921ns logic, 1.640ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'b3/clk_out'
+  Clock period: 2.363ns (frequency: 423.218MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.363ns (Levels of Logic = 1)
+  Source:            b4/temp_1 (FF)
+  Destination:       b4/temp_1 (FF)
+  Source Clock:      b3/clk_out rising
+  Destination Clock: b3/clk_out rising
+
+  Data Path: b4/temp_1 to b4/temp_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.514   0.969  b4/temp_1 (b4/temp_1)
+     LUT2:I0->O            1   0.612   0.000  b4/Mcount_temp_xor<1>11 (Result<1>1)
+     FD:D                      0.268          b4/temp_1
+    ----------------------------------------
+    Total                      2.363ns (1.394ns logic, 0.969ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 41 / 24
+-------------------------------------------------------------------------
+Offset:              6.198ns (Levels of Logic = 10)
+  Source:            sw<6> (PAD)
+  Destination:       b10/sqrt_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<6> to b10/sqrt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.410  sw_6_IBUF (sw_6_IBUF)
+     LUT3:I2->O            1   0.612   0.509  b10/_old_a_3<6>1 (b10/_old_a_3<6>)
+     LUT2:I0->O            1   0.612   0.000  b10/Maddsub__old_r_6_lut<0> (b10/Maddsub__old_r_6_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  b10/Maddsub__old_r_6_cy<0> (b10/Maddsub__old_r_6_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  b10/Maddsub__old_r_6_cy<1> (b10/Maddsub__old_r_6_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  b10/Maddsub__old_r_6_cy<2> (b10/Maddsub__old_r_6_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  b10/Maddsub__old_r_6_cy<3> (b10/Maddsub__old_r_6_cy<3>)
+     MUXCY:CI->O           0   0.052   0.000  b10/Maddsub__old_r_6_cy<4> (b10/Maddsub__old_r_6_cy<4>)
+     XORCY:CI->O           2   0.699   0.380  b10/Maddsub__old_r_6_xor<5> (b10/_old_r_6<5>)
+     INV:I->O              2   0.612   0.380  b10/old_q_8_not00001_INV_0 (b10/old_q_8_not0000)
+     FDR:D                     0.268          b10/q_0
+    ----------------------------------------
+    Total                      6.198ns (4.519ns logic, 1.679ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b3/clk_out'
+  Total number of paths / destination ports: 111 / 10
+-------------------------------------------------------------------------
+Offset:              8.997ns (Levels of Logic = 5)
+  Source:            b4/temp_0 (FF)
+  Destination:       segment<6> (PAD)
+  Source Clock:      b3/clk_out rising
+
+  Data Path: b4/temp_0 to segment<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.969  b4/temp_0 (b4/temp_0)
+     LUT2:I0->O            1   0.612   0.426  b2/Mmux_out876 (b2/Mmux_out661)
+     LUT4:I1->O            1   0.612   0.360  b2/Mmux_out663 (b2/Mmux_out663)
+     LUT4:I3->O            7   0.612   0.754  b2/Mmux_out6238 (mux_out<2>)
+     LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
+     OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
+    ----------------------------------------
+    Total                      8.997ns (6.131ns logic, 2.866ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'btn<0>'
+  Total number of paths / destination ports: 70201 / 15
+-------------------------------------------------------------------------
+Offset:              18.113ns (Levels of Logic = 14)
+  Source:            STATE_1 (FF)
+  Destination:       segment<6> (PAD)
+  Source Clock:      btn<0> rising
+
+  Data Path: STATE_1 to segment<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             24   0.514   1.216  STATE_1 (STATE_1)
+     LUT3:I0->O            4   0.612   0.568  led<2>61 (N19)
+     LUT4:I1->O            1   0.612   0.360  led<3>57 (led<3>57)
+     LUT4:I3->O           21   0.612   1.111  led<3>217 (led_3_OBUF)
+     LUT3:I0->O            1   0.612   0.000  b1/shift_mux00092 (b1/shift_mux00091)
+     MUXF5:I0->O           1   0.278   0.000  b1/shift_mux0009_f5 (b1/shift_mux0009_f5)
+     MUXF6:I1->O          10   0.451   0.902  b1/shift_mux0009_f6 (b1/Madd__add0003_lut<3>)
+     LUT4:I0->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
+     MUXF5:I1->O          10   0.278   0.780  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
+     LUT4:I2->O            1   0.612   0.509  b2/Mmux_out6147 (b2/Mmux_out6147)
+     LUT4:I0->O            1   0.612   0.360  b2/Mmux_out6195 (b2/Mmux_out6195)
+     LUT4:I3->O            1   0.612   0.387  b2/Mmux_out6238_SW0 (N224)
+     LUT4:I2->O            7   0.612   0.754  b2/Mmux_out6238 (mux_out<2>)
+     LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
+     OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
+    ----------------------------------------
+    Total                     18.113ns (10.810ns logic, 7.303ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 138984 / 15
+-------------------------------------------------------------------------
+Offset:              23.585ns (Levels of Logic = 20)
+  Source:            valueA_1 (FF)
+  Destination:       segment<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: valueA_1 to segment<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             24   0.514   1.216  valueA_1 (valueA_1)
+     LUT4:I0->O            2   0.612   0.410  b9/a1_cmp_gt0000143 (b9/a1_cmp_gt0000143)
+     LUT4:I2->O            1   0.612   0.000  b9/a1_cmp_gt00001702 (b9/a1_cmp_gt00001701)
+     MUXF5:I0->O           3   0.278   0.603  b9/a1_cmp_gt0000170_f5 (b9/a1_cmp_gt0000)
+     LUT3:I0->O            2   0.612   0.383  b9/firstblk/cout1 (b9/c0)
+     LUT4:I3->O            2   0.612   0.383  b9/secondblk/cout1 (b9/c1)
+     LUT4:I3->O            1   0.612   0.509  led<3>21 (N6)
+     LUT4:I0->O            1   0.612   0.387  led<3>149_SW0 (N212)
+     LUT4:I2->O            1   0.612   0.387  led<3>149 (led<3>149)
+     LUT4:I2->O           21   0.612   1.111  led<3>217 (led_3_OBUF)
+     LUT3:I0->O            1   0.612   0.000  b1/shift_mux00092 (b1/shift_mux00091)
+     MUXF5:I0->O           1   0.278   0.000  b1/shift_mux0009_f5 (b1/shift_mux0009_f5)
+     MUXF6:I1->O          10   0.451   0.902  b1/shift_mux0009_f6 (b1/Madd__add0003_lut<3>)
+     LUT4:I0->O            1   0.612   0.000  b1/shift_mux00161 (b1/shift_mux0016)
+     MUXF5:I1->O          10   0.278   0.780  b1/shift_mux0016_f5 (b1/Madd__add0006_cy<0>)
+     LUT4:I2->O            1   0.612   0.509  b2/Mmux_out6147 (b2/Mmux_out6147)
+     LUT4:I0->O            1   0.612   0.360  b2/Mmux_out6195 (b2/Mmux_out6195)
+     LUT4:I3->O            1   0.612   0.387  b2/Mmux_out6238_SW0 (N224)
+     LUT4:I2->O            7   0.612   0.754  b2/Mmux_out6238 (mux_out<2>)
+     LUT4:I0->O            1   0.612   0.357  b6/Mrom_numtobedisplay41 (segment_4_OBUF)
+     OBUF:I->O                 3.169          segment_4_OBUF (segment<4>)
+    ----------------------------------------
+    Total                     23.585ns (14.148ns logic, 9.437ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.54 secs
  
-Found 10 error(s). Aborting synthesis.
 --> 
 
 
-Total memory usage is 506276 kilobytes
+Total memory usage is 617540 kilobytes
 
-Number of errors   :   10 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

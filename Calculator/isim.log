@@ -14,17 +14,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-power1 =  3 power =  3
-State =  1
-State =  2
-State =  3
-State =  4
-State =  5
-State =  6
-State =  7
-State =  0
-State =  1
-State =  2
-State =  3
-State =  4
 # exit 0

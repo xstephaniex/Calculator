@@ -10,6 +10,7 @@ NET "sw[6]" LOC = E2;
 NET "sw[7]" LOC = N3;
 
 NET "btn[0]" LOC = G12;
+NET "btn<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "btn[1]" LOC = C11;
 NET "btn[2]" LOC = M4;
 

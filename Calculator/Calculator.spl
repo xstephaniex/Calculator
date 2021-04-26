@@ -1,7 +1,7 @@
 [Inputs]
 clk
 =sw[7:0]=
-=btn[1:0]=
+=btn[2:0]=
 [Outputs]
 =led[7:0]=
 =an[6:0]=

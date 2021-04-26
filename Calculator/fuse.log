@@ -7,7 +7,6 @@ Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/HalfAdder.v" into
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/FullAdder.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/twobit_counter.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/Squareroot.v" into library work
-Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/power.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/multiplication.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/four_to_one_mux.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/FourBitAdderSubstractor.v" into library work
@@ -21,10 +20,10 @@ Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/Calculator.v" int
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/calculator_tb.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "/home/ise/Xilinx/Calculator/Calculator/Calculator.v" Line 144: Size mismatch in connection of port <numberbox>. Formal port size is 4-bit while actual signal size is 7-bit.
+WARNING:HDLCompiler:189 - "/home/ise/Xilinx/Calculator/Calculator/Calculator.v" Line 174: Size mismatch in connection of port <numberbox>. Formal port size is 4-bit while actual signal size is 7-bit.
 Completed static elaboration
-Fuse Memory Usage: 95048 KB
-Fuse CPU Usage: 400 ms
+Fuse Memory Usage: 95052 KB
+Fuse CPU Usage: 390 ms
 Compiling module binary_to_BCD
 Compiling module four_to_one_mux
 Compiling module delay_clock
@@ -38,13 +37,12 @@ Compiling module FourBitAdder
 Compiling module FourBitAdderSubstractor
 Compiling module Squareroot
 Compiling module Multiplication
-Compiling module Power
 Compiling module Calculator
 Compiling module calculator_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 17 Verilog Units
+Compiled 16 Verilog Units
 Built simulation executable /home/ise/Xilinx/Calculator/Calculator/calculator_tb_isim_beh.exe
-Fuse Memory Usage: 98220 KB
+Fuse Memory Usage: 98204 KB
 Fuse CPU Usage: 450 ms
-GCC CPU Usage: 460 ms
+GCC CPU Usage: 440 ms

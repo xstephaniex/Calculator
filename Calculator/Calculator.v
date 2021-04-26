@@ -35,6 +35,8 @@ module Calculator(
 	//divider signals; outputs
 	
 	reg [3:0] STATE = 4'b0000;
+	reg buttonpressed;
+	reg switchMode;
 	reg [3:0] valueA ;
 	reg [3:0] valueB ;
 	reg flag [1:0]; //Flag[0] = Overflow - Flag[1] = Key Pressed
@@ -78,8 +80,11 @@ module Calculator(
 
 	//Assing Values to Registers
 	always @(posedge clk)begin
-		valueA = sw[3:0];
-		valueB = sw[7:4];
+		if(switchMode) begin
+			valueA = sw[3:0];
+			valueB = sw[7:4];
+		end
+		
 		
 		case(STATE)
 			4'b0000: assign led = sum;
@@ -88,22 +93,36 @@ module Calculator(
 			4'b0011: assign led = multiplication;
 			4'b0100: assign led = Reminder;
 			4'b0101: assign led = sqrt;
-			4'b0110: assign led = power;
-			4'b0111: assign led = 8'b11111111;
 						
 			
-			default: STATE = 4'b0000;
+			default: assign led = sum;
 			
 		endcase
 	end
 	
 	
 	always @(posedge btn[0])begin
+		#50;
 		STATE = STATE + 1;
-		$monitor("State = %d" , STATE);
-		if(STATE == 4'b1000)
+		if(STATE == 4'b0110)
 			STATE = 4'b0000;
 	end
+	
+	always @(posedge btn[1])begin
+		#50;
+//		STATE = STATE + 1;
+//		if(STATE == 4'b1000)
+//			STATE = 4'b0000;
+	end
+	
+	always @(posedge btn[2])begin
+		#50;
+//		STATE = STATE + 1;
+//		if(STATE == 4'b1000)
+//			STATE = 4'b0000;
+	end
+	
+
 	
 //	always @(posedge flag[0])begin
 //		STATE = STATE + 1;
@@ -196,12 +215,22 @@ module Calculator(
     .product(multiplication)
     );
 	 
-	 Power b12 (
-    .clk(clk), 
-    .base(valueA), 
-    .power(valueB), 
-    .result(power)
-    );
-	
+	 KeypadDecoder c1 (
+		.jA(valueA)
+	 );
+	 
+	 FPGA_2_LCD c2(
+	 .CLK(clk),
+	 .DATA(solution),
+	 .OPER(operation),
+	 .ENB(enable),
+	 .RST(reset),
+	 .RDY(lcd_ready),
+	 .LCD_RS(),
+	 .LCD_RW(),
+	 .LCD_E(),
+	 );
+	 
+
 
 endmodule

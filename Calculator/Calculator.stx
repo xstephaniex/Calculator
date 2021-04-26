@@ -27,12 +27,12 @@ Compiling verilog file "twobit_counter.v" in library work
 Module <FullAdder> compiled
 Compiling verilog file "Squareroot.v" in library work
 Module <twobit_counter> compiled
-Compiling verilog file "power.v" in library work
-Module <Squareroot> compiled
 Compiling verilog file "multiplication.v" in library work
-Module <Power> compiled
-Compiling verilog file "four_to_one_mux.v" in library work
+Module <Squareroot> compiled
+Compiling verilog file "FPGA_2_LCD.v" in library work
 Module <Multiplication> compiled
+Compiling verilog file "four_to_one_mux.v" in library work
+Module <FPGA_2_LCD> compiled
 Compiling verilog file "FourBitAdderSubstractor.v" in library work
 Module <four_to_one_mux> compiled
 Compiling verilog file "FourBitAdder.v" in library work
@@ -49,21 +49,18 @@ Compiling verilog file "BCD_sevensegment.v" in library work
 Module <binary_to_BCD> compiled
 Compiling verilog file "Calculator.v" in library work
 Module <BCD_sevensegment> compiled
+ERROR:HDLCompilers:26 - "Calculator.v" line 232 expecting '.', found ')'
+ERROR:HDLCompilers:26 - "Calculator.v" line 237 expecting ')', found 'EOF'
+ERROR:HDLCompilers:26 - "Calculator.v" line 237 expecting ';', found 'EOF'
 Module <Calculator> compiled
-No errors in compilation
-Analysis of file <"Calculator.prj"> succeeded.
- 
-
-
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
- 
+ERROR:HDLCompilers:26 - "Calculator.v" line 237 expecting 'endmodule', found 'EOF'
+Analysis of file <"Calculator.prj"> failed.
 --> 
 
 
-Total memory usage is 469660 kilobytes
+Total memory usage is 566404 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :    4 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

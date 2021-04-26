@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Apr 18 21:54:19 2021
+// Written by: Map P.20131013 on Mon Apr 26 14:37:32 2021
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -28,12 +28,15 @@ COMP "sw<6>" LOCATE = SITE "E2" LEVEL 1;
 COMP "sw<7>" LOCATE = SITE "N3" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "M5" LEVEL 1;
 COMP "btn<0>" LOCATE = SITE "G12" LEVEL 1;
-COMP "led<1>" LOCATE = SITE "M11" LEVEL 1;
+PIN btn<0>_pin<0> = BEL "btn<0>" PINNAME PAD;
+PIN "btn<0>_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 COMP "btn<1>" LOCATE = SITE "C11" LEVEL 1;
-COMP "led<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "M11" LEVEL 1;
 COMP "btn<2>" LOCATE = SITE "M4" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "P7" LEVEL 1;
 COMP "led<3>" LOCATE = SITE "P6" LEVEL 1;
 COMP "led<4>" LOCATE = SITE "N5" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "btn_0_BUFGP/IBUFG" BEL "btn_0_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 
