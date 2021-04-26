@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/Power_root2.tfi -lib work C:/Users/User/dev/Calculator/Calculator//Power_root2.v -module Power_root2 -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

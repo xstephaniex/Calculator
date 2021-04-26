@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Calculator(
     input [7:0]sw,
-	 input [2:0] btn,
+	 input [3:0] btn,
 	 input clk,
-    output reg [7:0]led = 8'b00000000,  
+    output[7:0]led,  
 	 output[6:0]an,
 	 output[6:0]segment
 
@@ -31,16 +31,22 @@ module Calculator(
 	
 	//this are the testing wires for each operation, for displaying in the leds
 	//wire [7:0] addition, substraction;
+<<<<<<< HEAD
 	//	wire [7:0] multiplication;
 	//divider signals; outputs
 	
 	reg [3:0] STATE = 4'b0000;
 	reg buttonpressed;
 	reg switchMode;
+=======
+	//wire [7:0] multiplication;
+
+
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 	reg [3:0] valueA ;
 	reg [3:0] valueB ;
-	reg flag [1:0]; //Flag[0] = Overflow - Flag[1] = Key Pressed
-	
+
+
 	
 	//division signals; outputs
 	wire [7:0] Quotient;   
@@ -61,9 +67,17 @@ module Calculator(
 	//multiplication signals; outputs
 	wire [7:0] multiplication; 
 	
-	//multiplication signals; outputs
-	wire [7:0] power; 
+	//comparator signals; outputs
+	wire [7:0] comparator; 
 	
+	
+	//derivative signals; outputs
+	wire [7:0] base; 
+	wire [7:0] X; 
+	
+	//powerof2 signals; outputs
+	wire [7:0] powerA; 
+	wire [7:0] powerB; 
 	
 	//segment control signals
 	wire clk_out;
@@ -74,12 +88,13 @@ module Calculator(
 	wire[3:0] hundreds;
 	
 	// verilog calculations testing
-//	assign addition = sw[7:4] + sw[3:0];
-//	assign substraction = sw[7:4] - sw[3:0];
-//	assign multiplication = sw[7:4] * sw[3:0];
+	//	assign addition = sw[7:4] + sw[3:0];
+	//	assign substraction = sw[7:4] - sw[3:0];
+	//	assign multiplication = sw[7:4] * sw[3:0];
 
-	//Assing Values to Registers
+	//adding Values to Registers
 	always @(posedge clk)begin
+<<<<<<< HEAD
 		if(switchMode) begin
 			valueA = sw[3:0];
 			valueB = sw[7:4];
@@ -132,14 +147,39 @@ module Calculator(
 //	end
 	
 			
+=======
+		valueA = sw[3:0];
+		valueB = sw[7:4];
+		end
+
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 	
 	
 	//output on the leds
-	/*assign led = ({8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum ) |({8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract ) 
-	|({8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient ) |({8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication | ({8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder )
-	 | ({8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt ) | ({8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & power));*/
-	
-	
+
+	 assign led = (({8{~btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum )|
+						({8{~btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract)  
+						|({8{~btn[3]}} &{8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient)  
+						|({8{~btn[3]}} &{8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication) 
+						|({8{~btn[3]}} &{8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder)
+						|({8{~btn[3]}} & {8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt) 
+						|({8{~btn[3]}} & {8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & comparator) 
+						|({8{~btn[3]}} & {8{btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & base )
+						|({8{btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & X)
+						|({8{btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & powerA)
+						|({8{btn[3]}} & {8{~btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & powerB));
+
+	//0 = sum
+	//1 = substract
+	//2 = Quotient
+	//3 = multiplication
+	//4 = reminder
+	//5 = sqrt
+	//6 = comparator
+	//7 = base
+	//8 = X
+	//9 = A^2; power of 2 of A
+	//10 = B^2; power of 2 of B
 	
 	
 	 binary_to_BCD b1 (
@@ -215,6 +255,7 @@ module Calculator(
     .product(multiplication)
     );
 	 
+<<<<<<< HEAD
 	 KeypadDecoder c1 (
 		.jA(valueA)
 	 );
@@ -231,6 +272,40 @@ module Calculator(
 	 .LCD_E(),
 	 );
 	 
+=======
+	 Comparator b12 (
+    .a(valueA), 
+    .b(valueB), 
+    .out(comparator)
+    );
+	 
+	 SimpleDerivative b13 (
+    .base(valueB), 
+    .root(valueA), 
+    .rootout(X), 
+    .baseout(base)
+    );
+	 
+	 Power_root2 b14 (
+    .base(valueA), 
+    .result(powerA)
+    );
+	 
+	 Power_root2 b15 (
+    .base(valueB), 
+    .result(powerB)
+    );
+
+
+	 
+//This block is not synthesizable 
+//	 Power b12 (
+//    .clk(clk), 
+//    .base(valueA), 
+//    .power(valueB), 
+//    .result(power)
+//    );
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 
 
 endmodule

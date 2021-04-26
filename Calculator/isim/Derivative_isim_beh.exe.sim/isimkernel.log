@@ -1,0 +1,29 @@
+Command line:
+   Derivative_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52477
+
+Sat Apr 24 12:29:31 2021
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5149.97 Meg
+
+ Total Signals          : 16
+ Total Nets             : 29
+ Total Signal Drivers   : 7
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 117
+Total Line Count : 25
+
+ Total Simulation Time: 0.03125 sec
+
+ Current Memory Usage: 5149.97 Meg
+
+Sat Apr 24 12:29:37 2021
+

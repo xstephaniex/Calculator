@@ -1,8 +1,9 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/ise/Xilinx/Calculator/Calculator/calculator_tb_isim_beh.exe -prj /home/ise/Xilinx/Calculator/Calculator/calculator_tb_beh.prj work.calculator_tb work.glbl 
-ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 1
-Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/User/dev/Calculator/Calculator/power_root2_tb_isim_beh.exe -prj C:/Users/User/dev/Calculator/Calculator/power_root2_tb_beh.prj work.power_root2_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
+<<<<<<< HEAD
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/HalfAdder.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/FullAdder.v" into library work
 Analyzing Verilog file "/home/ise/Xilinx/Calculator/Calculator/twobit_counter.v" into library work
@@ -46,3 +47,19 @@ Built simulation executable /home/ise/Xilinx/Calculator/Calculator/calculator_tb
 Fuse Memory Usage: 98204 KB
 Fuse CPU Usage: 450 ms
 GCC CPU Usage: 440 ms
+=======
+Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/Power_root2.v" into library work
+Analyzing Verilog file "C:/Users/User/dev/Calculator/Calculator/power_root2_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Power_root2
+Compiling module power_root2_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable C:/Users/User/dev/Calculator/Calculator/power_root2_tb_isim_beh.exe
+Fuse Memory Usage: 27592 KB
+Fuse CPU Usage: 264 ms
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7

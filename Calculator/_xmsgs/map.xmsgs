@@ -19,6 +19,7 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
+<<<<<<< HEAD
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">b7/rem_mux00111_SW0</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">b7/mux0000_cmp_ge00002</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
@@ -26,6 +27,9 @@ To see the details of these <arg fmt="%s" index="4">info</arg> messages, please 
 </msg>
 
 <msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">btn&lt;2&gt;_IBUF</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+=======
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">b7/rem_mux00111_SW0</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">b7/mux0000_cmp_ge00002</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 </msg>
 
 </messages>

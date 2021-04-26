@@ -33,7 +33,7 @@ module power_tb;
 	wire [7:0] result;
 
 	// Instantiate the Unit Under Test (UUT)
-	power uut (
+	Power uut (
 		.clk(clk), 
 		.base(base), 
 		.power(power), 
@@ -51,11 +51,11 @@ module power_tb;
 		// Wait 100 ns for global reset to finish
 		#100;
         
-		clk = 0;
+	
 		base = 4'b0010;
 		power = 4'b0011;
 		
-		#100;
+		#500;
         
 	
 		base = 4'b1111;

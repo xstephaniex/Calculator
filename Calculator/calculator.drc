@@ -1,7 +1,11 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
+<<<<<<< HEAD
 Mon Apr 26 14:37:53 2021
+=======
+Sat Apr 24 15:18:39 2021
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 
 drc -z Calculator.ncd Calculator.pcf
 

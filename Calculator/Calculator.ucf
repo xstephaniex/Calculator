@@ -13,6 +13,7 @@ NET "btn[0]" LOC = G12;
 NET "btn<0>" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "btn[1]" LOC = C11;
 NET "btn[2]" LOC = M4;
+NET "btn[3]" LOC = A7; 
 
 NET "led[0]" LOC = M5;
 NET "led[1]" LOC = M11;

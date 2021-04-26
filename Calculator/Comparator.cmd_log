@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Calculator -o C:/Users/User/dev/Calculator/Calculator/Comparator.tfi -lib work C:/Users/User/dev/Calculator/Calculator//comparator.v -module Comparator -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

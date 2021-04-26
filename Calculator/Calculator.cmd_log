@@ -764,24 +764,60 @@ par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+<<<<<<< HEAD
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+=======
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
 bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+<<<<<<< HEAD
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+=======
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+<<<<<<< HEAD
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
@@ -793,29 +829,92 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp1
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+=======
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
-xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
-map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
-par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
-xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
-map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
-par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
-xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
 par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
 bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+<<<<<<< HEAD
+xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+=======
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+<<<<<<< HEAD
+xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+=======
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+<<<<<<< HEAD
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
@@ -825,6 +924,29 @@ xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 xst -intstyle ise -ifn "/home/ise/Xilinx/Calculator/Calculator/Calculator.xst" -ofn "/home/ise/Xilinx/Calculator/Calculator/Calculator.syr" 
+=======
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 
+par -w -intstyle ise -ol high -t 1 Calculator_map.ncd Calculator.ncd Calculator.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Calculator.twx Calculator.ncd -o Calculator.twr Calculator.pcf -ucf Calculator.ucf 
+bitgen -intstyle ise -f Calculator.ut Calculator.ncd 
+xst -intstyle ise -ifn "C:/Users/User/dev/Calculator/Calculator/Calculator.xst" -ofn "C:/Users/User/dev/Calculator/Calculator/Calculator.syr" 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Calculator.ngc Calculator_synthesis.v 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Calculator.ucf -p xc3s100e-cp132-5 Calculator.ngc Calculator.ngd  
 map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Calculator_map.ncd Calculator.ngd Calculator.pcf 

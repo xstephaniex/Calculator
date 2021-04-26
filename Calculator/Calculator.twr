@@ -45,6 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
+<<<<<<< HEAD
 sw<0>       |    1.651(R)|   -0.052(R)|clk_BUFGP         |   0.000|
 sw<1>       |    1.487(R)|    0.620(R)|clk_BUFGP         |   0.000|
 sw<2>       |    0.957(R)|    0.535(R)|clk_BUFGP         |   0.000|
@@ -53,6 +54,16 @@ sw<4>       |    0.626(R)|    1.003(R)|clk_BUFGP         |   0.000|
 sw<5>       |    0.779(R)|    0.799(R)|clk_BUFGP         |   0.000|
 sw<6>       |    3.531(R)|    0.220(R)|clk_BUFGP         |   0.000|
 sw<7>       |    4.018(R)|   -0.027(R)|clk_BUFGP         |   0.000|
+=======
+sw<0>       |    2.511(R)|   -0.045(R)|clk_BUFGP         |   0.000|
+sw<1>       |    2.256(R)|    0.343(R)|clk_BUFGP         |   0.000|
+sw<2>       |    1.480(R)|    0.627(R)|clk_BUFGP         |   0.000|
+sw<3>       |    2.130(R)|    0.383(R)|clk_BUFGP         |   0.000|
+sw<4>       |    1.100(R)|    1.332(R)|clk_BUFGP         |   0.000|
+sw<5>       |    1.326(R)|    0.478(R)|clk_BUFGP         |   0.000|
+sw<6>       |    4.135(R)|    1.098(R)|clk_BUFGP         |   0.000|
+sw<7>       |    5.922(R)|    0.229(R)|clk_BUFGP         |   0.000|
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 ------------+------------+------------+------------------+--------+
 
 Clock btn<0> to Pad
@@ -82,6 +93,7 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
+<<<<<<< HEAD
 led<0>      |   11.714(R)|clk_BUFGP         |   0.000|
 led<1>      |   15.321(R)|clk_BUFGP         |   0.000|
 led<2>      |   15.373(R)|clk_BUFGP         |   0.000|
@@ -97,6 +109,23 @@ segment<3>  |   26.649(R)|clk_BUFGP         |   0.000|
 segment<4>  |   26.191(R)|clk_BUFGP         |   0.000|
 segment<5>  |   26.973(R)|clk_BUFGP         |   0.000|
 segment<6>  |   25.971(R)|clk_BUFGP         |   0.000|
+=======
+led<0>      |   17.222(R)|clk_BUFGP         |   0.000|
+led<1>      |   17.449(R)|clk_BUFGP         |   0.000|
+led<2>      |   17.381(R)|clk_BUFGP         |   0.000|
+led<3>      |   17.615(R)|clk_BUFGP         |   0.000|
+led<4>      |   20.172(R)|clk_BUFGP         |   0.000|
+led<5>      |   24.924(R)|clk_BUFGP         |   0.000|
+led<6>      |   31.792(R)|clk_BUFGP         |   0.000|
+led<7>      |   31.929(R)|clk_BUFGP         |   0.000|
+segment<0>  |   42.834(R)|clk_BUFGP         |   0.000|
+segment<1>  |   43.304(R)|clk_BUFGP         |   0.000|
+segment<2>  |   43.130(R)|clk_BUFGP         |   0.000|
+segment<3>  |   42.758(R)|clk_BUFGP         |   0.000|
+segment<4>  |   42.519(R)|clk_BUFGP         |   0.000|
+segment<5>  |   43.278(R)|clk_BUFGP         |   0.000|
+segment<6>  |   43.407(R)|clk_BUFGP         |   0.000|
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock btn<0>
@@ -112,11 +141,85 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
+<<<<<<< HEAD
 clk            |    8.195|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Analysis completed Mon Apr 26 14:37:45 2021 
+=======
+clk            |    8.325|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+btn<0>         |led<0>         |   13.251|
+btn<0>         |led<1>         |   12.176|
+btn<0>         |led<2>         |   13.217|
+btn<0>         |led<3>         |   12.508|
+btn<0>         |led<4>         |   10.765|
+btn<0>         |led<5>         |   11.630|
+btn<0>         |led<6>         |   11.347|
+btn<0>         |led<7>         |   12.504|
+btn<0>         |segment<0>     |   22.514|
+btn<0>         |segment<1>     |   22.984|
+btn<0>         |segment<2>     |   22.810|
+btn<0>         |segment<3>     |   22.438|
+btn<0>         |segment<4>     |   22.199|
+btn<0>         |segment<5>     |   22.958|
+btn<0>         |segment<6>     |   23.087|
+btn<1>         |led<0>         |   10.014|
+btn<1>         |led<1>         |   10.560|
+btn<1>         |led<2>         |   11.590|
+btn<1>         |led<3>         |   11.172|
+btn<1>         |led<4>         |   11.814|
+btn<1>         |led<5>         |   11.502|
+btn<1>         |led<6>         |   11.402|
+btn<1>         |led<7>         |   13.052|
+btn<1>         |segment<0>     |   22.441|
+btn<1>         |segment<1>     |   22.911|
+btn<1>         |segment<2>     |   22.737|
+btn<1>         |segment<3>     |   22.365|
+btn<1>         |segment<4>     |   22.126|
+btn<1>         |segment<5>     |   22.885|
+btn<1>         |segment<6>     |   23.014|
+btn<2>         |led<0>         |   11.233|
+btn<2>         |led<1>         |   11.218|
+btn<2>         |led<2>         |   12.087|
+btn<2>         |led<3>         |   11.796|
+btn<2>         |led<4>         |   10.754|
+btn<2>         |led<5>         |   10.939|
+btn<2>         |led<6>         |   11.057|
+btn<2>         |led<7>         |   12.170|
+btn<2>         |segment<0>     |   22.096|
+btn<2>         |segment<1>     |   22.566|
+btn<2>         |segment<2>     |   22.392|
+btn<2>         |segment<3>     |   22.020|
+btn<2>         |segment<4>     |   21.781|
+btn<2>         |segment<5>     |   22.540|
+btn<2>         |segment<6>     |   22.669|
+btn<3>         |led<0>         |   12.406|
+btn<3>         |led<1>         |   11.331|
+btn<3>         |led<2>         |   12.372|
+btn<3>         |led<3>         |   11.663|
+btn<3>         |led<4>         |   11.804|
+btn<3>         |led<5>         |   10.785|
+btn<3>         |led<6>         |   10.608|
+btn<3>         |led<7>         |   11.659|
+btn<3>         |segment<0>     |   21.777|
+btn<3>         |segment<1>     |   22.247|
+btn<3>         |segment<2>     |   22.073|
+btn<3>         |segment<3>     |   21.701|
+btn<3>         |segment<4>     |   21.462|
+btn<3>         |segment<5>     |   22.221|
+btn<3>         |segment<6>     |   22.350|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Apr 24 15:18:36 2021 
+>>>>>>> 78b4e5dacc355a77d8acb0e1d6c1e5541be14cf7
 --------------------------------------------------------------------------------
 
 Trace Settings:
