@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-04-25T15:39:25</DateModified>
+  <DateModified>2021-04-26T15:44:24</DateModified>
   <ModuleName>Calculator</ModuleName>
   <SummaryTimeStamp>2021-04-23T00:37:05</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/User/dev/Calculator/Calculator/iseconfig/Calculator.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/User/dev/Calculator/Calculator\</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/Xilinx/Calculator/Calculator/iseconfig/Calculator.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/Xilinx/Calculator/Calculator/</ImplementationReportsDirectory>
   <DateInitialized>2021-03-06T11:17:23</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

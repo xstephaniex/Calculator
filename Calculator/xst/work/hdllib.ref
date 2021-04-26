@@ -20,6 +20,7 @@ MO binary_to_BCD_converter NULL binary_to_BCD_converter.v vlg56/binary__to___b_c
 MO shift_or_addthree NULL shift_or_addthree.v vlg52/shift__or__addthree.bin 1618452540
 MO four_to_one_mux NULL four_to_one_mux.v vlg58/four__to__one__mux.bin 1619385435
 MO Power NULL power.v vlg0D/_power.bin 1619281843
+MO FPGA_2_LCD NULL FPGA_2_LCD.v vlg51/_f_p_g_a__2___l_c_d.bin 1619452476
 MO SimpleDerivative NULL simplederivativetest.v vlg4D/_simple_derivative.bin 1619385435
 MO Comparator NULL comparator.v vlg4C/_comparator.bin 1619385435
 MO SimpleDerivativeBase NULL simplederivativebase.v vlg54/_simple_derivative_base.bin 1619383758
@@ -29,5 +30,6 @@ MO binarytobcd NULL binarytobcd.v vlg55/binarytobcd.bin 1618446714
 MO binary_to_BCD NULL binary_to_BCD.v vlg23/binary__to___b_c_d.bin 1619385435
 MO SimpleDerivativeRoot NULL SimpleDerivative.v vlg7D/_simple_derivative_root.bin 1619384142
 MO FullAdder NULL FullAdder.v vlg73/_full_adder.bin 1619385435
+MO KeypadDecoder NULL KeypadDecoder.v vlg04/_keypad_decoder.bin 1619452707
 MO BCD_sevensegment NULL BCD_sevensegment.v vlg40/_b_c_d__sevensegment.bin 1619385435
 MO binary_to_bcd NULL binary_to_bcd.v vlg03/binary__to__bcd.bin 1618398345

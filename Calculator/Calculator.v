@@ -24,7 +24,10 @@ module Calculator(
 	 input clk,
     output[7:0]led,  
 	 output[3:0]an,
-	 output[6:0]segment
+	 output[6:0]segment,
+	 output[3:0]LCDdatapath,
+	 inout [3:0]KRows,
+	 inout [3:0]KCol
 
     );
 	
@@ -34,6 +37,9 @@ module Calculator(
 	//wire [7:0] multiplication;
 
 
+	reg [3:0] STATE = 4'b0000; // Register for Checking operation State
+	reg buttonpressed; //Flag to check if a button has been pressed
+	reg switchMode; //Flag to swap between Switches for Inputs and Keypad
 	reg [3:0] valueA ;
 	reg [3:0] valueB ;
 
@@ -85,25 +91,48 @@ module Calculator(
 
 	//adding Values to Registers
 	always @(posedge clk)begin
-		valueA = sw[3:0];
-		valueB = sw[7:4];
+		if(switchMode) begin
+			valueA = sw[3:0];
+			valueB = sw[7:4];
 		end
+		
+		
+		case(STATE)
+			4'b0000: assign led = sum;
+			4'b0001: assign led = substract;
+			4'b0010: assign led = Quotient;
+			4'b0011: assign led = multiplication;
+			4'b0100: assign led = Reminder;
+			4'b0101: assign led = sqrt;
+						
+			
+			default: assign led = sum;
+			
+		endcase
+	end
+		
+	always @(posedge btn[0])begin
+		#50;
+		STATE = STATE + 1;
+		if(STATE == 4'b0110)
+			STATE = 4'b0000;
+	end
 
 	
 	
 	//output on the leds
 
-	 assign led = (({8{~btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum )|
-						({8{~btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract)  
-						|({8{~btn[3]}} &{8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient)  
-						|({8{~btn[3]}} &{8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication) 
-						|({8{~btn[3]}} &{8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder)
-						|({8{~btn[3]}} & {8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt) 
-						|({8{~btn[3]}} & {8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & comparator) 
-						|({8{~btn[3]}} & {8{btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & base )
-						|({8{btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & X)
-						|({8{btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & powerA)
-						|({8{btn[3]}} & {8{~btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & powerB));
+//	 assign led = (({8{~btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}} & {8{~btn[0]}}& sum )|
+//						({8{~btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}} & {8{btn[0]}}& substract)  
+//						|({8{~btn[3]}} &{8{~btn[2]}} &  {8{btn[1]}} & {8{~btn[0]}} & Quotient)  
+//						|({8{~btn[3]}} &{8{~btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & multiplication) 
+//						|({8{~btn[3]}} &{8{btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & Reminder)
+//						|({8{~btn[3]}} & {8{btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & sqrt) 
+//						|({8{~btn[3]}} & {8{btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & comparator) 
+//						|({8{~btn[3]}} & {8{btn[2]}} &  {8{btn[1]}}& {8{btn[0]}} & base )
+//						|({8{btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}}& {8{~btn[0]}} & X)
+//						|({8{btn[3]}} & {8{~btn[2]}} &  {8{~btn[1]}}& {8{btn[0]}} & powerA)
+//						|({8{btn[3]}} & {8{~btn[2]}} &  {8{btn[1]}}& {8{~btn[0]}} & powerB));
 
 	//0 = sum
 	//1 = substract
@@ -228,6 +257,22 @@ module Calculator(
     .base(valueB), 
     .result(powerB)
     );
+	 
+	 KeypadDecoder c1 (
+		.jA(valueA)
+	 );
+	 
+	 FPGA_2_LCD c2(
+	 .CLK(clk),
+	 .DATA(solution),
+	 .OPER(operation),
+	 .ENB(enable),
+	 .RST(reset),
+	 .RDY(lcd_ready),
+	 .LCD_RS(),
+	 .LCD_RW(),
+	 .LCD_E(),
+	 );
 
 
 	 
